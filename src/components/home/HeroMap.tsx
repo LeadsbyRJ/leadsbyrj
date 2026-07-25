@@ -94,10 +94,10 @@ function MapPin({
 export function HeroMap() {
   return (
     <motion.div
-      className="relative mx-auto hidden w-full max-w-md lg:mx-0 lg:block lg:max-w-none"
-      initial={{ opacity: 0, x: 40, scale: 0.94 }}
-      animate={{ opacity: 1, x: 0, scale: 1 }}
-      transition={{ duration: 0.9, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
+      className="relative mx-auto w-full max-w-sm sm:max-w-md lg:mx-0 lg:max-w-none"
+      initial={{ opacity: 0, y: 28, scale: 0.96 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ duration: 0.9, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
       aria-hidden
     >
       <div className="pointer-events-none absolute inset-0 -z-10 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(57,255,20,0.14),transparent_65%)] blur-2xl" />

@@ -32,6 +32,7 @@ export function Hero() {
 
       <Container className="relative z-10 py-12 sm:py-16 lg:py-20">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-12 xl:gap-16">
+          {/* Copy — CTAs first on mobile; map stacks below */}
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             <motion.div
               custom={0}
@@ -132,7 +133,10 @@ export function Hero() {
             </motion.div>
           </div>
 
-          <HeroMap />
+          {/* Map: smaller/centered on mobile, full side column on desktop */}
+          <div className="mt-2 w-full lg:mt-0">
+            <HeroMap />
+          </div>
         </div>
       </Container>
     </section>
