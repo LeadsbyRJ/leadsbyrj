@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { INDIVIDUAL_PRICING, PACKAGE_PRICING } from "@/lib/constants";
 import { Section, SectionHeading } from "@/components/ui/Section";
-import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
-import { cn } from "@/lib/utils";
+import {
+  IndividualCards,
+  PackageCards,
+} from "@/components/pricing/PricingCards";
 
 export const metadata: Metadata = {
   title: "Pricing",
@@ -31,58 +32,7 @@ export default function PricingPage() {
             </span>
           </h2>
         </div>
-        <div className="grid gap-5 lg:grid-cols-3">
-          {PACKAGE_PRICING.map((pkg) => (
-            <Card
-              key={pkg.name}
-              glow={pkg.popular}
-              className={cn(
-                "relative flex flex-col",
-                pkg.popular && "border-accent/55 ring-1 ring-accent/35"
-              )}
-            >
-              {pkg.popular && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-accent px-3 py-0.5 text-xs font-bold text-black neon-glow">
-                  Most Popular
-                </span>
-              )}
-              <h3 className="text-xl font-bold text-foreground">{pkg.name}</h3>
-              <p className="mt-1 text-xs text-muted">{pkg.savings}</p>
-              <div className="mt-6">
-                <p className="text-3xl font-bold text-foreground">
-                  {pkg.oneTime}
-                  <span className="ml-1 text-sm font-normal text-muted">
-                    one-time
-                  </span>
-                </p>
-                <p className="mt-1 text-2xl font-semibold text-accent neon-text">
-                  {pkg.monthly}
-                  <span className="ml-1 text-sm font-normal text-muted">
-                    /mo
-                  </span>
-                </p>
-              </div>
-              <ul className="mt-6 flex-1 space-y-2.5">
-                {pkg.includes.map((item) => (
-                  <li
-                    key={item}
-                    className="flex gap-2 text-sm text-muted"
-                  >
-                    <span className="text-accent shrink-0">✓</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <Button
-                href="/contact"
-                variant={pkg.popular ? "primary" : "secondary"}
-                className={cn("mt-8 w-full", pkg.popular && "neon-glow")}
-              >
-                Get Started
-              </Button>
-            </Card>
-          ))}
-        </div>
+        <PackageCards />
       </Section>
 
       <Section className="bg-background-elevated">
@@ -94,24 +44,7 @@ export default function PricingPage() {
             Mix and match—or ask which combination fits your goals.
           </p>
         </div>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {INDIVIDUAL_PRICING.map((item) => (
-            <Card key={item.name} className="flex flex-col">
-              <h3 className="text-base font-semibold text-foreground sm:text-lg">
-                {item.name}
-              </h3>
-              <p className="mt-3 text-2xl font-bold text-accent neon-text">
-                {item.price}
-                <span className="ml-1 text-sm font-normal text-muted">
-                  {item.period}
-                </span>
-              </p>
-              <p className="mt-2.5 flex-1 text-sm leading-relaxed text-muted">
-                {item.description}
-              </p>
-            </Card>
-          ))}
-        </div>
+        <IndividualCards />
         <div className="mt-10 text-center">
           <p className="mb-4 text-muted">
             Not sure which option is right? Start with a free ranking audit.
