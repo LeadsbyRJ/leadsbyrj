@@ -20,29 +20,44 @@ export const NAV_LINKS = [
 
 export const SERVICES = [
   {
-    title: "Website Design",
+    id: "web",
+    title: "Website Design & Development",
     description:
-      "Fast, mobile-first sites built to convert visitors into calls, forms, and booked jobs.",
-    icon: "globe" as const,
+      "Conversion-focused, mobile-first websites that turn visitors into calls, form fills, and booked jobs—not just pretty pages.",
+    points: ["Mobile-first UI", "Speed & SEO-ready", "Lead capture forms"],
   },
   {
-    title: "Google Ads",
+    id: "ads",
+    title: "Google Ads Management",
     description:
-      "Local Search & Local Services Ads managed for qualified leads—not vanity clicks.",
-    icon: "megaphone" as const,
+      "Local Search and Local Services Ads managed for qualified leads—tight targeting, clean creative, and waste cut ruthlessly.",
+    points: ["Search & LSA", "Budget control", "Lead quality focus"],
   },
   {
-    title: "SEO",
+    id: "seo",
+    title: "SEO (Search Engine Optimization)",
     description:
-      "On-page, local, and technical SEO so the right customers find you on Google.",
-    icon: "search" as const,
+      "On-page, local, and technical SEO so the customers ready to buy find you on Google—and keep finding you.",
+    points: ["Local SEO", "On-page & technical", "Content that ranks"],
   },
   {
-    title: "Google Business Profile",
+    id: "gbp",
+    title: "Google Business Profile Optimization",
     description:
-      "Optimization and monthly management so you show up in Maps and local pack results.",
-    icon: "mapPin" as const,
+      "Stand out in Maps and the local pack with full profile optimization, posts, reviews strategy, and ongoing management.",
+    points: ["Maps visibility", "Reviews & posts", "Category & NAP setup"],
   },
+] as const;
+
+export const SERVICE_TAGS = [
+  "Website Design",
+  "SEO",
+  "Google Ads",
+  "Local Services Ads",
+  "Google Business Profile",
+  "Landing Pages",
+  "Local Lead Gen",
+  "Maintenance",
 ] as const;
 
 export const PROCESS_STEPS = [
