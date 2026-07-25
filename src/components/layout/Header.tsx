@@ -66,7 +66,7 @@ export function Header() {
             alt={`${SITE.name} logo`}
             width={808}
             height={288}
-            className="logo-glow h-10 w-auto sm:h-11 md:h-12"
+            className="logo-glow h-9 w-auto sm:h-10 md:h-11"
             priority
             sizes="180px"
           />

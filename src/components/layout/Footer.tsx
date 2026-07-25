@@ -30,7 +30,7 @@ export function Footer() {
                 alt={`${SITE.name} logo`}
                 width={808}
                 height={288}
-                className="logo-glow h-11 w-auto sm:h-12"
+                className="logo-glow h-10 w-auto sm:h-11"
                 sizes="180px"
               />
             </Link>

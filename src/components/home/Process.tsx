@@ -19,8 +19,8 @@ export function Process() {
         />
         {PROCESS_STEPS.map((step) => (
           <StaggerItem key={step.step}>
-            <div className="relative rounded-2xl border border-border bg-surface p-5 sm:p-6 text-center transition-all duration-300 hover:border-accent/40 hover:shadow-[0_0_24px_rgba(0,255,159,0.1)] md:text-left">
-              <span className="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full border border-accent/45 bg-background text-sm font-bold text-accent neon-glow">
+            <div className="relative rounded-2xl border border-border bg-surface p-5 sm:p-6 text-center transition-all duration-300 hover:border-accent/35 md:text-left">
+              <span className="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full border border-accent/40 bg-background text-sm font-bold text-accent">
                 {step.step}
               </span>
               <h3 className="text-lg font-semibold text-foreground sm:text-xl">{step.title}</h3>

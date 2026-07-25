@@ -27,7 +27,7 @@ export function Services() {
           return (
             <StaggerItem key={service.title}>
               <Card className="h-full group">
-                <div className="mb-4 inline-flex rounded-xl border border-accent/20 bg-accent/5 p-3 text-accent transition-shadow duration-300 group-hover:shadow-[0_0_20px_rgba(0,255,159,0.25)]">
+                <div className="mb-4 inline-flex rounded-xl border border-accent/20 bg-accent/5 p-3 text-accent transition-colors duration-300 group-hover:border-accent/40">
                   <Icon className="h-5 w-5" aria-hidden />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground">

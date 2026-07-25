@@ -13,9 +13,9 @@ export function Card({
     <div
       className={cn(
         "rounded-2xl border border-border bg-surface p-5 sm:p-6 transition-all duration-300",
-        "hover:border-accent/45 hover:bg-surface-elevated hover:shadow-[0_0_24px_rgba(0,255,159,0.1)]",
+        "hover:border-accent/35 hover:bg-surface-elevated",
         "hover:-translate-y-0.5",
-        glow && "neon-border border-accent/45 shadow-[0_0_28px_rgba(0,255,159,0.12)]",
+        glow && "border-accent/40 shadow-[0_0_20px_rgba(57,255,20,0.08)]",
         className
       )}
     >

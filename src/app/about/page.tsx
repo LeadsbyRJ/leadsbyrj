@@ -50,7 +50,7 @@ export default function AboutPage() {
               alt={`${SITE.name} logo`}
               width={808}
               height={288}
-              className="logo-glow-hero h-16 w-auto sm:h-20"
+              className="logo-glow-hero h-14 w-auto sm:h-16"
               sizes="240px"
             />
             <p className="mt-6 text-center text-sm text-muted">

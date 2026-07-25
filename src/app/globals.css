@@ -1,24 +1,28 @@
 @import "tailwindcss";
 
 :root {
+  /* Brand — pure neon lime (logo / Monster-style) */
   --background: #000000;
   --background-elevated: #0a0a0a;
   --surface: #111111;
   --surface-elevated: #1a1a1a;
   --foreground: #ffffff;
   --foreground-muted: #a0a0a0;
-  --accent: #00ff9f;
-  --accent-dim: #00cc7f;
+  --accent: #39ff14;
+  --accent-dim: #2dd40f;
   --border: #222222;
   --border-hover: #333333;
-  --neon-glow: 0 0 18px rgba(0, 255, 159, 0.45), 0 0 36px rgba(0, 255, 159, 0.22);
-  --neon-glow-strong: 0 0 22px rgba(0, 255, 159, 0.65), 0 0 48px rgba(0, 255, 159, 0.32),
-    0 0 80px rgba(0, 255, 159, 0.14);
-  --neon-text-glow: 0 0 10px rgba(0, 255, 159, 0.75), 0 0 24px rgba(0, 255, 159, 0.4);
-  --logo-glow: drop-shadow(0 0 10px rgba(0, 255, 159, 0.55))
-    drop-shadow(0 0 24px rgba(0, 255, 159, 0.28));
-  --logo-glow-hero: drop-shadow(0 0 14px rgba(0, 255, 159, 0.7))
-    drop-shadow(0 0 32px rgba(0, 255, 159, 0.4)) drop-shadow(0 0 56px rgba(0, 255, 159, 0.18));
+
+  /* Soft, restrained neon — high-end, not blurry bloom */
+  --neon-glow: 0 0 12px rgba(57, 255, 20, 0.28), 0 0 24px rgba(57, 255, 20, 0.1);
+  --neon-glow-strong: 0 0 14px rgba(57, 255, 20, 0.35), 0 0 28px rgba(57, 255, 20, 0.14);
+  --neon-text-glow: 0 0 8px rgba(57, 255, 20, 0.35);
+
+  /* Logo: crisp mark, almost no bloom */
+  --logo-glow: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.55))
+    drop-shadow(0 0 6px rgba(57, 255, 20, 0.22));
+  --logo-glow-hero: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.45))
+    drop-shadow(0 0 8px rgba(57, 255, 20, 0.18));
 }
 
 @theme inline {
@@ -47,11 +51,11 @@ body {
 }
 
 ::selection {
-  background: rgba(0, 255, 159, 0.25);
+  background: rgba(57, 255, 20, 0.22);
   color: #ffffff;
 }
 
-/* Neon utilities */
+/* Neon utilities — restrained */
 .neon-glow {
   box-shadow: var(--neon-glow);
 }
@@ -66,17 +70,16 @@ body {
 }
 
 .neon-border {
-  border-color: rgba(0, 255, 159, 0.4);
-  box-shadow: 0 0 0 1px rgba(0, 255, 159, 0.12), var(--neon-glow);
+  border-color: rgba(57, 255, 20, 0.35);
+  box-shadow: 0 0 0 1px rgba(57, 255, 20, 0.08), var(--neon-glow);
 }
 
 .neon-focus:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 1px var(--accent), 0 0 16px rgba(0, 255, 159, 0.35);
+  box-shadow: 0 0 0 1px var(--accent), 0 0 10px rgba(57, 255, 20, 0.22);
 }
 
-/* Logo glows — filter-based so no black box appears */
 .logo-glow {
   filter: var(--logo-glow);
 }
@@ -85,18 +88,18 @@ body {
   filter: var(--logo-glow-hero);
 }
 
-/* Subtle grid background for hero sections */
+/* Subtle grid — barely there */
 .bg-grid {
   background-image:
-    linear-gradient(rgba(0, 255, 159, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 255, 159, 0.035) 1px, transparent 1px);
+    linear-gradient(rgba(57, 255, 20, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(57, 255, 20, 0.025) 1px, transparent 1px);
   background-size: 56px 56px;
-  mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 75%);
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 15%, transparent 70%);
 }
 
+/* Soft top wash — not a green fog */
 .bg-radial-neon {
   background:
-    radial-gradient(ellipse 70% 45% at 50% 0%, rgba(0, 255, 159, 0.14), transparent 55%),
-    radial-gradient(ellipse 50% 35% at 50% 55%, rgba(0, 255, 159, 0.04), transparent 55%),
+    radial-gradient(ellipse 65% 40% at 50% 0%, rgba(57, 255, 20, 0.06), transparent 55%),
     var(--background);
 }
