@@ -6,6 +6,7 @@ import { Comparison } from "@/components/home/Comparison";
 import { Process } from "@/components/home/Process";
 import { RankingAudit } from "@/components/home/RankingAudit";
 import { FeaturedProjects } from "@/components/home/FeaturedProjects";
+import { FAQ } from "@/components/home/FAQ";
 import { CtaLeadForm } from "@/components/home/CtaLeadForm";
 
 export default function HomePage() {
@@ -19,6 +20,7 @@ export default function HomePage() {
       <Process />
       <RankingAudit />
       <FeaturedProjects />
+      <FAQ />
       <CtaLeadForm />
     </>
   );
