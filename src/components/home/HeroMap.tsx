@@ -202,6 +202,30 @@ export function HeroMap() {
           Local visibility
         </div>
       </div>
+
+      {/* 5-star rating under map */}
+      <div className="mt-4 flex flex-col items-center gap-1.5 lg:items-start">
+        <div
+          className="flex items-center gap-0.5"
+          role="img"
+          aria-label="5 star rating"
+        >
+          {Array.from({ length: 5 }).map((_, i) => (
+            <svg
+              key={i}
+              viewBox="0 0 20 20"
+              className="h-4 w-4 text-accent sm:h-[1.125rem] sm:w-[1.125rem]"
+              fill="currentColor"
+              aria-hidden
+            >
+              <path d="M10 1.5l2.47 5.01 5.53.8-4 3.9.94 5.5L10 14.27 5.06 16.7l.94-5.5-4-3.9 5.53-.8L10 1.5z" />
+            </svg>
+          ))}
+        </div>
+        <p className="text-[11px] font-medium tracking-wide text-muted sm:text-xs">
+          5-star reviews
+        </p>
+      </div>
     </motion.div>
   );
 }
