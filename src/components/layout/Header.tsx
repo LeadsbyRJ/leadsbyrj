@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X as XClose } from "lucide-react";
@@ -10,6 +9,7 @@ import { NAV_LINKS, SITE } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { LogoLink } from "@/components/layout/LogoLink";
 
 function XIcon({ className }: { className?: string }) {
   return (
@@ -57,20 +57,10 @@ export function Header() {
       )}
     >
       <Container className="flex h-[4.25rem] items-center justify-between gap-4 sm:h-[4.75rem]">
-        <Link
-          href="/"
-          className="relative z-10 flex shrink-0 items-center transition-opacity hover:opacity-90"
-        >
-          <Image
-            src="/logo.png"
-            alt={`${SITE.name} logo`}
-            width={808}
-            height={288}
-            className="logo-glow h-9 w-auto sm:h-10 md:h-11"
-            priority
-            sizes="180px"
-          />
-        </Link>
+        <LogoLink
+          priority
+          imageClassName="h-9 w-auto sm:h-10 md:h-11"
+        />
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Main">
           {NAV_LINKS.map((link) => {

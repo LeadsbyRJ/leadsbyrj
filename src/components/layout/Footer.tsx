@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import { NAV_LINKS, SITE } from "@/lib/constants";
 import { Container } from "@/components/ui/Container";
+import { LogoLink } from "@/components/layout/LogoLink";
 
 function XIcon({ className }: { className?: string }) {
   return (
@@ -24,16 +24,7 @@ export function Footer() {
       <Container className="py-10 sm:py-12">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link href="/" className="inline-block">
-              <Image
-                src="/logo.png"
-                alt={`${SITE.name} logo`}
-                width={808}
-                height={288}
-                className="logo-glow h-10 w-auto sm:h-11"
-                sizes="180px"
-              />
-            </Link>
+            <LogoLink imageClassName="h-10 w-auto sm:h-11" />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
               {SITE.tagline} Helping local businesses get found and get more
               customers since {SITE.since}.

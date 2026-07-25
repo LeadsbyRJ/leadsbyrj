@@ -11,11 +11,15 @@ import { HeroParticles } from "@/components/home/HeroParticles";
 const ease = [0.22, 1, 0.36, 1] as const;
 
 const item = {
-  hidden: { opacity: 0, y: 18 },
+  hidden: { opacity: 0, y: 42 },
   show: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: 0.08 + i * 0.12, duration: 0.55, ease },
+    transition: {
+      delay: 0.12 + i * 0.16,
+      duration: 0.7,
+      ease,
+    },
   }),
 };
 
@@ -28,7 +32,6 @@ export function Hero() {
 
       <Container className="relative z-10 py-12 sm:py-16 lg:py-20">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-12 xl:gap-16">
-          {/* Copy column */}
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             <motion.div
               custom={0}
@@ -56,23 +59,28 @@ export function Hero() {
               className="mb-5 sm:mb-6"
             >
               <motion.div
-                className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/5 px-3.5 py-1.5 text-xs font-medium text-accent sm:text-sm"
+                className="inline-flex items-center gap-2 rounded-full border border-accent/35 bg-accent/5 px-3.5 py-1.5 text-xs font-medium text-accent sm:text-sm"
                 animate={{
                   boxShadow: [
                     "0 0 0 0 rgba(57,255,20,0)",
-                    "0 0 14px 0 rgba(57,255,20,0.22)",
+                    "0 0 18px 2px rgba(57,255,20,0.32)",
                     "0 0 0 0 rgba(57,255,20,0)",
                   ],
                   borderColor: [
                     "rgba(57,255,20,0.3)",
-                    "rgba(57,255,20,0.5)",
+                    "rgba(57,255,20,0.65)",
                     "rgba(57,255,20,0.3)",
                   ],
+                  scale: [1, 1.03, 1],
                 }}
-                transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut" }}
+                transition={{
+                  duration: 2.4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
               >
                 <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-40" />
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-50" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
                 </span>
                 Available for work
@@ -124,7 +132,6 @@ export function Hero() {
             </motion.div>
           </div>
 
-          {/* Map — desktop only */}
           <HeroMap />
         </div>
       </Container>
