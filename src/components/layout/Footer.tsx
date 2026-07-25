@@ -26,8 +26,9 @@ export function Footer() {
           <div className="sm:col-span-2 lg:col-span-1">
             <LogoLink imageClassName="h-10 w-auto sm:h-11" />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
-              {SITE.tagline} Helping local businesses get found and get more
-              customers since {SITE.since}.
+              Websites, SEO, Google Maps Marketing &amp; Google Ads that generate
+              real local leads. Helping local businesses get found and get more
+              customers since 2014.
             </p>
           </div>
 
