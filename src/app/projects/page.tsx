@@ -14,14 +14,14 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <>
-      <Section className="bg-radial-neon pt-12 sm:pt-16">
+      <Section className="bg-radial-neon pt-10 sm:pt-14">
         <SectionHeading
           eyebrow="Projects"
           title="Work that generates leads"
           description="Selected client sites built for conversion—local service businesses and product brands. More case studies coming soon."
         />
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-5 md:grid-cols-2">
           {PROJECTS.map((project) => (
             <Card key={project.slug} className="flex flex-col">
               <div className="mb-4 flex flex-wrap gap-2">
@@ -66,7 +66,7 @@ export default function ProjectsPage() {
           </Card>
         </div>
 
-        <div className="mt-14 text-center">
+        <div className="mt-10 text-center">
           <p className="mb-4 text-muted">
             Want results like these for your business?
           </p>

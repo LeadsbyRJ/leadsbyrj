@@ -44,13 +44,14 @@ export default function AboutPage() {
               </Button>
             </div>
           </div>
-          <Card className="flex flex-col items-center justify-center py-12">
+          <Card className="flex flex-col items-center justify-center py-10 sm:py-12">
             <Image
               src="/logo.png"
               alt={`${SITE.name} logo`}
-              width={240}
-              height={72}
-              className="h-16 w-auto drop-shadow-[0_0_24px_rgba(0,255,159,0.35)] sm:h-20"
+              width={808}
+              height={288}
+              className="logo-glow-hero h-16 w-auto sm:h-20"
+              sizes="240px"
             />
             <p className="mt-6 text-center text-sm text-muted">
               {SITE.email}

@@ -21,16 +21,17 @@ export function Footer() {
 
   return (
     <footer className="border-t border-border bg-background-elevated">
-      <Container className="py-12 sm:py-16">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+      <Container className="py-10 sm:py-12">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="inline-block">
               <Image
                 src="/logo.png"
                 alt={`${SITE.name} logo`}
-                width={160}
-                height={48}
-                className="h-10 w-auto"
+                width={808}
+                height={288}
+                className="logo-glow h-11 w-auto sm:h-12"
+                sizes="180px"
               />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
@@ -125,7 +126,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-border pt-8 text-center text-xs text-muted sm:flex-row sm:text-left">
+        <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-border pt-6 text-center text-xs text-muted sm:flex-row sm:text-left">
           <p>
             © {year} {SITE.name}. All rights reserved.
           </p>

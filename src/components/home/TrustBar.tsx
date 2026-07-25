@@ -11,8 +11,8 @@ const items = [
 export function TrustBar() {
   return (
     <div className="border-y border-border bg-background-elevated">
-      <Container className="py-8 sm:py-10">
-        <div className="grid grid-cols-2 gap-6 lg:grid-cols-4 lg:gap-8">
+      <Container className="py-6 sm:py-7">
+        <div className="grid grid-cols-2 gap-5 lg:grid-cols-4 lg:gap-6">
           {items.map((item) => (
             <div key={item.label} className="text-center lg:text-left">
               <p className="text-sm font-semibold text-foreground sm:text-base">

@@ -11,10 +11,14 @@
   --accent-dim: #00cc7f;
   --border: #222222;
   --border-hover: #333333;
-  --neon-glow: 0 0 20px rgba(0, 255, 159, 0.45), 0 0 40px rgba(0, 255, 159, 0.2);
-  --neon-glow-strong: 0 0 24px rgba(0, 255, 159, 0.6), 0 0 48px rgba(0, 255, 159, 0.3),
-    0 0 80px rgba(0, 255, 159, 0.15);
-  --neon-text-glow: 0 0 12px rgba(0, 255, 159, 0.7), 0 0 28px rgba(0, 255, 159, 0.35);
+  --neon-glow: 0 0 18px rgba(0, 255, 159, 0.45), 0 0 36px rgba(0, 255, 159, 0.22);
+  --neon-glow-strong: 0 0 22px rgba(0, 255, 159, 0.65), 0 0 48px rgba(0, 255, 159, 0.32),
+    0 0 80px rgba(0, 255, 159, 0.14);
+  --neon-text-glow: 0 0 10px rgba(0, 255, 159, 0.75), 0 0 24px rgba(0, 255, 159, 0.4);
+  --logo-glow: drop-shadow(0 0 10px rgba(0, 255, 159, 0.55))
+    drop-shadow(0 0 24px rgba(0, 255, 159, 0.28));
+  --logo-glow-hero: drop-shadow(0 0 14px rgba(0, 255, 159, 0.7))
+    drop-shadow(0 0 32px rgba(0, 255, 159, 0.4)) drop-shadow(0 0 56px rgba(0, 255, 159, 0.18));
 }
 
 @theme inline {
@@ -62,8 +66,8 @@ body {
 }
 
 .neon-border {
-  border-color: rgba(0, 255, 159, 0.35);
-  box-shadow: 0 0 0 1px rgba(0, 255, 159, 0.15), var(--neon-glow);
+  border-color: rgba(0, 255, 159, 0.4);
+  box-shadow: 0 0 0 1px rgba(0, 255, 159, 0.12), var(--neon-glow);
 }
 
 .neon-focus:focus {
@@ -72,17 +76,27 @@ body {
   box-shadow: 0 0 0 1px var(--accent), 0 0 16px rgba(0, 255, 159, 0.35);
 }
 
+/* Logo glows — filter-based so no black box appears */
+.logo-glow {
+  filter: var(--logo-glow);
+}
+
+.logo-glow-hero {
+  filter: var(--logo-glow-hero);
+}
+
 /* Subtle grid background for hero sections */
 .bg-grid {
   background-image:
-    linear-gradient(rgba(0, 255, 159, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 255, 159, 0.03) 1px, transparent 1px);
-  background-size: 48px 48px;
+    linear-gradient(rgba(0, 255, 159, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 159, 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 75%);
 }
 
 .bg-radial-neon {
   background:
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 255, 159, 0.12), transparent 60%),
-    radial-gradient(ellipse 60% 40% at 80% 50%, rgba(0, 255, 159, 0.04), transparent 50%),
+    radial-gradient(ellipse 70% 45% at 50% 0%, rgba(0, 255, 159, 0.14), transparent 55%),
+    radial-gradient(ellipse 50% 35% at 50% 55%, rgba(0, 255, 159, 0.04), transparent 55%),
     var(--background);
 }

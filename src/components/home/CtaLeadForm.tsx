@@ -9,7 +9,7 @@ export function CtaLeadForm() {
   return (
     <Section className="bg-background">
       <AnimatedSection>
-        <div className="grid gap-10 rounded-3xl border border-border bg-surface p-6 sm:p-10 lg:grid-cols-2 lg:gap-14">
+        <div className="grid gap-8 rounded-2xl border border-border bg-surface p-5 sm:p-8 lg:grid-cols-2 lg:gap-12">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent neon-text">
               Let&apos;s talk

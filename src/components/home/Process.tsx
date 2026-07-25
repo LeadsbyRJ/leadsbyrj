@@ -12,18 +12,18 @@ export function Process() {
         title="A simple 3-step path to more leads"
         description="No fluff. Clear discovery, solid execution, and ongoing optimization."
       />
-      <StaggerChildren className="relative grid gap-6 md:grid-cols-3">
+      <StaggerChildren className="relative grid gap-5 md:grid-cols-3">
         <div
           className="pointer-events-none absolute left-0 right-0 top-10 hidden h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent md:block"
           aria-hidden
         />
         {PROCESS_STEPS.map((step) => (
           <StaggerItem key={step.step}>
-            <div className="relative rounded-2xl border border-border bg-surface p-6 sm:p-8 text-center md:text-left">
-              <span className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full border border-accent/40 bg-background text-sm font-bold text-accent neon-glow">
+            <div className="relative rounded-2xl border border-border bg-surface p-5 sm:p-6 text-center transition-all duration-300 hover:border-accent/40 hover:shadow-[0_0_24px_rgba(0,255,159,0.1)] md:text-left">
+              <span className="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full border border-accent/45 bg-background text-sm font-bold text-accent neon-glow">
                 {step.step}
               </span>
-              <h3 className="text-xl font-semibold text-foreground">{step.title}</h3>
+              <h3 className="text-lg font-semibold text-foreground sm:text-xl">{step.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">
                 {step.description}
               </p>

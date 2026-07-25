@@ -15,7 +15,7 @@ export function FeaturedProjects() {
         title="Projects that convert"
         description="Recent builds for real businesses—local service and product brands that need leads, not just a pretty homepage."
       />
-      <StaggerChildren className="grid gap-6 md:grid-cols-2">
+      <StaggerChildren className="grid gap-5 md:grid-cols-2">
         {PROJECTS.map((project) => (
           <StaggerItem key={project.slug}>
             <Card className="flex h-full flex-col">
@@ -51,7 +51,7 @@ export function FeaturedProjects() {
           </StaggerItem>
         ))}
       </StaggerChildren>
-      <div className="mt-10 flex justify-center">
+      <div className="mt-8 flex justify-center">
         <Button href="/projects" variant="secondary">
           View all projects
           <ArrowRight className="h-4 w-4" />

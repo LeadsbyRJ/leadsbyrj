@@ -56,15 +56,19 @@ export function Header() {
           : "border-b border-transparent bg-background/70 backdrop-blur-sm"
       )}
     >
-      <Container className="flex h-16 items-center justify-between gap-4 sm:h-[4.25rem]">
-        <Link href="/" className="relative z-10 flex shrink-0 items-center gap-2">
+      <Container className="flex h-[4.25rem] items-center justify-between gap-4 sm:h-[4.75rem]">
+        <Link
+          href="/"
+          className="relative z-10 flex shrink-0 items-center transition-opacity hover:opacity-90"
+        >
           <Image
             src="/logo.png"
             alt={`${SITE.name} logo`}
-            width={160}
-            height={48}
-            className="h-9 w-auto sm:h-10"
+            width={808}
+            height={288}
+            className="logo-glow h-10 w-auto sm:h-11 md:h-12"
             priority
+            sizes="180px"
           />
         </Link>
 

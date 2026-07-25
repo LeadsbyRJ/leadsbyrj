@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function PricingPage() {
   return (
     <>
-      <Section className="bg-radial-neon pt-12 sm:pt-16">
+      <Section className="bg-radial-neon pt-10 sm:pt-14">
         <SectionHeading
           eyebrow="Pricing"
           title="Clear packages. Real results."
@@ -23,7 +23,7 @@ export default function PricingPage() {
       </Section>
 
       <Section className="bg-background pt-0">
-        <div className="mb-8 text-center">
+        <div className="mb-6 text-center sm:mb-8">
           <h2 className="text-2xl font-bold text-foreground sm:text-3xl">
             Packages{" "}
             <span className="text-accent text-base font-semibold sm:text-lg">
@@ -31,14 +31,14 @@ export default function PricingPage() {
             </span>
           </h2>
         </div>
-        <div className="grid gap-6 lg:grid-cols-3">
+        <div className="grid gap-5 lg:grid-cols-3">
           {PACKAGE_PRICING.map((pkg) => (
             <Card
               key={pkg.name}
               glow={pkg.popular}
               className={cn(
                 "relative flex flex-col",
-                pkg.popular && "border-accent/50 ring-1 ring-accent/30"
+                pkg.popular && "border-accent/55 ring-1 ring-accent/35"
               )}
             >
               {pkg.popular && (
@@ -106,13 +106,13 @@ export default function PricingPage() {
                   {item.period}
                 </span>
               </p>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
+              <p className="mt-2.5 flex-1 text-sm leading-relaxed text-muted">
                 {item.description}
               </p>
             </Card>
           ))}
         </div>
-        <div className="mt-12 text-center">
+        <div className="mt-10 text-center">
           <p className="mb-4 text-muted">
             Not sure which option is right? Start with a free ranking audit.
           </p>

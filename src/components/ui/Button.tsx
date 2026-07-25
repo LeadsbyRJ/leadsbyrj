@@ -9,19 +9,18 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          "bg-accent text-black hover:bg-accent-dim neon-glow hover:neon-glow-strong active:scale-[0.98]",
+          "bg-accent text-black hover:bg-[#33ffb3] neon-glow hover:neon-glow-strong active:scale-[0.98]",
         secondary:
-          "border border-border bg-surface text-foreground hover:border-accent/50 hover:text-accent hover:neon-border",
-        ghost:
-          "text-muted hover:text-accent hover:bg-surface",
+          "border border-border/90 bg-surface/80 text-foreground hover:border-accent/55 hover:text-accent hover:bg-accent/5 hover:shadow-[0_0_20px_rgba(0,255,159,0.12)]",
+        ghost: "text-muted hover:text-accent hover:bg-surface",
         outline:
-          "border border-accent/40 text-accent hover:bg-accent/10 neon-glow",
+          "border border-accent/45 text-accent hover:bg-accent/10 neon-glow",
       },
       size: {
         sm: "h-9 px-4 text-xs",
         md: "h-11 px-6 text-sm",
         lg: "h-12 px-8 text-base",
-        xl: "h-14 px-10 text-base",
+        xl: "h-12 px-8 text-sm sm:h-14 sm:px-9 sm:text-base",
       },
     },
     defaultVariants: {
