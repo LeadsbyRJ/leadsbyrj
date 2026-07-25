@@ -26,10 +26,9 @@ const item = {
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-[calc(100svh-4.75rem)] items-center overflow-hidden bg-radial-neon">
+    <section className="relative flex min-h-[calc(100svh-4.75rem)] items-center overflow-hidden bg-background">
       <HeroBackground />
       <HeroParticles />
-      <div className="pointer-events-none absolute inset-0 bg-grid opacity-40" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-background to-transparent" />
 
       <Container className="relative z-10 py-12 sm:py-16 lg:py-20">

@@ -2,19 +2,18 @@
 
 import { motion } from "framer-motion";
 
+/** Low-density, slow-drifting neon particles — elegant, not busy */
 const PARTICLES = [
-  { left: "8%", top: "18%", size: 2, delay: 0, duration: 9 },
-  { left: "18%", top: "72%", size: 1.5, delay: 1.2, duration: 11 },
-  { left: "28%", top: "40%", size: 2, delay: 0.4, duration: 10 },
-  { left: "42%", top: "22%", size: 1.5, delay: 2, duration: 12 },
-  { left: "55%", top: "65%", size: 2.5, delay: 0.8, duration: 9.5 },
-  { left: "68%", top: "30%", size: 1.5, delay: 1.6, duration: 11.5 },
-  { left: "78%", top: "78%", size: 2, delay: 0.2, duration: 10.5 },
-  { left: "88%", top: "48%", size: 1.5, delay: 2.4, duration: 12 },
-  { left: "12%", top: "52%", size: 1.5, delay: 1.8, duration: 9 },
-  { left: "92%", top: "16%", size: 2, delay: 0.6, duration: 11 },
-  { left: "48%", top: "88%", size: 1.5, delay: 1.1, duration: 10 },
-  { left: "35%", top: "12%", size: 2, delay: 2.2, duration: 13 },
+  { left: "12%", top: "22%", size: 2, delay: 0, duration: 14, drift: 18 },
+  { left: "22%", top: "68%", size: 1.5, delay: 2.1, duration: 16, drift: 14 },
+  { left: "38%", top: "35%", size: 2, delay: 0.8, duration: 15, drift: 20 },
+  { left: "52%", top: "18%", size: 1.5, delay: 3.2, duration: 17, drift: 12 },
+  { left: "64%", top: "58%", size: 2.5, delay: 1.4, duration: 15.5, drift: 16 },
+  { left: "78%", top: "32%", size: 1.5, delay: 2.8, duration: 16.5, drift: 15 },
+  { left: "88%", top: "72%", size: 2, delay: 0.5, duration: 14.5, drift: 18 },
+  { left: "8%", top: "48%", size: 1.5, delay: 3.8, duration: 18, drift: 12 },
+  { left: "46%", top: "78%", size: 2, delay: 1.9, duration: 15, drift: 14 },
+  { left: "72%", top: "12%", size: 1.5, delay: 2.4, duration: 16, drift: 16 },
 ] as const;
 
 export function HeroParticles() {
@@ -23,20 +22,6 @@ export function HeroParticles() {
       className="pointer-events-none absolute inset-0 overflow-hidden"
       aria-hidden
     >
-      {/* Soft drifting grid layer */}
-      <motion.div
-        className="absolute inset-[-20%] opacity-[0.35]"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(57,255,20,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(57,255,20,0.04) 1px, transparent 1px)",
-          backgroundSize: "64px 64px",
-          maskImage:
-            "radial-gradient(ellipse 75% 65% at 50% 45%, black 10%, transparent 72%)",
-        }}
-        animate={{ x: [0, 18, 0], y: [0, -12, 0] }}
-        transition={{ duration: 28, repeat: Infinity, ease: "easeInOut" }}
-      />
-
       {PARTICLES.map((p, i) => (
         <motion.span
           key={i}
@@ -46,12 +31,13 @@ export function HeroParticles() {
             top: p.top,
             width: p.size,
             height: p.size,
-            boxShadow: "0 0 6px rgba(57,255,20,0.45)",
+            boxShadow: "0 0 8px rgba(57,255,20,0.4)",
           }}
           animate={{
-            y: [0, -14, 0],
-            opacity: [0.15, 0.45, 0.15],
-            scale: [1, 1.35, 1],
+            x: [0, p.drift * 0.4, -p.drift * 0.25, 0],
+            y: [0, -p.drift, -p.drift * 0.3, 0],
+            opacity: [0.12, 0.4, 0.22, 0.12],
+            scale: [1, 1.25, 1.05, 1],
           }}
           transition={{
             duration: p.duration,
