@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Menu, X as XClose } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { NAV_LINKS, SITE } from "@/lib/constants";
@@ -10,6 +10,11 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { LogoLink } from "@/components/layout/LogoLink";
+import {
+  navigateToSection,
+  resolveHomeSectionId,
+  SECTION_IDS,
+} from "@/lib/scroll";
 
 function XIcon({ className }: { className?: string }) {
   return (
@@ -26,6 +31,7 @@ function XIcon({ className }: { className?: string }) {
 
 export function Header() {
   const pathname = usePathname();
+  const router = useRouter();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -47,6 +53,37 @@ export function Header() {
     };
   }, [open]);
 
+  function handleNavClick(
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) {
+    // Close mobile drawer first so header height is correct for offset calc
+    const wasOpen = open;
+    if (wasOpen) setOpen(false);
+
+    const sectionId = resolveHomeSectionId(href, pathname);
+    if (sectionId) {
+      e.preventDefault();
+      navigateToSection(sectionId, {
+        pathname,
+        delayMs: wasOpen ? 280 : 0,
+        push: (url) => router.push(url),
+      });
+      return;
+    }
+
+    // Same-page / already on destination — nothing special
+  }
+
+  function handleRankingCta(fromMobileMenu: boolean) {
+    if (fromMobileMenu) setOpen(false);
+    navigateToSection(SECTION_IDS.rankingAudit, {
+      pathname,
+      delayMs: fromMobileMenu ? 280 : 0,
+      push: (url) => router.push(url),
+    });
+  }
+
   return (
     <header
       className={cn(
@@ -56,7 +93,10 @@ export function Header() {
           : "border-b border-transparent bg-background/70 backdrop-blur-sm"
       )}
     >
-      <Container className="flex h-[4.25rem] items-center justify-between gap-4 sm:h-[4.75rem]">
+      <Container
+        data-header-bar
+        className="flex h-[4.25rem] items-center justify-between gap-4 sm:h-[4.75rem]"
+      >
         <LogoLink
           priority
           imageClassName="h-9 w-auto sm:h-10 md:h-11"
@@ -72,6 +112,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className={cn(
                   "rounded-md px-3 py-2 text-sm font-medium transition-colors",
                   active
@@ -95,7 +136,12 @@ export function Header() {
           >
             <XIcon className="h-4 w-4" />
           </a>
-          <Button scrollToId="ranking-audit" size="sm" className="neon-glow">
+          <Button
+            type="button"
+            size="sm"
+            className="neon-glow"
+            onClick={() => handleRankingCta(false)}
+          >
             Get Free Ranking Audit
           </Button>
         </div>
@@ -132,6 +178,7 @@ export function Header() {
                   <Link
                     key={link.href}
                     href={link.href}
+                    onClick={(e) => handleNavClick(e, link.href)}
                     className={cn(
                       "rounded-lg px-3 py-3 text-base font-medium",
                       active
@@ -153,7 +200,11 @@ export function Header() {
                   <XIcon className="h-4 w-4" />
                   @{SITE.name.replace(/\s/g, "")}
                 </a>
-                <Button scrollToId="ranking-audit" className="w-full neon-glow">
+                <Button
+                  type="button"
+                  className="w-full neon-glow"
+                  onClick={() => handleRankingCta(true)}
+                >
                   Get Free Ranking Audit
                 </Button>
               </div>

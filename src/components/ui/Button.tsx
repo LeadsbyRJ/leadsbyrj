@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import {
   extractSectionId,
   navigateToSection,
+  resolveHomeSectionId,
   scrollToElementWithHeaderOffset,
 } from "@/lib/scroll";
 
@@ -45,6 +46,8 @@ export interface ButtonProps
   external?: boolean;
   /** Prefer scrolling to this section id (with sticky header offset) */
   scrollToId?: string;
+  /** Extra delay before scroll (e.g. after closing mobile menu) */
+  scrollDelayMs?: number;
 }
 
 export function Button({
@@ -54,6 +57,7 @@ export function Button({
   href,
   external,
   scrollToId,
+  scrollDelayMs = 0,
   children,
   onClick,
   ...props
@@ -62,18 +66,14 @@ export function Button({
   const router = useRouter();
   const classes = cn(buttonVariants({ variant, size, className }));
 
-  function handleSectionNav(
-    e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>,
-    sectionId: string
-  ) {
-    e.preventDefault();
+  function goToSection(sectionId: string) {
     navigateToSection(sectionId, {
       pathname,
+      delayMs: scrollDelayMs,
       push: (url) => router.push(url),
     });
   }
 
-  // Explicit scroll target (e.g. ranking-audit, contact-form)
   if (scrollToId) {
     return (
       <button
@@ -82,7 +82,8 @@ export function Button({
         onClick={(e) => {
           onClick?.(e);
           if (!e.defaultPrevented) {
-            handleSectionNav(e, scrollToId);
+            e.preventDefault();
+            goToSection(scrollToId);
           }
         }}
         {...props}
@@ -107,16 +108,27 @@ export function Button({
     }
 
     const hashId = extractSectionId(href);
-    // In-page or home hash links — sticky-header-aware scroll
-    if (hashId && (href.startsWith("#") || href.startsWith("/#"))) {
+    const homeSectionId = resolveHomeSectionId(href, pathname);
+
+    // Hash links or homepage /contact → section scroll with header offset
+    if (hashId || homeSectionId) {
+      const sectionId = hashId || homeSectionId!;
+      const anchorHref =
+        hashId && (href.startsWith("#") || href.startsWith("/#"))
+          ? href.startsWith("#")
+            ? href
+            : `/#${hashId}`
+          : `/#${sectionId}`;
+
       return (
         <a
-          href={href.startsWith("#") ? href : `/#${hashId}`}
+          href={anchorHref}
           className={classes}
           onClick={(e) => {
             onClick?.(e as unknown as React.MouseEvent<HTMLButtonElement>);
             if (!e.defaultPrevented) {
-              handleSectionNav(e, hashId);
+              e.preventDefault();
+              goToSection(sectionId);
             }
           }}
         >
@@ -139,5 +151,4 @@ export function Button({
   );
 }
 
-/** Re-export helper for non-Button CTAs if needed */
 export { scrollToElementWithHeaderOffset };

@@ -42,6 +42,29 @@
 
 html {
   scroll-behavior: smooth;
+  /* Fallback offset for native hash jumps; JS uses measured header height */
+  scroll-padding-top: 5.5rem;
+}
+
+@media (min-width: 640px) {
+  html {
+    scroll-padding-top: 6rem;
+  }
+}
+
+/* Consistent sticky-header clearance for in-page section targets */
+#contact,
+#contact-form,
+#ranking-audit {
+  scroll-margin-top: 5.5rem;
+}
+
+@media (min-width: 640px) {
+  #contact,
+  #contact-form,
+  #ranking-audit {
+    scroll-margin-top: 6rem;
+  }
 }
 
 body {

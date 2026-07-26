@@ -1,7 +1,11 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { NAV_LINKS, SITE } from "@/lib/constants";
 import { Container } from "@/components/ui/Container";
 import { LogoLink } from "@/components/layout/LogoLink";
+import { navigateToSection, resolveHomeSectionId } from "@/lib/scroll";
 
 function XIcon({ className }: { className?: string }) {
   return (
@@ -24,6 +28,21 @@ const FOOTER_LINKS = [
 
 export function Footer() {
   const year = new Date().getFullYear();
+  const pathname = usePathname();
+  const router = useRouter();
+
+  function handleFooterNav(
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) {
+    const sectionId = resolveHomeSectionId(href, pathname);
+    if (!sectionId) return;
+    e.preventDefault();
+    navigateToSection(sectionId, {
+      pathname,
+      push: (url) => router.push(url),
+    });
+  }
 
   return (
     <footer className="border-t border-border bg-background-elevated">
@@ -57,6 +76,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
+                    onClick={(e) => handleFooterNav(e, link.href)}
                     className="text-sm text-muted transition-colors hover:text-accent"
                   >
                     {link.label}
@@ -111,6 +131,7 @@ export function Footer() {
             </p>
             <Link
               href="/#ranking-audit"
+              onClick={(e) => handleFooterNav(e, "/#ranking-audit")}
               className="mt-4 inline-flex text-sm font-semibold text-accent transition-colors hover:text-accent-dim"
             >
               Get Free Ranking Audit →

@@ -15,12 +15,11 @@ export function HashScroll() {
       const hash = window.location.hash.replace(/^#/, "");
       if (!hash) return;
 
-      // Double rAF + delay so layout settles (esp. mobile Safari)
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
           window.setTimeout(() => {
             scrollToElementWithHeaderOffset(hash, behavior);
-          }, 80);
+          }, 100);
         });
       });
     }
@@ -31,14 +30,14 @@ export function HashScroll() {
 
     scrollFromHash("smooth");
 
-    // Retry after fonts/images — mobile can mis-measure on first paint
-    const retry = window.setTimeout(() => {
-      scrollFromHash("auto");
-    }, 350);
+    // Correct after layout/fonts (mobile Safari)
+    const retry1 = window.setTimeout(() => scrollFromHash("auto"), 300);
+    const retry2 = window.setTimeout(() => scrollFromHash("auto"), 600);
 
     window.addEventListener("hashchange", onHashChange);
     return () => {
-      window.clearTimeout(retry);
+      window.clearTimeout(retry1);
+      window.clearTimeout(retry2);
       window.removeEventListener("hashchange", onHashChange);
     };
   }, [pathname]);
