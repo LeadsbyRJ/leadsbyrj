@@ -178,6 +178,7 @@ export const PROJECTS = [
     summary:
       "Local landscaping and hardscaping site with before/after project galleries, quote form, and strong local trust signals including a 5.0 Yelp rating.",
     tags: ["Website", "Local SEO", "Lead Forms"],
+    image: "/projects/lobato-landscaping.jpg",
   },
   {
     slug: "vseeboxus",
@@ -187,5 +188,6 @@ export const PROJECTS = [
     summary:
       "Authorized streaming box product site built for retail and wholesale lead generation—clear catalog, trust, and conversion paths.",
     tags: ["E-commerce", "Product Site", "Wholesale Leads"],
+    image: "/projects/vseeboxus.jpg",
   },
 ] as const;
