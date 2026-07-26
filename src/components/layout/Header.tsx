@@ -95,7 +95,7 @@ export function Header() {
           >
             <XIcon className="h-4 w-4" />
           </a>
-          <Button href="/contact" size="sm" className="neon-glow">
+          <Button scrollToId="ranking-audit" size="sm" className="neon-glow">
             Get Free Ranking Audit
           </Button>
         </div>
@@ -153,7 +153,7 @@ export function Header() {
                   <XIcon className="h-4 w-4" />
                   @{SITE.name.replace(/\s/g, "")}
                 </a>
-                <Button href="/contact" className="w-full neon-glow">
+                <Button scrollToId="ranking-audit" className="w-full neon-glow">
                   Get Free Ranking Audit
                 </Button>
               </div>

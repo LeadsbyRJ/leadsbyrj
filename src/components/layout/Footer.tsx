@@ -110,7 +110,7 @@ export function Footer() {
               Google—and how to climb.
             </p>
             <Link
-              href="/contact"
+              href="/#ranking-audit"
               className="mt-4 inline-flex text-sm font-semibold text-accent transition-colors hover:text-accent-dim"
             >
               Get Free Ranking Audit →

@@ -1,14 +1,12 @@
 "use client";
 
 import { useId, useState, type FormEvent } from "react";
-import { usePathname, useRouter } from "next/navigation";
 import { Search, MapPin, ExternalLink, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Input, Label } from "@/components/ui/Input";
 import { Section } from "@/components/ui/Section";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
 import { cn } from "@/lib/utils";
-import { scrollToElementWithHeaderOffset } from "@/lib/scroll";
 
 function buildMapsSearchUrl(service: string, location: string) {
   const query = [service.trim(), location.trim()].filter(Boolean).join(" ");
@@ -17,8 +15,6 @@ function buildMapsSearchUrl(service: string, location: string) {
 
 export function RankingAudit() {
   const uid = useId();
-  const pathname = usePathname();
-  const router = useRouter();
   const [service, setService] = useState("");
   const [cityState, setCityState] = useState("");
   const [mapsError, setMapsError] = useState("");
@@ -37,21 +33,11 @@ export function RankingAudit() {
     );
   }
 
-  function goToContactForm(e: React.MouseEvent) {
-    e.preventDefault();
-    // Prefer homepage contact form; fall back to /contact#contact-form
-    if (pathname === "/") {
-      const scrolled = scrollToElementWithHeaderOffset("contact-form");
-      if (!scrolled) {
-        scrollToElementWithHeaderOffset("contact");
-      }
-      return;
-    }
-    router.push("/#contact-form");
-  }
-
   return (
-    <Section id="ranking-audit" className="bg-background">
+    <Section
+      id="ranking-audit"
+      className="scroll-mt-[5.5rem] bg-background sm:scroll-mt-24"
+    >
       <AnimatedSection>
         <div
           className={cn(
@@ -154,7 +140,7 @@ export function RankingAudit() {
               </div>
               <Button
                 type="button"
-                onClick={goToContactForm}
+                scrollToId="contact-form"
                 className="w-full shrink-0 neon-glow sm:w-auto"
               >
                 Request a Free Personal Audit

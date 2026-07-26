@@ -112,7 +112,7 @@ export function Comparison() {
           Ready for marketing that actually generates leads—and a partner who
           answers when you call?
         </p>
-        <Button href="/contact" size="lg" className="neon-glow">
+        <Button scrollToId="ranking-audit" size="lg" className="neon-glow">
           Get Free Ranking Audit
         </Button>
       </motion.div>

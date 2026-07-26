@@ -20,7 +20,7 @@ export default function ContactPage() {
   return (
     <Section
       id="contact"
-      className="scroll-mt-[4.75rem] bg-radial-neon pt-8 sm:scroll-mt-24 sm:pt-14"
+      className="scroll-mt-[5.5rem] bg-radial-neon pt-8 sm:scroll-mt-24 sm:pt-14"
     >
       <SectionHeading
         eyebrow="Contact"
@@ -74,7 +74,7 @@ export default function ContactPage() {
 
         <Card
           id="contact-form"
-          className="scroll-mt-[4.75rem] p-4 sm:scroll-mt-24 sm:p-6 lg:col-span-3"
+          className="scroll-mt-[5.5rem] p-4 sm:scroll-mt-24 sm:p-6 lg:col-span-3"
         >
           <ContactForm
             title="Send a message"

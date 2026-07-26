@@ -1,7 +1,15 @@
+"use client";
+
 import * as React from "react";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
+import {
+  extractSectionId,
+  navigateToSection,
+  scrollToElementWithHeaderOffset,
+} from "@/lib/scroll";
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50 cursor-pointer",
@@ -35,6 +43,8 @@ export interface ButtonProps
     VariantProps<typeof buttonVariants> {
   href?: string;
   external?: boolean;
+  /** Prefer scrolling to this section id (with sticky header offset) */
+  scrollToId?: string;
 }
 
 export function Button({
@@ -43,10 +53,44 @@ export function Button({
   size,
   href,
   external,
+  scrollToId,
   children,
+  onClick,
   ...props
 }: ButtonProps) {
+  const pathname = usePathname();
+  const router = useRouter();
   const classes = cn(buttonVariants({ variant, size, className }));
+
+  function handleSectionNav(
+    e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>,
+    sectionId: string
+  ) {
+    e.preventDefault();
+    navigateToSection(sectionId, {
+      pathname,
+      push: (url) => router.push(url),
+    });
+  }
+
+  // Explicit scroll target (e.g. ranking-audit, contact-form)
+  if (scrollToId) {
+    return (
+      <button
+        type="button"
+        className={classes}
+        onClick={(e) => {
+          onClick?.(e);
+          if (!e.defaultPrevented) {
+            handleSectionNav(e, scrollToId);
+          }
+        }}
+        {...props}
+      >
+        {children}
+      </button>
+    );
+  }
 
   if (href) {
     if (external) {
@@ -61,6 +105,26 @@ export function Button({
         </a>
       );
     }
+
+    const hashId = extractSectionId(href);
+    // In-page or home hash links — sticky-header-aware scroll
+    if (hashId && (href.startsWith("#") || href.startsWith("/#"))) {
+      return (
+        <a
+          href={href.startsWith("#") ? href : `/#${hashId}`}
+          className={classes}
+          onClick={(e) => {
+            onClick?.(e as unknown as React.MouseEvent<HTMLButtonElement>);
+            if (!e.defaultPrevented) {
+              handleSectionNav(e, hashId);
+            }
+          }}
+        >
+          {children}
+        </a>
+      );
+    }
+
     return (
       <Link href={href} className={classes}>
         {children}
@@ -69,8 +133,11 @@ export function Button({
   }
 
   return (
-    <button className={classes} {...props}>
+    <button className={classes} onClick={onClick} {...props}>
       {children}
     </button>
   );
 }
+
+/** Re-export helper for non-Button CTAs if needed */
+export { scrollToElementWithHeaderOffset };

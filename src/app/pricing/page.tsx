@@ -56,7 +56,7 @@ export default function PricingPage() {
           <p className="mb-4 text-muted">
             Not sure which option is right? Start with a free ranking audit.
           </p>
-          <Button href="/contact" size="lg" className="neon-glow">
+          <Button href="/#ranking-audit" size="lg" className="neon-glow">
             Get Free Ranking Audit
           </Button>
         </div>

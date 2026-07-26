@@ -11,21 +11,36 @@ export function HashScroll() {
   const pathname = usePathname();
 
   useEffect(() => {
-    function scrollFromHash() {
+    function scrollFromHash(behavior: ScrollBehavior = "smooth") {
       const hash = window.location.hash.replace(/^#/, "");
       if (!hash) return;
 
-      // Wait for layout paint (esp. after client navigation)
+      // Double rAF + delay so layout settles (esp. mobile Safari)
       requestAnimationFrame(() => {
-        window.setTimeout(() => {
-          scrollToElementWithHeaderOffset(hash, "smooth");
-        }, 50);
+        requestAnimationFrame(() => {
+          window.setTimeout(() => {
+            scrollToElementWithHeaderOffset(hash, behavior);
+          }, 80);
+        });
       });
     }
 
-    scrollFromHash();
-    window.addEventListener("hashchange", scrollFromHash);
-    return () => window.removeEventListener("hashchange", scrollFromHash);
+    function onHashChange() {
+      scrollFromHash("smooth");
+    }
+
+    scrollFromHash("smooth");
+
+    // Retry after fonts/images — mobile can mis-measure on first paint
+    const retry = window.setTimeout(() => {
+      scrollFromHash("auto");
+    }, 350);
+
+    window.addEventListener("hashchange", onHashChange);
+    return () => {
+      window.clearTimeout(retry);
+      window.removeEventListener("hashchange", onHashChange);
+    };
   }, [pathname]);
 
   return null;

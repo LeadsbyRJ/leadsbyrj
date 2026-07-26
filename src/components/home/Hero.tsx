@@ -120,7 +120,7 @@ export function Hero() {
               className="mt-6 flex w-full max-w-sm flex-col items-stretch gap-2.5 sm:mt-8 sm:max-w-none sm:w-auto sm:flex-row sm:items-center sm:gap-3 lg:justify-start"
             >
               <Button
-                href="#ranking-audit"
+                scrollToId="ranking-audit"
                 size="lg"
                 className="w-full sm:w-auto sm:min-w-[200px] sm:h-14 sm:px-9"
               >

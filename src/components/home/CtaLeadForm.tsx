@@ -9,12 +9,12 @@ export function CtaLeadForm() {
   return (
     <Section
       id="contact"
-      className="scroll-mt-[4.75rem] bg-background sm:scroll-mt-24"
+      className="scroll-mt-[5.5rem] bg-background sm:scroll-mt-24"
     >
       <AnimatedSection>
         <div
           id="contact-form"
-          className="scroll-mt-[4.75rem] grid gap-6 rounded-2xl border border-border bg-surface p-4 sm:scroll-mt-24 sm:gap-8 sm:p-8 lg:grid-cols-2 lg:gap-12"
+          className="scroll-mt-[5.5rem] grid gap-6 rounded-2xl border border-border bg-surface p-4 sm:scroll-mt-24 sm:gap-8 sm:p-8 lg:grid-cols-2 lg:gap-12"
         >
           <div>
             <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-accent neon-text sm:text-xs">

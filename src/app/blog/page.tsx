@@ -24,7 +24,7 @@ export default function BlogPage() {
           audit or browse projects.
         </p>
         <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <Button href="/contact" className="neon-glow">
+          <Button href="/#ranking-audit" className="neon-glow">
             Get Free Ranking Audit
           </Button>
           <Button href="/projects" variant="secondary">
