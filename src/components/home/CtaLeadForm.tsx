@@ -46,7 +46,7 @@ export function CtaLeadForm() {
               </p>
             </div>
           </div>
-          <ContactForm title="" submitLabel="Request Free Ranking Audit" />
+          <ContactForm title="" submitLabel="Get Started" />
         </div>
       </AnimatedSection>
     </Section>

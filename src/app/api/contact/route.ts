@@ -17,6 +17,8 @@ type ContactPayload = {
   email: string;
   website?: string;
   message: string;
+  /** Optional: "yes" | "no" for free GBP ranking audit interest */
+  rankingAudit?: string;
   consent: boolean;
   /** Honeypot — bots fill this; humans leave empty */
   company?: string;
@@ -61,6 +63,7 @@ async function postToGoogleScript(fields: {
   email: string;
   website: string;
   message: string;
+  rankingAudit: string;
 }) {
   const payload = {
     name: fields.name,
@@ -69,6 +72,7 @@ async function postToGoogleScript(fields: {
     email: fields.email,
     website: fields.website,
     message: fields.message,
+    rankingAudit: fields.rankingAudit,
   };
 
   const res = await fetch(GOOGLE_SCRIPT_URL, {
@@ -132,6 +136,7 @@ export async function POST(request: Request) {
   const email = sanitize(body.email, 160);
   const website = sanitize(body.website ?? "", 300);
   const message = sanitize(body.message, 5000);
+  const rankingAudit = sanitize(body.rankingAudit ?? "", 10).toLowerCase();
   const consent = Boolean(body.consent);
 
   if (!name || !phone || !email || !message || !consent) {
@@ -160,6 +165,8 @@ export async function POST(request: Request) {
       email,
       website,
       message,
+      rankingAudit:
+        rankingAudit === "yes" || rankingAudit === "no" ? rankingAudit : "",
     });
 
     if (result.ok) {

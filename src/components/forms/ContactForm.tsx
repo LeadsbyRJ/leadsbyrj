@@ -53,17 +53,25 @@ function ContactFormInner({
     const phone = String(data.get("phone") || "").trim();
     const email = String(data.get("email") || "").trim();
     const website = String(data.get("website") || "").trim();
-    const message = String(data.get("message") || "").trim();
+    const messageRaw = String(data.get("message") || "").trim();
+    const rankingAudit = String(data.get("rankingAudit") || "").trim(); // "yes" | "no" | ""
     const consent = data.get("consent") === "on";
     const company = String(data.get("company") || "").trim();
 
-    if (!name || !phone || !email || !message || !consent) {
+    if (!name || !phone || !email || !messageRaw || !consent) {
       setStatus("error");
       setErrorMessage(
         "Please complete all required fields and accept the consent checkbox."
       );
       return;
     }
+
+    const message =
+      rankingAudit === "yes" || rankingAudit === "no"
+        ? `${messageRaw}\n\nWould you also like a free Google Business Profile ranking audit?: ${
+            rankingAudit === "yes" ? "Yes" : "No"
+          }`
+        : messageRaw;
 
     setStatus("submitting");
     setErrorMessage("");
@@ -80,6 +88,7 @@ function ContactFormInner({
           email,
           website: website || "",
           message,
+          rankingAudit: rankingAudit || "",
           consent,
           company,
         }),
@@ -275,6 +284,38 @@ function ContactFormInner({
           .
         </label>
       </div>
+
+      {/* Optional GBP ranking audit question */}
+      <fieldset className="space-y-2.5" disabled={status === "submitting"}>
+        <legend className="text-[13px] font-medium leading-snug text-foreground sm:text-sm">
+          Would you also like a free Google Business Profile ranking audit?
+          <span className="ml-1.5 font-normal text-muted">(optional)</span>
+        </legend>
+        <div className="flex flex-wrap gap-2 sm:gap-3">
+          <label
+            className="inline-flex cursor-pointer items-center gap-2 rounded-lg border border-border bg-background-elevated px-4 py-2.5 text-sm text-muted transition-colors has-[:checked]:border-accent/50 has-[:checked]:bg-accent/10 has-[:checked]:text-accent"
+          >
+            <input
+              type="radio"
+              name="rankingAudit"
+              value="yes"
+              className="h-3.5 w-3.5 accent-[var(--accent)]"
+            />
+            Yes
+          </label>
+          <label
+            className="inline-flex cursor-pointer items-center gap-2 rounded-lg border border-border bg-background-elevated px-4 py-2.5 text-sm text-muted transition-colors has-[:checked]:border-accent/50 has-[:checked]:bg-accent/10 has-[:checked]:text-accent"
+          >
+            <input
+              type="radio"
+              name="rankingAudit"
+              value="no"
+              className="h-3.5 w-3.5 accent-[var(--accent)]"
+            />
+            No
+          </label>
+        </div>
+      </fieldset>
 
       {status === "error" && (
         <p className="text-sm text-red-400" role="alert">
