@@ -1,11 +1,19 @@
 "use client";
 
-import { Suspense, useEffect, useId, useState, type FormEvent } from "react";
+import {
+  Suspense,
+  useEffect,
+  useId,
+  useRef,
+  useState,
+  type FormEvent,
+} from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/Button";
 import { Input, Textarea, Label } from "@/components/ui/Input";
 import { SITE } from "@/lib/constants";
+import { scrollToElementWithHeaderOffset } from "@/lib/scroll";
 
 function buildAuditPrefill(service: string | null, location: string | null) {
   if (!service && !location) return "";
@@ -28,6 +36,7 @@ function ContactFormInner({
 }: ContactFormProps) {
   const uid = useId();
   const searchParams = useSearchParams();
+  const successRef = useRef<HTMLDivElement>(null);
   const [status, setStatus] = useState<
     "idle" | "submitting" | "success" | "error"
   >("idle");
@@ -43,6 +52,24 @@ function ContactFormInner({
     }
   }, [searchParams]);
 
+  // Bring success message into view on mobile after submit
+  useEffect(() => {
+    if (status !== "success") return;
+    const id = "contact-form-success";
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        window.setTimeout(() => {
+          if (!scrollToElementWithHeaderOffset(id, "smooth")) {
+            successRef.current?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        }, 50);
+      });
+    });
+  }, [status]);
+
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
@@ -53,12 +80,14 @@ function ContactFormInner({
     const phone = String(data.get("phone") || "").trim();
     const email = String(data.get("email") || "").trim();
     const website = String(data.get("website") || "").trim();
-    const messageRaw = String(data.get("message") || "").trim();
-    const wantsRankingAudit = String(data.get("wantsRankingAudit") || "").trim(); // "yes" | "no" | ""
+    const message = String(data.get("message") || "").trim();
+    const wantsRankingAudit = String(
+      data.get("wantsRankingAudit") || ""
+    ).trim(); // "yes" | "no" | ""
     const consent = data.get("consent") === "on";
     const company = String(data.get("company") || "").trim();
 
-    if (!name || !phone || !email || !messageRaw || !consent) {
+    if (!name || !phone || !email || !message || !consent) {
       setStatus("error");
       setErrorMessage(
         "Please complete all required fields and accept the consent checkbox."
@@ -66,18 +95,11 @@ function ContactFormInner({
       return;
     }
 
-    const message =
-      wantsRankingAudit === "yes" || wantsRankingAudit === "no"
-        ? `${messageRaw}\n\nWould you also like a free Google Business Profile ranking audit?: ${
-            wantsRankingAudit === "yes" ? "Yes" : "No"
-          }`
-        : messageRaw;
-
     setStatus("submitting");
     setErrorMessage("");
 
     try {
-      // Server route forwards these exact keys to Google Apps Script
+      // wantsRankingAudit is a separate Sheet column — never merge into message
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -120,7 +142,11 @@ function ContactFormInner({
 
   if (status === "success") {
     return (
-      <div className="space-y-4 rounded-xl border border-accent/30 bg-accent/5 p-5 sm:p-8">
+      <div
+        id="contact-form-success"
+        ref={successRef}
+        className="scroll-mt-[5.5rem] space-y-4 rounded-xl border border-accent/30 bg-accent/5 p-5 sm:scroll-mt-24 sm:p-8"
+      >
         {title ? (
           <h3 className="text-xl font-semibold text-foreground">{title}</h3>
         ) : null}
