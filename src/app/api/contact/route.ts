@@ -5,7 +5,7 @@ export const runtime = "nodejs";
 
 /**
  * Google Apps Script web app — writes to Sheet + emails.
- * Must stay exact (deployment URL).
+ * Keep this URL exact (deployment).
  */
 const GOOGLE_SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbwx2TO4FQ_qksV2OY7CRQ_sRXb5ga13YoRCycUQU8s1Eru4ilvFJ07Dkbt55lGOrq14/exec";
@@ -32,74 +32,80 @@ function sanitize(value: unknown, max = 2000) {
     .slice(0, max);
 }
 
-/**
- * POST to Google Apps Script while preserving the POST method across redirects.
- * Default fetch redirect-follow can turn 302 into GET and drop the body,
- * which returns a fake "success" without writing to the sheet.
- */
-async function postJsonToGoogleScript(payload: Record<string, string>) {
-  const body = JSON.stringify(payload);
-  // text/plain is the most reliable Content-Type for Apps Script doPost
-  const headers: HeadersInit = {
-    "Content-Type": "text/plain;charset=utf-8",
-  };
-
-  let url = GOOGLE_SCRIPT_URL;
-  let res: Response | null = null;
-
-  for (let hop = 0; hop < 6; hop++) {
-    res = await fetch(url, {
-      method: "POST",
-      headers,
-      body,
-      redirect: "manual",
-    });
-
-    // Follow redirects manually, always re-POST with the same body
-    if (res.status >= 300 && res.status < 400) {
-      const location = res.headers.get("location");
-      if (!location) break;
-      url = new URL(location, url).toString();
-      continue;
-    }
-
-    break;
-  }
-
-  if (!res) {
-    return { ok: false as const, error: "No response from Google Script." };
-  }
-
-  const raw = await res.text();
-  let data: { status?: string; message?: string } | null = null;
-
+function parseGasResponse(raw: string): {
+  status?: string;
+  message?: string;
+} | null {
+  if (!raw?.trim()) return null;
   try {
-    data = JSON.parse(raw) as { status?: string; message?: string };
+    return JSON.parse(raw) as { status?: string; message?: string };
   } catch {
     const match = raw.match(/\{[\s\S]*"status"\s*:\s*"[^"]+"[\s\S]*\}/);
-    if (match) {
-      try {
-        data = JSON.parse(match[0]) as { status?: string; message?: string };
-      } catch {
-        data = null;
-      }
+    if (!match) return null;
+    try {
+      return JSON.parse(match[0]) as { status?: string; message?: string };
+    } catch {
+      return null;
     }
   }
+}
+
+/**
+ * Post JSON to Google Apps Script using text/plain.
+ * This avoids intermittent HTTP 405s that occur with application/json.
+ */
+async function postToGoogleScript(fields: {
+  name: string;
+  businessName: string;
+  phone: string;
+  email: string;
+  website: string;
+  message: string;
+}) {
+  const payload = {
+    name: fields.name,
+    businessName: fields.businessName,
+    phone: fields.phone,
+    email: fields.email,
+    website: fields.website,
+    message: fields.message,
+  };
+
+  const res = await fetch(GOOGLE_SCRIPT_URL, {
+    method: "POST",
+    headers: {
+      // Required for reliable Google Apps Script doPost handling
+      "Content-Type": "text/plain;charset=utf-8",
+    },
+    body: JSON.stringify(payload),
+    redirect: "follow",
+  });
+
+  const raw = await res.text();
+  const data = parseGasResponse(raw);
 
   if (data?.status === "success") {
     return { ok: true as const };
   }
 
-  console.error("Google Script error:", {
+  // Treat non-JSON or unexpected status as failure (do not fake success)
+  console.error("Google Script response:", {
     httpStatus: res.status,
     body: raw.slice(0, 400),
   });
+
+  if (res.status === 405) {
+    return {
+      ok: false as const,
+      error: `Google Script rejected the request (HTTP 405). Please try again or email ${SITE.email}.`,
+    };
+  }
 
   return {
     ok: false as const,
     error:
       data?.message ||
-      `Could not save your message (HTTP ${res.status}). Please try again or email ${SITE.email}.`,
+      `Could not save your message. Please try again or email ${SITE.email}.`,
   };
 }
 
@@ -146,18 +152,15 @@ export async function POST(request: Request) {
     );
   }
 
-  // Exact keys for Google Apps Script / Sheet columns
-  const payload = {
-    name,
-    businessName,
-    phone,
-    email,
-    website,
-    message,
-  };
-
   try {
-    const result = await postJsonToGoogleScript(payload);
+    const result = await postToGoogleScript({
+      name,
+      businessName,
+      phone,
+      email,
+      website,
+      message,
+    });
 
     if (result.ok) {
       return NextResponse.json({ ok: true });
