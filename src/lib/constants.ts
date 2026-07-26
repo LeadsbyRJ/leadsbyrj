@@ -5,7 +5,8 @@ export const SITE = {
   phone: "(949) 264-2559",
   phoneHref: "tel:+19492642559",
   xUrl: "https://x.com/LeadsbyRJ",
-  tagline: "Websites, Google Ads & SEO that generate real local leads.",
+  tagline:
+    "Websites, SEO, Google Maps Marketing & Google Ads that generate real local leads.",
   since: 2014,
 } as const;
 

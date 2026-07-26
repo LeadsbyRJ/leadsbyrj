@@ -8,7 +8,12 @@ import { SITE } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 function smoothScrollTop() {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  try {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    document.documentElement.scrollTo({ top: 0, behavior: "smooth" });
+  } catch {
+    window.scrollTo(0, 0);
+  }
 }
 
 export function LogoLink({

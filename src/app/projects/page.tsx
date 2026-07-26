@@ -4,9 +4,16 @@ import { Button } from "@/components/ui/Button";
 import { ProjectsGrid } from "@/components/projects/ProjectsGrid";
 
 export const metadata: Metadata = {
-  title: "Projects",
+  title: "Projects — Websites & Local Lead Gen Case Work",
   description:
-    "Featured websites and lead-gen projects by Leads by RJ—including Lobato Landscaping and vSeeBoxUS.",
+    "Featured Orange County and national projects by Leads by RJ: Lobato Landscaping, vSeeBoxUS, and more conversion-focused websites, SEO, and lead gen builds.",
+  alternates: { canonical: "/projects" },
+  openGraph: {
+    title: "Projects | Leads by RJ — Lead-Generating Websites",
+    description:
+      "Real client websites built for Google Ads, SEO, and local leads—including Lobato Landscaping and vSeeBoxUS.",
+    url: "/projects",
+  },
 };
 
 export default function ProjectsPage() {

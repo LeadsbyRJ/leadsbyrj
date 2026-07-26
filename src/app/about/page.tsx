@@ -6,8 +6,15 @@ import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "About",
-  description: `About ${SITE.name}—websites, Google Ads, SEO, and Google Business Profile for local businesses since ${SITE.since}.`,
+  title: "About — Orange County Google Ads, SEO & Lead Gen",
+  description: `About ${SITE.name}: websites, Google Ads, SEO, and Google Business Profile for local businesses since ${SITE.since}. Practical, transparent, results-focused.`,
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About Leads by RJ | Local Marketing Since 2014",
+    description:
+      "Orange County–rooted digital marketing: websites, Google Ads, SEO, and Google Business Profile that generate real leads.",
+    url: "/about",
+  },
 };
 
 export default function AboutPage() {

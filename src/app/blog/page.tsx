@@ -4,9 +4,10 @@ import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "Blog — Local SEO, Google Ads & Lead Gen Tips",
   description:
-    "Local SEO, Google Ads, and lead generation insights from Leads by RJ. Coming soon.",
+    "Local SEO, Google Ads, Google Business Profile, and lead generation insights from Leads by RJ. Orange County marketing tips—coming soon.",
+  alternates: { canonical: "/blog" },
 };
 
 export default function BlogPage() {

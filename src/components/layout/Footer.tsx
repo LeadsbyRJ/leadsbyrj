@@ -16,6 +16,12 @@ function XIcon({ className }: { className?: string }) {
   );
 }
 
+const FOOTER_LINKS = [
+  ...NAV_LINKS,
+  { href: "/testimonials", label: "Testimonials" },
+  { href: "/privacy", label: "Privacy Policy" },
+] as const;
+
 export function Footer() {
   const year = new Date().getFullYear();
 
@@ -30,6 +36,16 @@ export function Footer() {
               real local leads. Helping local businesses get found and get more
               customers since 2014.
             </p>
+            <a
+              href={SITE.xUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-muted transition-colors hover:text-accent"
+              aria-label="Follow Leads by RJ on X"
+            >
+              <XIcon className="h-4 w-4" />
+              @LeadsbyRJ
+            </a>
           </div>
 
           <div>
@@ -37,7 +53,7 @@ export function Footer() {
               Navigate
             </h3>
             <ul className="mt-4 space-y-2">
-              {NAV_LINKS.map((link) => (
+              {FOOTER_LINKS.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
@@ -47,22 +63,6 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link
-                  href="/testimonials"
-                  className="text-sm text-muted transition-colors hover:text-accent"
-                >
-                  Testimonials
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/privacy"
-                  className="text-sm text-muted transition-colors hover:text-accent"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -111,7 +111,7 @@ export function Footer() {
             </p>
             <Link
               href="/contact"
-              className="mt-4 inline-flex text-sm font-semibold text-accent neon-text transition-opacity hover:opacity-90"
+              className="mt-4 inline-flex text-sm font-semibold text-accent transition-colors hover:text-accent-dim"
             >
               Get Free Ranking Audit →
             </Link>
@@ -122,7 +122,7 @@ export function Footer() {
           <p>
             © {year} {SITE.name}. All rights reserved.
           </p>
-          <p>Built for local businesses that want more leads.</p>
+          <p>Orange County · Websites · Google Ads · SEO · GBP</p>
         </div>
       </Container>
     </footer>

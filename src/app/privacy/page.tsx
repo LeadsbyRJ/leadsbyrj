@@ -5,7 +5,9 @@ import { Section } from "@/components/ui/Section";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: `Privacy Policy for ${SITE.name}—how we collect, use, and protect your information.`,
+  description: `Privacy Policy for ${SITE.name}—how we collect, use, and protect your information for Google Ads, SEO, and lead generation inquiries.`,
+  alternates: { canonical: "/privacy" },
+  robots: { index: true, follow: true },
 };
 
 export default function PrivacyPage() {

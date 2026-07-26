@@ -7,9 +7,16 @@ import {
 } from "@/components/pricing/PricingCards";
 
 export const metadata: Metadata = {
-  title: "Pricing",
+  title: "Pricing — Google Ads, SEO, Websites & GBP Packages",
   description:
-    "Transparent pricing for Google Business Profile, Google Ads, websites, SEO retainers, and money-saving packages from Leads by RJ.",
+    "Transparent Orange County pricing for Google Business Profile, Google Ads, websites, SEO retainers, and packages with 20% savings. No mystery retainers.",
+  alternates: { canonical: "/pricing" },
+  openGraph: {
+    title: "Pricing | Leads by RJ — Google Ads, SEO & Website Packages",
+    description:
+      "Clear rates for Google Ads, SEO, Google Business Profile, and conversion websites. Packages save 20%.",
+    url: "/pricing",
+  },
 };
 
 export default function PricingPage() {

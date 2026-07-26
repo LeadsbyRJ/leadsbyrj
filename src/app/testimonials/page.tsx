@@ -4,9 +4,10 @@ import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Testimonials",
+  title: "Testimonials — Client Results & Reviews",
   description:
-    "Client testimonials and reviews for Leads by RJ. Coming soon.",
+    "Client testimonials and results for Leads by RJ Google Ads, SEO, websites, and Google Business Profile projects. Coming soon.",
+  alternates: { canonical: "/testimonials" },
 };
 
 export default function TestimonialsPage() {

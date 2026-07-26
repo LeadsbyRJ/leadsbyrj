@@ -5,8 +5,15 @@ import { Card } from "@/components/ui/Card";
 import { ContactForm } from "@/components/forms/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact",
-  description: `Contact ${SITE.name} for a free ranking audit, website project, Google Ads, SEO, or Google Business Profile help. ${SITE.phone} · ${SITE.email}`,
+  title: "Contact — Free Ranking Audit | Google Ads & SEO",
+  description: `Contact ${SITE.name} for a free Google ranking audit, website project, Google Ads, SEO, or Google Business Profile help. Orange County. ${SITE.phone} · ${SITE.email}`,
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact Leads by RJ | Free Ranking Audit",
+    description:
+      "Request a free ranking audit or start a Google Ads, SEO, website, or Google Business Profile project. Call (949) 264-2559.",
+    url: "/contact",
+  },
 };
 
 export default function ContactPage() {
