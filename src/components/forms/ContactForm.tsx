@@ -54,7 +54,7 @@ function ContactFormInner({
     const email = String(data.get("email") || "").trim();
     const website = String(data.get("website") || "").trim();
     const messageRaw = String(data.get("message") || "").trim();
-    const rankingAudit = String(data.get("rankingAudit") || "").trim(); // "yes" | "no" | ""
+    const wantsRankingAudit = String(data.get("wantsRankingAudit") || "").trim(); // "yes" | "no" | ""
     const consent = data.get("consent") === "on";
     const company = String(data.get("company") || "").trim();
 
@@ -67,9 +67,9 @@ function ContactFormInner({
     }
 
     const message =
-      rankingAudit === "yes" || rankingAudit === "no"
+      wantsRankingAudit === "yes" || wantsRankingAudit === "no"
         ? `${messageRaw}\n\nWould you also like a free Google Business Profile ranking audit?: ${
-            rankingAudit === "yes" ? "Yes" : "No"
+            wantsRankingAudit === "yes" ? "Yes" : "No"
           }`
         : messageRaw;
 
@@ -88,7 +88,7 @@ function ContactFormInner({
           email,
           website: website || "",
           message,
-          rankingAudit: rankingAudit || "",
+          wantsRankingAudit: wantsRankingAudit || "",
           consent,
           company,
         }),
@@ -297,7 +297,7 @@ function ContactFormInner({
           >
             <input
               type="radio"
-              name="rankingAudit"
+              name="wantsRankingAudit"
               value="yes"
               className="h-3.5 w-3.5 accent-[var(--accent)]"
             />
@@ -308,7 +308,7 @@ function ContactFormInner({
           >
             <input
               type="radio"
-              name="rankingAudit"
+              name="wantsRankingAudit"
               value="no"
               className="h-3.5 w-3.5 accent-[var(--accent)]"
             />
