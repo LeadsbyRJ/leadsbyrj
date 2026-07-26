@@ -43,12 +43,13 @@ export default function PricingPage() {
       </Section>
 
       <Section className="bg-background-elevated">
-        <div className="mb-10 text-center">
+        <div className="mb-8 text-center sm:mb-10">
           <h2 className="text-2xl font-bold text-foreground sm:text-3xl">
             Individual services
           </h2>
-          <p className="mt-2 text-muted">
-            Mix and match—or ask which combination fits your goals.
+          <p className="mt-2 text-sm text-muted sm:text-base">
+            Mix and match Google Marketing and Website Design &amp; SEO—or ask
+            which combination fits your goals.
           </p>
         </div>
         <IndividualCards />

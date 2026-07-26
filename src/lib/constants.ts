@@ -82,91 +82,154 @@ export const PROCESS_STEPS = [
   },
 ] as const;
 
-export const INDIVIDUAL_PRICING = [
+/** Individual services — match Framer site copy */
+export const PRICING_CATEGORIES = [
   {
-    name: "Google Business Profile Optimization",
-    price: "$350",
-    period: "one-time",
-    description: "Full setup and optimization so your profile is ready to rank and convert.",
+    id: "google-marketing",
+    title: "Google Marketing",
+    services: [
+      {
+        name: "Google Business Profile Optimization",
+        price: "$350",
+        period: "one-time",
+        features: [
+          "Google Business Profile setup, photos, posts & review strategy",
+          "Full citation audit & cleanup",
+          "Manual citation creation on all major directories",
+          "Listings across top search engines (Google, Apple Maps, Bing, Yahoo)",
+          "NAP consistency across every platform",
+          "Local category & keyword optimization",
+        ],
+      },
+      {
+        name: "Google Business Profile Monthly Management",
+        price: "$200",
+        period: "/mo",
+        features: [
+          "Ongoing posts, review responses, changes, updates and optimization",
+          "Citation consistency monitoring",
+          "Quarterly NAP audits",
+          "New directory submissions & citation building each month",
+          "Monthly performance reporting with insights & recommendations",
+          "Competitor tracking & local ranking monitoring",
+        ],
+      },
+      {
+        name: "Google Ads and/or Google Local Service Ads Management",
+        price: "$500",
+        period: "/mo",
+        features: [
+          "Full campaign setup, optimization, and management for Google Search, Performance Max, and Local Services Ads",
+        ],
+      },
+    ],
   },
   {
-    name: "Google Business Profile Monthly Management",
-    price: "$200",
-    period: "/mo",
-    description: "Posts, updates, review responses, and ongoing profile health.",
-  },
-  {
-    name: "Google Ads / Local Services Ads Management",
-    price: "$500",
-    period: "/mo",
-    description: "Campaign setup, bidding, creative, and lead quality optimization.",
-  },
-  {
-    name: "Landing Page",
-    price: "$400",
-    period: "one-time",
-    description: "High-converting single page for ads or a focused offer.",
-  },
-  {
-    name: "Essentials Website",
-    price: "$750",
-    period: "one-time",
-    description: "Up to 5 pages—clean, fast, and built to generate leads.",
-  },
-  {
-    name: "Professional Website",
-    price: "$2,000",
-    period: "one-time",
-    description: "Up to 10 pages plus e-commerce when you need more room to grow.",
-  },
-  {
-    name: "SEO & Maintenance Retainer",
-    price: "$200",
-    period: "/mo",
-    description: "Ongoing SEO, updates, and site care so performance doesn’t drift.",
+    id: "website-seo",
+    title: "Website Design & SEO",
+    services: [
+      {
+        name: "Landing Page",
+        price: "$400",
+        period: "one-time",
+        features: [
+          "1-page high-converting site",
+          "Lead capture & opt-in form",
+          "Mobile, tablet & desktop responsive",
+          "SEO setup & speed optimization",
+          "Hosting setup + social icons",
+          "Unlimited revisions • 3-day delivery",
+        ],
+      },
+      {
+        name: "Essentials Website",
+        price: "$750",
+        period: "one-time",
+        features: [
+          "Up to 5 custom-coded pages",
+          "Gallery, projects & blog",
+          "Lead forms + opt-in on every page",
+          "Advanced SEO & speed optimization",
+          "Hosting setup + social icons",
+          "Unlimited revisions • 5-day delivery",
+        ],
+      },
+      {
+        name: "Professional Website",
+        price: "$2,000",
+        period: "one-time",
+        features: [
+          "Up to 10 custom-coded pages",
+          "Full e-commerce store (up to 50 products)",
+          "Secure payment integration",
+          "Email autoresponder & automation",
+          "Advanced integrations & SEO",
+          "Unlimited revisions • 7-day delivery",
+        ],
+      },
+      {
+        name: "SEO & Maintenance Retainer",
+        price: "$200",
+        period: "/mo",
+        features: [
+          "Ongoing SEO, monthly website updates & minor changes, performance reporting (only available for websites I build)",
+        ],
+      },
+    ],
   },
 ] as const;
 
+/**
+ * Packages = 20% savings vs. à la carte
+ * Starter: GBP Opt + Landing ($750 → $600) + $320/mo (GBP Monthly + SEO)
+ * Growth: GBP Opt + Essentials ($1,100 → $880) + $320/mo
+ * Scale: GBP Opt + Professional ($2,350 → $1,880) + $320/mo
+ */
 export const PACKAGE_PRICING = [
   {
     name: "Starter",
     oneTime: "$600",
     monthly: "$320",
     popular: false,
-    includes: [
-      "Google Business Profile Optimization",
-      "Essentials Website (up to 5 pages)",
-      "GBP Monthly Management",
-      "SEO & Maintenance Retainer",
-    ],
     savings: "20% savings vs. à la carte",
+    includes: [
+      "Google Business Profile Optimization ($350 value)",
+      "Landing Page — 1-page high-converting site ($400 value)",
+      "Google Business Profile Monthly Management",
+      "SEO & Maintenance Retainer",
+      "Lead capture form, mobile-ready, SEO & speed setup",
+      "Ongoing posts, reviews, citations & monthly reporting",
+    ],
   },
   {
     name: "Growth",
     oneTime: "$880",
     monthly: "$320",
     popular: true,
-    includes: [
-      "Google Business Profile Optimization",
-      "Landing Page",
-      "Essentials Website foundation",
-      "GBP Monthly Management",
-      "SEO & Maintenance Retainer",
-    ],
     savings: "20% savings · Most Popular",
+    includes: [
+      "Google Business Profile Optimization ($350 value)",
+      "Essentials Website — up to 5 custom-coded pages ($750 value)",
+      "Google Business Profile Monthly Management",
+      "SEO & Maintenance Retainer",
+      "Gallery, projects & blog + lead forms on every page",
+      "Advanced SEO, speed optimization & unlimited revisions",
+    ],
   },
   {
     name: "Scale & Dominate",
     oneTime: "$1,880",
     monthly: "$320",
     popular: false,
-    includes: [
-      "Google Business Profile Optimization",
-      "Professional Website (up to 10 pages + ecom)",
-      "GBP Monthly Management",
-      "SEO & Maintenance Retainer",
-    ],
     savings: "20% savings vs. à la carte",
+    includes: [
+      "Google Business Profile Optimization ($350 value)",
+      "Professional Website — up to 10 pages + e-commerce ($2,000 value)",
+      "Google Business Profile Monthly Management",
+      "SEO & Maintenance Retainer",
+      "Full store (up to 50 products), payments & email automation",
+      "Advanced integrations, SEO & unlimited revisions",
+    ],
   },
 ] as const;
 

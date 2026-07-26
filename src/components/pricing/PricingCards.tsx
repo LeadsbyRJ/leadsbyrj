@@ -1,6 +1,6 @@
 "use client";
 
-import { INDIVIDUAL_PRICING, PACKAGE_PRICING } from "@/lib/constants";
+import { PACKAGE_PRICING, PRICING_CATEGORIES } from "@/lib/constants";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
@@ -61,28 +61,53 @@ export function PackageCards() {
 
 export function IndividualCards() {
   return (
-    <StaggerChildren
-      className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
-      stagger={0.08}
-    >
-      {INDIVIDUAL_PRICING.map((item) => (
-        <StaggerItem key={item.name}>
-          <Card className="flex h-full flex-col">
-            <h3 className="text-base font-semibold text-foreground sm:text-lg">
-              {item.name}
-            </h3>
-            <p className="mt-3 text-2xl font-bold text-accent neon-text">
-              {item.price}
-              <span className="ml-1 text-sm font-normal text-muted">
-                {item.period}
-              </span>
-            </p>
-            <p className="mt-2.5 flex-1 text-sm leading-relaxed text-muted">
-              {item.description}
-            </p>
-          </Card>
-        </StaggerItem>
+    <div className="space-y-12 sm:space-y-14">
+      {PRICING_CATEGORIES.map((category) => (
+        <div key={category.id}>
+          <h3 className="mb-5 text-center text-lg font-semibold text-foreground sm:mb-6 sm:text-left sm:text-xl">
+            <span className="text-accent neon-text">{category.title}</span>
+          </h3>
+          <StaggerChildren
+            className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+            stagger={0.08}
+          >
+            {category.services.map((item) => (
+              <StaggerItem key={item.name}>
+                <Card className="flex h-full flex-col">
+                  <h4 className="text-base font-semibold leading-snug text-foreground sm:text-lg">
+                    {item.name}
+                  </h4>
+                  <p className="mt-3 text-2xl font-bold text-accent neon-text">
+                    {item.price}
+                    <span className="ml-1 text-sm font-normal text-muted">
+                      {item.period}
+                    </span>
+                  </p>
+                  <ul className="mt-4 flex-1 space-y-2 border-t border-border pt-4">
+                    {item.features.map((feature) => (
+                      <li
+                        key={feature}
+                        className="flex gap-2 text-[13px] leading-snug text-muted sm:text-sm"
+                      >
+                        <span className="mt-0.5 shrink-0 text-accent">✓</span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Button
+                    href="/contact"
+                    variant="secondary"
+                    size="sm"
+                    className="mt-6 w-full"
+                  >
+                    Get Started
+                  </Button>
+                </Card>
+              </StaggerItem>
+            ))}
+          </StaggerChildren>
+        </div>
       ))}
-    </StaggerChildren>
+    </div>
   );
 }
