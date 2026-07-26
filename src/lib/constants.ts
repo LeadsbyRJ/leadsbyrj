@@ -194,6 +194,8 @@ export const PACKAGE_PRICING = [
     savings: "20% savings vs. à la carte",
     includes: [
       "Google Business Profile Optimization ($350 value)",
+      "Manual citation creation on all major directories",
+      "Listings across top search engines (Google, Apple Maps, Bing, Yahoo)",
       "Landing Page — 1-page high-converting site ($400 value)",
       "Google Business Profile Monthly Management",
       "SEO & Maintenance Retainer",
@@ -209,6 +211,8 @@ export const PACKAGE_PRICING = [
     savings: "20% savings · Most Popular",
     includes: [
       "Google Business Profile Optimization ($350 value)",
+      "Manual citation creation on all major directories",
+      "Listings across top search engines (Google, Apple Maps, Bing, Yahoo)",
       "Essentials Website — up to 5 custom-coded pages ($750 value)",
       "Google Business Profile Monthly Management",
       "SEO & Maintenance Retainer",
@@ -224,6 +228,8 @@ export const PACKAGE_PRICING = [
     savings: "20% savings vs. à la carte",
     includes: [
       "Google Business Profile Optimization ($350 value)",
+      "Manual citation creation on all major directories",
+      "Listings across top search engines (Google, Apple Maps, Bing, Yahoo)",
       "Professional Website — up to 10 pages + e-commerce ($2,000 value)",
       "Google Business Profile Monthly Management",
       "SEO & Maintenance Retainer",
