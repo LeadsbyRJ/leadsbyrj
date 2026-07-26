@@ -72,18 +72,15 @@ export async function POST(request: Request) {
     );
   }
 
-  // Include business name in message so it always lands in the Sheet/email
-  const message = businessName
-    ? `Business: ${businessName}\n\n${messageRaw}`
-    : messageRaw;
-
+  // Payload keys must match Google Apps Script expectations:
+  // name, businessName, phone, email, website, message
   const payload = {
     name,
-    businessName,
+    businessName, // optional; empty string when not provided
     phone,
     email,
     website,
-    message,
+    message: messageRaw,
   };
 
   try {
