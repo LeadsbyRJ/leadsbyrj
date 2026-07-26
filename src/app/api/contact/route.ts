@@ -9,6 +9,7 @@ const GOOGLE_SCRIPT_URL =
 
 type ContactPayload = {
   name: string;
+  businessName?: string;
   phone: string;
   email: string;
   website?: string;
@@ -46,13 +47,14 @@ export async function POST(request: Request) {
   }
 
   const name = sanitize(body.name, 120);
+  const businessName = sanitize(body.businessName ?? "", 160);
   const phone = sanitize(body.phone, 40);
   const email = sanitize(body.email, 160);
   const website = sanitize(body.website ?? "", 300);
-  const message = sanitize(body.message, 5000);
+  const messageRaw = sanitize(body.message, 5000);
   const consent = Boolean(body.consent);
 
-  if (!name || !phone || !email || !message || !consent) {
+  if (!name || !phone || !email || !messageRaw || !consent) {
     return NextResponse.json(
       {
         ok: false,
@@ -70,8 +72,14 @@ export async function POST(request: Request) {
     );
   }
 
+  // Include business name in message so it always lands in the Sheet/email
+  const message = businessName
+    ? `Business: ${businessName}\n\n${messageRaw}`
+    : messageRaw;
+
   const payload = {
     name,
+    businessName,
     phone,
     email,
     website,

@@ -49,6 +49,7 @@ function ContactFormInner({
     const data = new FormData(form);
 
     const name = String(data.get("name") || "").trim();
+    const businessName = String(data.get("businessName") || "").trim();
     const phone = String(data.get("phone") || "").trim();
     const email = String(data.get("email") || "").trim();
     const website = String(data.get("website") || "").trim();
@@ -73,6 +74,7 @@ function ContactFormInner({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           name,
+          businessName,
           phone,
           email,
           website,
@@ -178,6 +180,19 @@ function ContactFormInner({
           />
         </div>
         <div>
+          <Label htmlFor={`${uid}-businessName`}>Business Name</Label>
+          <Input
+            id={`${uid}-businessName`}
+            name="businessName"
+            autoComplete="organization"
+            placeholder="Your business (optional)"
+            disabled={status === "submitting"}
+          />
+        </div>
+      </div>
+
+      <div className="grid gap-4 sm:grid-cols-2 sm:gap-5">
+        <div>
           <Label htmlFor={`${uid}-phone`} required>
             Phone
           </Label>
@@ -191,9 +206,6 @@ function ContactFormInner({
             disabled={status === "submitting"}
           />
         </div>
-      </div>
-
-      <div className="grid gap-4 sm:grid-cols-2 sm:gap-5">
         <div>
           <Label htmlFor={`${uid}-email`} required>
             Email
@@ -208,18 +220,19 @@ function ContactFormInner({
             disabled={status === "submitting"}
           />
         </div>
-        <div>
-          <Label htmlFor={`${uid}-website`}>Website</Label>
-          <Input
-            id={`${uid}-website`}
-            name="website"
-            type="text"
-            inputMode="url"
-            autoComplete="url"
-            placeholder="https:// (optional)"
-            disabled={status === "submitting"}
-          />
-        </div>
+      </div>
+
+      <div>
+        <Label htmlFor={`${uid}-website`}>Website</Label>
+        <Input
+          id={`${uid}-website`}
+          name="website"
+          type="text"
+          inputMode="url"
+          autoComplete="url"
+          placeholder="https:// (optional)"
+          disabled={status === "submitting"}
+        />
       </div>
 
       <div>
