@@ -49,18 +49,18 @@ export function Comparison() {
         <div className="overflow-hidden rounded-2xl border border-border bg-surface shadow-[0_0_40px_rgba(0,0,0,0.35)]">
           {/* Column headers */}
           <div className="grid grid-cols-2 border-b border-border">
-            <div className="flex items-center justify-center gap-2 border-r border-border bg-accent/[0.06] px-4 py-5 sm:gap-3 sm:px-6 sm:py-6">
+            <div className="flex items-center justify-center gap-2 border-r border-border bg-accent/[0.06] px-2 py-3.5 sm:gap-3 sm:px-6 sm:py-6">
               <Image
                 src="/logo.png"
                 alt={SITE.name}
                 width={808}
                 height={288}
-                className="logo-glow h-8 w-auto sm:h-10"
+                className="logo-glow h-7 w-auto sm:h-10"
                 sizes="140px"
               />
             </div>
-            <div className="flex items-center justify-center bg-background-elevated px-4 py-5 sm:px-6 sm:py-6">
-              <span className="text-center text-sm font-semibold text-muted sm:text-base">
+            <div className="flex items-center justify-center bg-background-elevated px-2 py-3.5 sm:px-6 sm:py-6">
+              <span className="text-center text-xs font-semibold text-muted sm:text-base">
                 Typical Agencies
               </span>
             </div>
@@ -77,20 +77,20 @@ export function Comparison() {
                   )}
                 >
                   {/* Us */}
-                  <div className="flex items-start gap-2.5 border-r border-border bg-accent/[0.03] px-3 py-4 sm:items-center sm:gap-3 sm:px-6 sm:py-5">
-                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent sm:mt-0 sm:h-6 sm:w-6">
-                      <Check className="h-3 w-3 sm:h-3.5 sm:w-3.5" strokeWidth={3} />
+                  <div className="flex items-start gap-1.5 border-r border-border bg-accent/[0.03] px-2 py-3 sm:items-center sm:gap-3 sm:px-6 sm:py-5">
+                    <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent sm:mt-0 sm:h-6 sm:w-6">
+                      <Check className="h-2.5 w-2.5 sm:h-3.5 sm:w-3.5" strokeWidth={3} />
                     </span>
-                    <span className="text-xs font-medium leading-snug text-foreground sm:text-sm">
+                    <span className="text-[11px] font-medium leading-snug text-foreground sm:text-sm">
                       {row.us}
                     </span>
                   </div>
                   {/* Them */}
-                  <div className="flex items-start gap-2.5 bg-background-elevated/50 px-3 py-4 sm:items-center sm:gap-3 sm:px-6 sm:py-5">
-                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-red-500/10 text-red-400/80 sm:mt-0 sm:h-6 sm:w-6">
-                      <X className="h-3 w-3 sm:h-3.5 sm:w-3.5" strokeWidth={3} />
+                  <div className="flex items-start gap-1.5 bg-background-elevated/50 px-2 py-3 sm:items-center sm:gap-3 sm:px-6 sm:py-5">
+                    <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-red-500/10 text-red-400/80 sm:mt-0 sm:h-6 sm:w-6">
+                      <X className="h-2.5 w-2.5 sm:h-3.5 sm:w-3.5" strokeWidth={3} />
                     </span>
-                    <span className="text-xs leading-snug text-muted sm:text-sm">
+                    <span className="text-[11px] leading-snug text-muted sm:text-sm">
                       {row.them}
                     </span>
                   </div>
@@ -102,7 +102,7 @@ export function Comparison() {
       </AnimatedSection>
 
       <motion.div
-        className="mt-10 flex flex-col items-center gap-4 text-center"
+        className="mt-8 flex flex-col items-center gap-3 text-center sm:mt-10 sm:gap-4"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}

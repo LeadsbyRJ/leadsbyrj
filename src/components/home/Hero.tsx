@@ -12,13 +12,13 @@ import { HeroBackground } from "@/components/home/HeroBackground";
 const ease = [0.22, 1, 0.36, 1] as const;
 
 const item = {
-  hidden: { opacity: 0, y: 42 },
+  hidden: { opacity: 0, y: 36 },
   show: (i: number) => ({
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.12 + i * 0.16,
-      duration: 0.7,
+      delay: 0.1 + i * 0.14,
+      duration: 0.65,
       ease,
     },
   }),
@@ -26,30 +26,29 @@ const item = {
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-[calc(100svh-4.75rem)] items-center overflow-hidden bg-background">
+    <section className="relative flex items-center overflow-hidden bg-background lg:min-h-[calc(100svh-4.75rem)]">
       <HeroBackground />
       <HeroParticles />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-background to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-background to-transparent sm:h-28" />
 
-      <Container className="relative z-10 py-12 sm:py-16 lg:py-20">
-        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-12 xl:gap-16">
-          {/* Copy — CTAs first on mobile; map stacks below */}
+      <Container className="relative z-10 py-8 sm:py-12 lg:py-16">
+        <div className="grid items-center gap-8 sm:gap-10 lg:grid-cols-2 lg:gap-12 xl:gap-16">
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             <motion.div
               custom={0}
               variants={item}
               initial="hidden"
               animate="show"
-              className="mb-6 sm:mb-7"
+              className="mb-4 sm:mb-6"
             >
               <Image
                 src="/logo.png"
                 alt={`${SITE.name} logo`}
                 width={808}
                 height={288}
-                className="logo-glow-hero h-14 w-auto sm:h-16 md:h-[4.5rem]"
+                className="logo-glow-hero h-12 w-auto sm:h-14 md:h-16 lg:h-[4.5rem]"
                 priority
-                sizes="(max-width: 640px) 220px, 280px"
+                sizes="(max-width: 640px) 200px, 280px"
               />
             </motion.div>
 
@@ -58,10 +57,10 @@ export function Hero() {
               variants={item}
               initial="hidden"
               animate="show"
-              className="mb-5 sm:mb-6"
+              className="mb-4 sm:mb-5"
             >
               <motion.div
-                className="inline-flex items-center gap-2 rounded-full border border-accent/35 bg-accent/5 px-3.5 py-1.5 text-xs font-medium text-accent sm:text-sm"
+                className="inline-flex items-center gap-2 rounded-full border border-accent/35 bg-accent/5 px-3 py-1.5 text-[11px] font-medium text-accent sm:px-3.5 sm:text-sm"
                 animate={{
                   boxShadow: [
                     "0 0 0 0 rgba(57,255,20,0)",
@@ -94,7 +93,7 @@ export function Hero() {
               variants={item}
               initial="hidden"
               animate="show"
-              className="text-[2rem] font-bold leading-[1.15] tracking-tight text-foreground sm:text-5xl md:text-6xl"
+              className="text-[1.75rem] font-bold leading-[1.15] tracking-tight text-foreground sm:text-5xl md:text-6xl"
             >
               More local{" "}
               <span className="neon-text">leads</span>
@@ -106,7 +105,7 @@ export function Hero() {
               variants={item}
               initial="hidden"
               animate="show"
-              className="mt-4 max-w-lg text-[0.95rem] leading-relaxed text-muted sm:mt-5 sm:max-w-xl sm:text-lg"
+              className="mt-3 max-w-md text-sm leading-relaxed text-muted sm:mt-5 sm:max-w-xl sm:text-lg"
             >
               Websites, Google Ads, SEO, and Google Business Profile—built and
               managed so Orange County (and beyond) businesses get found,
@@ -118,24 +117,27 @@ export function Hero() {
               variants={item}
               initial="hidden"
               animate="show"
-              className="mt-8 flex w-full max-w-md flex-col items-stretch justify-center gap-3 sm:mt-9 sm:max-w-none sm:w-auto sm:flex-row sm:items-center sm:gap-4 lg:justify-start"
+              className="mt-6 flex w-full max-w-sm flex-col items-stretch gap-2.5 sm:mt-8 sm:max-w-none sm:w-auto sm:flex-row sm:items-center sm:gap-3 lg:justify-start"
             >
-              <Button href="/contact" size="xl" className="min-w-[200px]">
+              <Button
+                href="#ranking-audit"
+                size="lg"
+                className="w-full sm:w-auto sm:min-w-[200px] sm:h-14 sm:px-9"
+              >
                 Get Free Ranking Audit
               </Button>
               <Button
                 href="/projects"
                 variant="secondary"
-                size="xl"
-                className="min-w-[200px]"
+                size="lg"
+                className="w-full sm:w-auto sm:min-w-[200px] sm:h-14 sm:px-9"
               >
                 View Projects
               </Button>
             </motion.div>
           </div>
 
-          {/* Map: smaller/centered on mobile, full side column on desktop */}
-          <div className="mt-2 w-full lg:mt-0">
+          <div className="mx-auto w-full max-w-[300px] sm:max-w-sm lg:mx-0 lg:max-w-none">
             <HeroMap />
           </div>
         </div>

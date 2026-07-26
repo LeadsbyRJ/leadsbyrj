@@ -205,20 +205,20 @@ export function Services() {
               )}
             >
               {/* Visual panel */}
-              <div className="relative h-36 border-b border-border bg-gradient-to-b from-background-elevated to-surface sm:h-40">
+              <div className="relative h-32 border-b border-border bg-gradient-to-b from-background-elevated to-surface sm:h-40">
                 <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(57,255,20,0.08),transparent_60%)]" />
-                <div className="relative h-full p-4">{visuals[service.id]}</div>
+                <div className="relative h-full p-3 sm:p-4">{visuals[service.id]}</div>
               </div>
 
               {/* Copy */}
-              <div className="flex flex-1 flex-col p-5 sm:p-6">
-                <h3 className="text-base font-semibold leading-snug text-foreground sm:text-lg">
+              <div className="flex flex-1 flex-col p-4 sm:p-6">
+                <h3 className="text-[0.95rem] font-semibold leading-snug text-foreground sm:text-lg">
                   {service.title}
                 </h3>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">
+                <p className="mt-2 flex-1 text-[13px] leading-relaxed text-muted sm:text-sm">
                   {service.description}
                 </p>
-                <ul className="mt-4 space-y-1.5 border-t border-border pt-4">
+                <ul className="mt-3 space-y-1.5 border-t border-border pt-3 sm:mt-4 sm:pt-4">
                   {service.points.map((point) => (
                     <li
                       key={point}
@@ -240,12 +240,12 @@ export function Services() {
 
       {/* Service tags */}
       <StaggerChildren
-        className="mt-10 flex flex-wrap items-center justify-center gap-2 sm:mt-12 sm:gap-2.5"
+        className="mt-8 flex flex-wrap items-center justify-center gap-1.5 sm:mt-12 sm:gap-2.5"
         stagger={0.05}
       >
         {SERVICE_TAGS.map((tag) => (
           <StaggerItem key={tag}>
-            <span className="inline-flex rounded-full border border-border bg-surface px-3 py-1.5 text-xs font-medium text-muted transition-colors duration-300 hover:border-accent/40 hover:text-accent sm:text-sm">
+            <span className="inline-flex rounded-full border border-border bg-surface px-2.5 py-1 text-[11px] font-medium text-muted transition-colors duration-300 hover:border-accent/40 hover:text-accent sm:px-3 sm:py-1.5 sm:text-sm">
               {tag}
             </span>
           </StaggerItem>

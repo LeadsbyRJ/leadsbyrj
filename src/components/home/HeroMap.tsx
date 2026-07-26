@@ -94,7 +94,7 @@ function MapPin({
 export function HeroMap() {
   return (
     <motion.div
-      className="relative mx-auto w-full max-w-sm sm:max-w-md lg:mx-0 lg:max-w-none"
+      className="relative mx-auto w-full lg:mx-0"
       initial={{ opacity: 0, y: 28, scale: 0.96 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.9, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
@@ -102,12 +102,12 @@ export function HeroMap() {
     >
       <div className="pointer-events-none absolute inset-0 -z-10 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(57,255,20,0.14),transparent_65%)] blur-2xl" />
 
-      <div className="relative overflow-hidden rounded-3xl border border-accent/15 bg-surface/70 shadow-[0_0_48px_rgba(57,255,20,0.08)] backdrop-blur-sm">
+      <div className="relative overflow-hidden rounded-2xl border border-accent/15 bg-surface/70 shadow-[0_0_48px_rgba(57,255,20,0.08)] backdrop-blur-sm sm:rounded-3xl">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,rgba(57,255,20,0.08),transparent_50%)]" />
 
         <svg
           viewBox="0 0 360 320"
-          className="h-auto w-full"
+          className="h-auto w-full max-h-[220px] sm:max-h-none"
           role="img"
           aria-label="Stylized local map with glowing location pins"
         >
@@ -204,7 +204,7 @@ export function HeroMap() {
       </div>
 
       {/* 5-star rating under map */}
-      <div className="mt-4 flex flex-col items-center gap-1.5 lg:items-start">
+      <div className="mt-3 flex flex-col items-center gap-1 sm:mt-4 sm:gap-1.5 lg:items-start">
         <div
           className="flex items-center gap-0.5"
           role="img"
@@ -214,7 +214,7 @@ export function HeroMap() {
             <svg
               key={i}
               viewBox="0 0 20 20"
-              className="h-4 w-4 text-accent sm:h-[1.125rem] sm:w-[1.125rem]"
+              className="h-3.5 w-3.5 text-accent sm:h-4 sm:w-4"
               fill="currentColor"
               aria-hidden
             >
@@ -222,7 +222,7 @@ export function HeroMap() {
             </svg>
           ))}
         </div>
-        <p className="text-[11px] font-medium tracking-wide text-muted sm:text-xs">
+        <p className="text-[10px] font-medium tracking-wide text-muted sm:text-xs">
           5-star reviews
         </p>
       </div>

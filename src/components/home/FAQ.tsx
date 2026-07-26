@@ -54,23 +54,23 @@ function FAQItem({
         type="button"
         onClick={onToggle}
         aria-expanded={isOpen}
-        className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left sm:px-6 sm:py-5"
+        className="flex w-full items-center justify-between gap-3 px-4 py-3.5 text-left sm:gap-4 sm:px-6 sm:py-5"
       >
-        <span className="text-sm font-semibold text-foreground sm:text-base">
+        <span className="text-[13px] font-semibold leading-snug text-foreground sm:text-base">
           {question}
         </span>
         <span
           className={cn(
-            "flex h-8 w-8 shrink-0 items-center justify-center rounded-full border transition-colors duration-300",
+            "flex h-7 w-7 shrink-0 items-center justify-center rounded-full border transition-colors duration-300 sm:h-8 sm:w-8",
             isOpen
               ? "border-accent/50 bg-accent/10 text-accent"
               : "border-border bg-background text-muted"
           )}
         >
           {isOpen ? (
-            <Minus className="h-4 w-4" aria-hidden />
+            <Minus className="h-3.5 w-3.5 sm:h-4 sm:w-4" aria-hidden />
           ) : (
-            <Plus className="h-4 w-4" aria-hidden />
+            <Plus className="h-3.5 w-3.5 sm:h-4 sm:w-4" aria-hidden />
           )}
         </span>
       </button>
@@ -84,8 +84,8 @@ function FAQItem({
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="overflow-hidden"
           >
-            <div className="border-t border-border px-5 pb-5 pt-3 sm:px-6 sm:pb-6">
-              <p className="text-sm leading-relaxed text-muted sm:text-[0.95rem]">
+            <div className="border-t border-border px-4 pb-4 pt-3 sm:px-6 sm:pb-6">
+              <p className="text-[13px] leading-relaxed text-muted sm:text-[0.95rem]">
                 {answer}
               </p>
             </div>

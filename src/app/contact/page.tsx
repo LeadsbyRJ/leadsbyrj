@@ -11,15 +11,15 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <Section className="bg-radial-neon pt-12 sm:pt-16">
+    <Section className="bg-radial-neon pt-8 sm:pt-14">
       <SectionHeading
         eyebrow="Contact"
         title="Let’s grow your lead pipeline"
         description="Share a few details and I’ll follow up. Prefer to talk now? Call or email anytime."
       />
 
-      <div className="grid gap-8 lg:grid-cols-5">
-        <Card className="lg:col-span-2 h-fit space-y-6">
+      <div className="grid gap-5 sm:gap-8 lg:grid-cols-5">
+        <Card className="h-fit space-y-5 p-4 sm:space-y-6 sm:p-6 lg:col-span-2">
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-muted">
               Email
@@ -62,7 +62,7 @@ export default function ContactPage() {
           </p>
         </Card>
 
-        <Card className="lg:col-span-3">
+        <Card className="p-4 sm:p-6 lg:col-span-3">
           <ContactForm
             title="Send a message"
             submitLabel="Send Message"

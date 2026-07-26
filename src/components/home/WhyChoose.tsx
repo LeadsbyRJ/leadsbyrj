@@ -230,15 +230,15 @@ export function WhyChoose() {
         {CARDS.map((card) => (
           <StaggerItem key={card.title}>
             <article className={cardClass}>
-              <div className="relative h-44 border-b border-border bg-gradient-to-b from-background to-surface sm:h-48">
+              <div className="relative h-40 border-b border-border bg-gradient-to-b from-background to-surface sm:h-48">
                 <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(57,255,20,0.08),transparent_60%)]" />
                 <div className="relative h-full">{card.visual}</div>
               </div>
-              <div className="flex flex-1 flex-col p-5 sm:p-6">
-                <h3 className="text-lg font-semibold leading-snug text-foreground">
+              <div className="flex flex-1 flex-col p-4 sm:p-6">
+                <h3 className="text-base font-semibold leading-snug text-foreground sm:text-lg">
                   {card.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">
+                <p className="mt-2 text-[13px] leading-relaxed text-muted sm:text-sm">
                   {card.description}
                 </p>
               </div>

@@ -1,23 +1,47 @@
 "use client";
 
-import { useId, useState, type FormEvent } from "react";
+import { Suspense, useEffect, useId, useState, type FormEvent } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/Button";
 import { Input, Textarea, Label } from "@/components/ui/Input";
 import { SITE } from "@/lib/constants";
 
-export function ContactForm({
-  title = "Send a message",
-  submitLabel = "Send Message",
-}: {
+function buildAuditPrefill(service: string | null, location: string | null) {
+  if (!service && !location) return "";
+  const parts = [
+    "I'd like a free ranking audit.",
+    service ? `Service / business type: ${service}` : null,
+    location ? `City & state: ${location}` : null,
+  ].filter(Boolean);
+  return parts.join("\n");
+}
+
+type ContactFormProps = {
   title?: string;
   submitLabel?: string;
-}) {
+};
+
+function ContactFormInner({
+  title = "Send a message",
+  submitLabel = "Send Message",
+}: ContactFormProps) {
   const uid = useId();
+  const searchParams = useSearchParams();
   const [status, setStatus] = useState<
     "idle" | "submitting" | "success" | "error"
   >("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const [messagePrefill, setMessagePrefill] = useState("");
+
+  useEffect(() => {
+    const service = searchParams.get("service");
+    const location = searchParams.get("location");
+    const intent = searchParams.get("intent");
+    if (intent === "ranking-audit" || service || location) {
+      setMessagePrefill(buildAuditPrefill(service, location));
+    }
+  }, [searchParams]);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -84,7 +108,7 @@ export function ContactForm({
 
   if (status === "success") {
     return (
-      <div className="space-y-4 rounded-xl border border-accent/30 bg-accent/5 p-6 sm:p-8">
+      <div className="space-y-4 rounded-xl border border-accent/30 bg-accent/5 p-5 sm:p-8">
         {title ? (
           <h3 className="text-xl font-semibold text-foreground">{title}</h3>
         ) : null}
@@ -118,13 +142,17 @@ export function ContactForm({
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5" noValidate>
+    <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5" noValidate>
       {title ? (
-        <h3 className="text-xl font-semibold text-foreground">{title}</h3>
+        <h3 className="text-lg font-semibold text-foreground sm:text-xl">
+          {title}
+        </h3>
       ) : null}
 
-      {/* Honeypot — hidden from users */}
-      <div className="absolute -left-[9999px] top-auto h-0 w-0 overflow-hidden" aria-hidden>
+      <div
+        className="absolute -left-[9999px] top-auto h-0 w-0 overflow-hidden"
+        aria-hidden
+      >
         <label htmlFor={`${uid}-company`}>Company</label>
         <input
           id={`${uid}-company`}
@@ -135,7 +163,7 @@ export function ContactForm({
         />
       </div>
 
-      <div className="grid gap-5 sm:grid-cols-2">
+      <div className="grid gap-4 sm:grid-cols-2 sm:gap-5">
         <div>
           <Label htmlFor={`${uid}-name`} required>
             Name
@@ -165,7 +193,7 @@ export function ContactForm({
         </div>
       </div>
 
-      <div className="grid gap-5 sm:grid-cols-2">
+      <div className="grid gap-4 sm:grid-cols-2 sm:gap-5">
         <div>
           <Label htmlFor={`${uid}-email`} required>
             Email
@@ -204,6 +232,8 @@ export function ContactForm({
           required
           placeholder="Tell me about your business and goals…"
           disabled={status === "submitting"}
+          defaultValue={messagePrefill}
+          key={messagePrefill || "message-empty"}
         />
       </div>
 
@@ -218,7 +248,7 @@ export function ContactForm({
         />
         <label
           htmlFor={`${uid}-consent`}
-          className="text-sm leading-relaxed text-muted"
+          className="text-[13px] leading-relaxed text-muted sm:text-sm"
         >
           I consent to being contacted by phone, text, and/or email regarding my
           inquiry. I understand I can opt out at any time. See our{" "}
@@ -241,11 +271,27 @@ export function ContactForm({
       <Button
         type="submit"
         size="lg"
-        className="w-full sm:w-auto neon-glow"
+        className="w-full neon-glow sm:w-auto"
         disabled={status === "submitting"}
       >
         {status === "submitting" ? "Sending…" : submitLabel}
       </Button>
     </form>
+  );
+}
+
+export function ContactForm(props: ContactFormProps) {
+  return (
+    <Suspense
+      fallback={
+        <div className="space-y-4 animate-pulse">
+          <div className="h-11 rounded-lg bg-surface-elevated" />
+          <div className="h-11 rounded-lg bg-surface-elevated" />
+          <div className="h-28 rounded-lg bg-surface-elevated" />
+        </div>
+      }
+    >
+      <ContactFormInner {...props} />
+    </Suspense>
   );
 }

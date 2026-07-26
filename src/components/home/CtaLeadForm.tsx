@@ -9,20 +9,20 @@ export function CtaLeadForm() {
   return (
     <Section className="bg-background">
       <AnimatedSection>
-        <div className="grid gap-8 rounded-2xl border border-border bg-surface p-5 sm:p-8 lg:grid-cols-2 lg:gap-12">
+        <div className="grid gap-6 rounded-2xl border border-border bg-surface p-4 sm:gap-8 sm:p-8 lg:grid-cols-2 lg:gap-12">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent neon-text">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-accent neon-text sm:text-xs">
               Let&apos;s talk
             </p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            <h2 className="mt-2.5 text-2xl font-bold tracking-tight text-foreground sm:mt-3 sm:text-4xl">
               Ready for more qualified leads?
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-muted">
+            <p className="mt-3 text-sm leading-relaxed text-muted sm:mt-4 sm:text-base">
               Tell me about your business. I&apos;ll reply with clear next steps—
               whether that&apos;s a free ranking audit, a site rebuild, ads, or
               Google Business Profile help.
             </p>
-            <div className="mt-8 space-y-3 text-sm text-muted">
+            <div className="mt-5 space-y-2 text-sm text-muted sm:mt-8 sm:space-y-3">
               <p>
                 <span className="text-foreground">Email:</span>{" "}
                 <a
