@@ -3,6 +3,10 @@ import { SITE } from "@/lib/constants";
 
 export const runtime = "nodejs";
 
+/** Google Apps Script web app — writes to Sheet + emails */
+const GOOGLE_SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbwx2TO4FQ_qksV2OY7CRQ_sRXb5ga13YoRCycUQU8s1Eru4ilvFJ07Dkbt55lGOrq14/exec";
+
 type ContactPayload = {
   name: string;
   phone: string;
@@ -52,7 +56,8 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         ok: false,
-        error: "Please complete all required fields and accept the consent checkbox.",
+        error:
+          "Please complete all required fields and accept the consent checkbox.",
       },
       { status: 400 }
     );
@@ -65,98 +70,61 @@ export async function POST(request: Request) {
     );
   }
 
-  const textBody = [
-    `New inquiry from ${SITE.name} website`,
-    "",
-    `Name: ${name}`,
-    `Phone: ${phone}`,
-    `Email: ${email}`,
-    website ? `Website: ${website}` : "Website: (not provided)",
-    "",
-    "Message:",
+  const payload = {
+    name,
+    phone,
+    email,
+    website,
     message,
-    "",
-    "Consent: Yes — may contact by phone, text, and/or email. Opt-out anytime.",
-    `Submitted: ${new Date().toISOString()}`,
-  ].join("\n");
-
-  const subject = `Website inquiry from ${name}`;
+  };
 
   try {
-    // Preferred: Resend (set RESEND_API_KEY in Vercel env for production email)
-    if (process.env.RESEND_API_KEY) {
-      const from =
-        process.env.RESEND_FROM_EMAIL || "Leads by RJ <onboarding@resend.dev>";
-      const res = await fetch("https://api.resend.com/emails", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          from,
-          to: [SITE.email],
-          reply_to: email,
-          subject,
-          text: textBody,
-        }),
-      });
+    const gasRes = await fetch(GOOGLE_SCRIPT_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+      redirect: "follow",
+    });
 
-      if (!res.ok) {
-        const errText = await res.text();
-        console.error("Resend error:", errText);
-        return NextResponse.json(
-          { ok: false, error: "Could not send message. Please try again or email me directly." },
-          { status: 502 }
-        );
-      }
+    const raw = await gasRes.text();
+    let data: { status?: string; message?: string } = {};
 
-      return NextResponse.json({ ok: true });
-    }
-
-    // Default: FormSubmit.co → delivers to rj@leadsbyrj.com (confirm once via activation email)
-    const formSubmitRes = await fetch(
-      `https://formsubmit.co/ajax/${encodeURIComponent(SITE.email)}`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          name,
-          phone,
-          email,
-          website: website || "N/A",
-          message,
-          consent: "Yes — phone, text, and/or email. Opt-out anytime.",
-          _subject: subject,
-          _template: "table",
-          _captcha: "false",
-          _replyto: email,
-        }),
-      }
-    );
-
-    if (!formSubmitRes.ok) {
-      const errText = await formSubmitRes.text();
-      console.error("FormSubmit error:", errText);
+    try {
+      data = JSON.parse(raw) as { status?: string; message?: string };
+    } catch {
+      // Apps Script sometimes returns HTML on misconfiguration
+      console.error("Google Script non-JSON response:", raw.slice(0, 400));
       return NextResponse.json(
         {
           ok: false,
-          error: "Could not send message. Please try again or email me directly.",
+          error: `Could not send message. Please try again or email ${SITE.email} directly.`,
         },
         { status: 502 }
       );
     }
 
-    return NextResponse.json({ ok: true });
-  } catch (err) {
-    console.error("Contact form error:", err);
+    if (data.status === "success") {
+      return NextResponse.json({ ok: true });
+    }
+
+    console.error("Google Script error payload:", data);
     return NextResponse.json(
       {
         ok: false,
-        error: "Something went wrong. Please email me directly at rj@leadsbyrj.com.",
+        error:
+          data.message ||
+          `Could not send message. Please try again or email ${SITE.email} directly.`,
+      },
+      { status: 502 }
+    );
+  } catch (err) {
+    console.error("Contact form / Google Script error:", err);
+    return NextResponse.json(
+      {
+        ok: false,
+        error: `Something went wrong. Please email me directly at ${SITE.email}.`,
       },
       { status: 500 }
     );

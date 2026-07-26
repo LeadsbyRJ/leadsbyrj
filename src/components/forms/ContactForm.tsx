@@ -51,7 +51,7 @@ export function ContactForm({
           name,
           phone,
           email,
-          website: website || undefined,
+          website,
           message,
           consent,
           company,
@@ -67,13 +67,13 @@ export function ContactForm({
         setStatus("error");
         setErrorMessage(
           json.error ||
-            `Could not send message. Please email ${SITE.email} directly.`
+            `Something went wrong. Please try again or email ${SITE.email}.`
         );
         return;
       }
 
-      setStatus("success");
       form.reset();
+      setStatus("success");
     } catch {
       setStatus("error");
       setErrorMessage(
