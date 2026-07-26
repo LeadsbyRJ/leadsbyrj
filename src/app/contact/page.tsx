@@ -18,7 +18,10 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <Section className="bg-radial-neon pt-8 sm:pt-14">
+    <Section
+      id="contact"
+      className="scroll-mt-[4.75rem] bg-radial-neon pt-8 sm:scroll-mt-24 sm:pt-14"
+    >
       <SectionHeading
         eyebrow="Contact"
         title="Let’s grow your lead pipeline"
@@ -69,7 +72,10 @@ export default function ContactPage() {
           </p>
         </Card>
 
-        <Card className="p-4 sm:p-6 lg:col-span-3">
+        <Card
+          id="contact-form"
+          className="scroll-mt-[4.75rem] p-4 sm:scroll-mt-24 sm:p-6 lg:col-span-3"
+        >
           <ContactForm
             title="Send a message"
             submitLabel="Send Message"

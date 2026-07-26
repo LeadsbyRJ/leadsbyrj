@@ -4,13 +4,16 @@ export function Card({
   children,
   className,
   glow = false,
+  id,
 }: {
   children: React.ReactNode;
   className?: string;
   glow?: boolean;
+  id?: string;
 }) {
   return (
     <div
+      id={id}
       className={cn(
         "rounded-2xl border border-border bg-surface p-5 sm:p-6",
         "transition-all duration-300 ease-out will-change-transform",
