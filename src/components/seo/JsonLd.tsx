@@ -10,8 +10,8 @@ export function LocalBusinessJsonLd() {
     description:
       "Websites, SEO, Google Maps Marketing & Google Ads that generate real local leads. Helping local businesses get found and get more customers since 2014.",
     url: SITE.url,
-    image: `${SITE.url}/logo.png`,
-    logo: `${SITE.url}/logo.png`,
+    image: `${SITE.url}/og-image.png`,
+    logo: `${SITE.url}/og-image.png`,
     email: SITE.email,
     telephone: "+1-949-264-2559",
     foundingDate: String(SITE.since),
