@@ -54,11 +54,11 @@ export const metadata: Metadata = {
     description: defaultDescription,
     images: [
       {
-        // Link preview image — full Leads by RJ logo (black background)
-        url: "/og-image.png",
+        // Original full logo for social link previews
+        url: "https://www.leadsbyrj.com/photos/Leads%20by%20RJ%20Logo%20blk.png",
         width: 832,
         height: 1248,
-        alt: `${SITE.name} — local leads, Google Ads & SEO`,
+        alt: "Leads by RJ Logo",
       },
     ],
   },
@@ -68,7 +68,9 @@ export const metadata: Metadata = {
     description: defaultDescription,
     creator: "@LeadsbyRJ",
     site: "@LeadsbyRJ",
-    images: ["/og-image.png"],
+    images: [
+      "https://www.leadsbyrj.com/photos/Leads%20by%20RJ%20Logo%20blk.png",
+    ],
   },
   robots: {
     index: true,
