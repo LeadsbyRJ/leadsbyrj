@@ -54,8 +54,8 @@ export const metadata: Metadata = {
     description: defaultDescription,
     images: [
       {
-        // Original full logo for social link previews
-        url: "https://www.leadsbyrj.com/photos/Leads%20by%20RJ%20Logo%20blk.png",
+        // Clean-filename original logo for social link previews
+        url: "https://www.leadsbyrj.com/photos/leads-by-rj-logo.png",
         width: 832,
         height: 1248,
         alt: "Leads by RJ Logo",
@@ -68,9 +68,7 @@ export const metadata: Metadata = {
     description: defaultDescription,
     creator: "@LeadsbyRJ",
     site: "@LeadsbyRJ",
-    images: [
-      "https://www.leadsbyrj.com/photos/Leads%20by%20RJ%20Logo%20blk.png",
-    ],
+    images: ["https://www.leadsbyrj.com/photos/leads-by-rj-logo.png"],
   },
   robots: {
     index: true,
