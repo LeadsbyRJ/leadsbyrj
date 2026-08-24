@@ -13,6 +13,14 @@ export const metadata: Metadata = {
     description:
       "Real client websites built for Google Ads, SEO, and local leads—including Lobato Landscaping and vSeeBoxUS.",
     url: "/projects",
+    images: [
+      {
+        url: "https://www.leadsbyrj.com/photos/website-link-preview.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Custom Websites & Google Marketing",
+      },
+    ],
   },
 };
 

@@ -13,6 +13,14 @@ export const metadata: Metadata = {
     description:
       "Request a free ranking audit or start a Google Ads, SEO, website, or Google Business Profile project. Call (949) 264-2559.",
     url: "/contact",
+    images: [
+      {
+        url: "https://www.leadsbyrj.com/photos/website-link-preview.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Custom Websites & Google Marketing",
+      },
+    ],
   },
 };
 

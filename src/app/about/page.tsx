@@ -14,6 +14,14 @@ export const metadata: Metadata = {
     description:
       "Orange County–rooted digital marketing: websites, Google Ads, SEO, and Google Business Profile that generate real leads.",
     url: "/about",
+    images: [
+      {
+        url: "https://www.leadsbyrj.com/photos/website-link-preview.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Custom Websites & Google Marketing",
+      },
+    ],
   },
 };
 

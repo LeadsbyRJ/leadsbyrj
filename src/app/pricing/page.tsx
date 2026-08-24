@@ -16,6 +16,14 @@ export const metadata: Metadata = {
     description:
       "Clear rates for Google Ads, SEO, Google Business Profile, and conversion websites. Packages save 20%.",
     url: "/pricing",
+    images: [
+      {
+        url: "https://www.leadsbyrj.com/photos/website-link-preview.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Custom Websites & Google Marketing",
+      },
+    ],
   },
 };
 

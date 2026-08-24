@@ -26,11 +26,20 @@ export const metadata: Metadata = {
       "Websites, Google Ads, SEO & Google Business Profile that generate real local leads. Helping businesses get found since 2014.",
     url: "/",
     type: "website",
+    images: [
+      {
+        url: "https://www.leadsbyrj.com/photos/website-link-preview.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Custom Websites & Google Marketing",
+      },
+    ],
   },
   twitter: {
     title: "Leads by RJ | Google Ads, SEO & Local Leads | Orange County",
     description:
       "Websites, Google Ads, SEO & Google Business Profile for real local lead generation.",
+    images: ["https://www.leadsbyrj.com/photos/website-link-preview.jpg"],
   },
 };
 
