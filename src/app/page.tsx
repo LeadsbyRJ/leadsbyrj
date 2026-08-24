@@ -20,10 +20,9 @@ export const metadata: Metadata = {
     "Get more local leads with conversion-focused websites, Google Ads, SEO, and Google Business Profile management. Orange County roots. Free ranking audit available.",
   alternates: { canonical: "/" },
   openGraph: {
-    title:
-      "Leads by RJ | Google Ads, SEO & Google Business Profile | Orange County",
+    title: "Leads by RJ | Custom Coded Websites, SEO, and Google Marketing",
     description:
-      "Websites, Google Ads, SEO & Google Business Profile that generate real local leads. Helping businesses get found since 2014.",
+      "Leads by RJ | Custom Coded Websites, SEO, and Google Marketing",
     url: "/",
     type: "website",
     images: [
@@ -36,9 +35,9 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    title: "Leads by RJ | Google Ads, SEO & Local Leads | Orange County",
+    title: "Leads by RJ | Custom Coded Websites, SEO, and Google Marketing",
     description:
-      "Websites, Google Ads, SEO & Google Business Profile for real local lead generation.",
+      "Leads by RJ | Custom Coded Websites, SEO, and Google Marketing",
     images: ["https://www.leadsbyrj.com/photos/website-link-preview.jpg"],
   },
 };

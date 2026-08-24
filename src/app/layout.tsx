@@ -21,6 +21,8 @@ const defaultTitle =
   "Leads by RJ | Google Ads, SEO & Google Business Profile | Orange County";
 const defaultDescription =
   "Orange County local lead generation: websites, Google Ads, SEO, and Google Business Profile optimization that get you found and get more customers. Free ranking audit.";
+const socialPreviewTitle =
+  "Leads by RJ | Custom Coded Websites, SEO, and Google Marketing";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.leadsbyrj.com"),
@@ -50,8 +52,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE.url,
     siteName: SITE.name,
-    title: defaultTitle,
-    description: defaultDescription,
+    title: socialPreviewTitle,
+    description: socialPreviewTitle,
     images: [
       {
         url: "https://www.leadsbyrj.com/photos/website-link-preview.jpg",
@@ -63,8 +65,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: defaultTitle,
-    description: defaultDescription,
+    title: socialPreviewTitle,
+    description: socialPreviewTitle,
     creator: "@LeadsbyRJ",
     site: "@LeadsbyRJ",
     images: ["https://www.leadsbyrj.com/photos/website-link-preview.jpg"],
