@@ -16,7 +16,13 @@ export function FeaturedProjects() {
         title="Projects that convert"
         description="Recent builds for real businesses—local service and product brands that need leads, not just a pretty homepage."
       />
-      <StaggerChildren className="grid gap-6 md:grid-cols-2">
+      <StaggerChildren
+        className={
+          PROJECTS.length > 1
+            ? "grid gap-6 md:grid-cols-2"
+            : "mx-auto grid max-w-xl gap-6"
+        }
+      >
         {PROJECTS.map((project) => (
           <StaggerItem key={project.slug}>
             <article

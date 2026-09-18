@@ -6,12 +6,12 @@ import { ProjectsGrid } from "@/components/projects/ProjectsGrid";
 export const metadata: Metadata = {
   title: "Projects — Websites & Local Lead Gen Case Work",
   description:
-    "Featured Orange County and national projects by Leads by RJ: Lobato Landscaping, vSeeBoxUS, and more conversion-focused websites, SEO, and lead gen builds.",
+    "Featured Orange County projects by Leads by RJ, including Lobato Landscaping and more conversion-focused websites, SEO, and lead gen builds.",
   alternates: { canonical: "/projects" },
   openGraph: {
     title: "Projects | Leads by RJ — Lead-Generating Websites",
     description:
-      "Real client websites built for Google Ads, SEO, and local leads—including Lobato Landscaping and vSeeBoxUS.",
+      "Real client websites built for Google Ads, SEO, and local leads—including Lobato Landscaping.",
     url: "/projects",
     images: [
       {

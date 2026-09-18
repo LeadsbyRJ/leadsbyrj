@@ -250,14 +250,4 @@ export const PROJECTS = [
     tags: ["Website", "Local SEO", "Lead Forms"],
     image: "/projects/lobato-landscaping.jpg",
   },
-  {
-    slug: "vseeboxus",
-    name: "vSeeBoxUS",
-    url: "https://www.vseeboxus.tv",
-    location: "National",
-    summary:
-      "Authorized streaming box product site built for retail and wholesale lead generation—clear catalog, trust, and conversion paths.",
-    tags: ["E-commerce", "Product Site", "Wholesale Leads"],
-    image: "/projects/vseeboxus.jpg",
-  },
 ] as const;
