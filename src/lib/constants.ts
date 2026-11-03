@@ -260,4 +260,14 @@ export const PROJECTS = [
     tags: ["Website", "Local SEO", "Lead Forms"],
     image: "/projects/summit-electrical.jpg",
   },
+  {
+    slug: "coastal-pipe-drain",
+    name: "Coastal Pipe & Drain",
+    url: "https://coastal-pipe-drain-bice.vercel.app",
+    location: "Coastal Orange County, CA",
+    summary:
+      "Local plumbing site for drain cleaning, pipe repair, and water heaters, with service pages, a quote form, and coastal Orange County trust signals.",
+    tags: ["Website", "Local SEO", "Lead Forms"],
+    image: "/projects/coastal-pipe-drain.jpg",
+  },
 ] as const;
