@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import remarkGfm from "remark-gfm";
 import { getPostBySlug, getPostSlugs } from "@/lib/blog";
 import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
@@ -23,6 +24,7 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.description,
+    keywords: post.keywords,
     alternates: { canonical: `/blog/${slug}` },
     openGraph: {
       title: post.title,
@@ -49,8 +51,15 @@ export default async function BlogPostPage({
         <h1 className="mt-2 text-3xl font-bold sm:text-4xl">{post.title}</h1>
         <p className="mt-4 text-lg text-muted">{post.description}</p>
 
-        <div className="prose prose-invert mt-8 max-w-none">
-          <MDXRemote source={post.content} />
+        <div className="prose prose-invert mt-8 max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-p:leading-relaxed prose-li:marker:text-accent">
+          <MDXRemote
+            source={post.content}
+            options={{
+              mdxOptions: {
+                remarkPlugins: [remarkGfm],
+              },
+            }}
+          />
         </div>
 
         <div className="mt-12 rounded-lg border border-border bg-surface p-6 text-center">
