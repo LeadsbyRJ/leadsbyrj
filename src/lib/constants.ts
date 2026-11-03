@@ -270,4 +270,14 @@ export const PROJECTS = [
     tags: ["Website", "Local SEO", "Lead Forms"],
     image: "/projects/coastal-pipe-drain.jpg",
   },
+  {
+    slug: "coastal-climate",
+    name: "Coastal Climate",
+    url: "https://coastal-climate.vercel.app",
+    location: "Orange County, CA",
+    summary:
+      "Local heating and cooling site for AC repair, installation, and indoor air quality, with service pages, a quote form, and Orange County trust signals.",
+    tags: ["Website", "Local SEO", "Lead Forms"],
+    image: "/projects/coastal-climate.jpg",
+  },
 ] as const;
