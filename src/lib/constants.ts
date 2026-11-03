@@ -250,4 +250,14 @@ export const PROJECTS = [
     tags: ["Website", "Local SEO", "Lead Forms"],
     image: "/projects/lobato-landscaping.jpg",
   },
+  {
+    slug: "summit-electrical",
+    name: "Summit Electrical Services",
+    url: "https://summit-electrical.vercel.app",
+    location: "Orange County, CA",
+    summary:
+      "Local electrician site for lighting, panel upgrades, and repairs, with service pages, a quote form, and Orange County trust signals.",
+    tags: ["Website", "Local SEO", "Lead Forms"],
+    image: "/projects/summit-electrical.jpg",
+  },
 ] as const;
