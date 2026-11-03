@@ -155,6 +155,15 @@ export function Header() {
 
         <div className="flex items-center lg:hidden">
           <a
+            href={SITE.xUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-md p-2 text-muted transition-colors hover:text-accent"
+            aria-label="Follow Leads by RJ on X"
+          >
+            <XIcon className="h-4 w-4" />
+          </a>
+          <a
             href={SITE.phoneHref}
             className="rounded-md p-2 text-muted transition-colors hover:text-accent"
             aria-label={`Call ${SITE.phone}`}
