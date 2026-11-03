@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { Menu, X as XClose } from "lucide-react";
+import { Menu, Phone, X as XClose } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { NAV_LINKS, SITE } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -136,6 +136,13 @@ export function Header() {
           >
             <XIcon className="h-4 w-4" />
           </a>
+          <a
+            href={SITE.phoneHref}
+            className="rounded-md p-2 text-muted transition-colors hover:text-accent"
+            aria-label={`Call ${SITE.phone}`}
+          >
+            <Phone className="h-4 w-4" aria-hidden="true" />
+          </a>
           <Button
             type="button"
             size="sm"
@@ -146,16 +153,25 @@ export function Header() {
           </Button>
         </div>
 
-        <button
-          type="button"
-          className="relative z-10 rounded-md p-2 text-foreground lg:hidden"
-          onClick={() => setOpen((v) => !v)}
-          aria-expanded={open}
-          aria-controls="mobile-nav"
-          aria-label={open ? "Close menu" : "Open menu"}
-        >
-          {open ? <XClose className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+        <div className="flex items-center lg:hidden">
+          <a
+            href={SITE.phoneHref}
+            className="rounded-md p-2 text-muted transition-colors hover:text-accent"
+            aria-label={`Call ${SITE.phone}`}
+          >
+            <Phone className="h-4 w-4" aria-hidden="true" />
+          </a>
+          <button
+            type="button"
+            className="relative z-10 rounded-md p-2 text-foreground"
+            onClick={() => setOpen((v) => !v)}
+            aria-expanded={open}
+            aria-controls="mobile-nav"
+            aria-label={open ? "Close menu" : "Open menu"}
+          >
+            {open ? <XClose className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
       </Container>
 
       <AnimatePresence>
