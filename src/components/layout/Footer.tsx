@@ -109,6 +109,16 @@ export function Footer() {
               </li>
               <li>
                 <a
+                  href="https://share.google/t12rOeFjeElmJ2oCY"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors hover:text-accent"
+                >
+                  Google Business Profile
+                </a>
+              </li>
+              <li>
+                <a
                   href={SITE.xUrl}
                   target="_blank"
                   rel="noopener noreferrer"
