@@ -62,6 +62,19 @@ export default function ContactPage() {
           </div>
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-muted">
+              Google Business Profile
+            </h3>
+            <a
+              href="https://share.google/t12rOeFjeElmJ2oCY"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-1 block text-lg text-accent hover:underline"
+            >
+              View on Google
+            </a>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-muted">
               Social
             </h3>
             <a
