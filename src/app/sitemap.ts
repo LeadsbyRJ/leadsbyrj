@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blog",
     "/testimonials",
     "/privacy",
+    "/serving-orange-county",
   ];
 
   const staticEntries = staticRoutes.map((path) => ({
