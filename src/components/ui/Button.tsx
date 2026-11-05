@@ -108,9 +108,9 @@ export function Button({
     }
 
     const hashId = extractSectionId(href);
-    const homeSectionId = resolveHomeSectionId(href, pathname);
+    const homeSectionId = resolveHomeSectionId(href);
 
-    // Hash links or homepage /contact → section scroll with header offset
+    // Hash links scroll in place. Plain routes such as /contact navigate.
     if (hashId || homeSectionId) {
       const sectionId = hashId || homeSectionId!;
       const anchorHref =

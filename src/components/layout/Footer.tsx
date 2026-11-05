@@ -35,7 +35,7 @@ export function Footer() {
     e: React.MouseEvent<HTMLAnchorElement>,
     href: string
   ) {
-    const sectionId = resolveHomeSectionId(href, pathname);
+    const sectionId = resolveHomeSectionId(href);
     if (!sectionId) return;
     e.preventDefault();
     navigateToSection(sectionId, {

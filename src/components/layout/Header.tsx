@@ -61,7 +61,7 @@ export function Header() {
     const wasOpen = open;
     if (wasOpen) setOpen(false);
 
-    const sectionId = resolveHomeSectionId(href, pathname);
+    const sectionId = resolveHomeSectionId(href);
     if (sectionId) {
       e.preventDefault();
       navigateToSection(sectionId, {

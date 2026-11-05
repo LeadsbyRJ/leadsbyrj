@@ -89,23 +89,11 @@ export function extractSectionId(href: string): string | null {
 }
 
 /**
- * Map common routes to homepage section ids when already on home.
- * e.g. /contact → contact-form on homepage.
+ * Map hash links to in-page section ids.
+ * Plain routes, including /contact, stay page navigations.
  */
-export function resolveHomeSectionId(
-  href: string,
-  pathname: string
-): string | null {
-  const hashId = extractSectionId(href);
-  if (hashId) return hashId;
-
-  if (pathname === "/") {
-    if (href === "/contact" || href.startsWith("/contact?")) {
-      return SECTION_IDS.contactForm;
-    }
-  }
-
-  return null;
+export function resolveHomeSectionId(href: string): string | null {
+  return extractSectionId(href);
 }
 
 /**
