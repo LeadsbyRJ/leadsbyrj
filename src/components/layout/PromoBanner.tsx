@@ -35,7 +35,7 @@ export function PromoBanner() {
           <span className="mx-1.5 text-muted">·</span>
           Custom websites for{" "}
           <span className="font-semibold text-foreground">$375</span>
-          <span className="text-muted"> (normally $750)</span>
+          <span className="text-muted"> (50% off! - Normally $750)</span>
         </p>
         <Link
           href="/contact"
