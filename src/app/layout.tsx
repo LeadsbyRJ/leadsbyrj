@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { HashScroll } from "@/components/layout/HashScroll";
-import { PromoBanner } from "@/components/layout/PromoBanner";
 import { LocalBusinessJsonLd } from "@/components/seo/JsonLd";
 import { SITE } from "@/lib/constants";
 import "./globals.css";
@@ -99,7 +98,6 @@ export default function RootLayout({
         <LocalBusinessJsonLd />
         <HashScroll />
         <Header />
-        <PromoBanner />
         <main className="flex-1">{children}</main>
         <Footer />
       </body>
