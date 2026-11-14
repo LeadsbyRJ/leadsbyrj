@@ -6,11 +6,14 @@ import { Section } from "@/components/ui/Section";
 import { SITE } from "@/lib/constants";
 import {
   CITY_SERVICE_SECTIONS,
+  cityPageFaqs,
+  cityPageKeywords,
   cityPageTitle,
   cityPath,
   getAllCities,
   getCityBySlug,
   getNearbyCities,
+  type CityFaq,
   type OrangeCountyCity,
 } from "@/lib/cities";
 
@@ -44,6 +47,7 @@ export async function generateMetadata({
   return {
     title: { absolute: title },
     description: city.metaDescription,
+    keywords: cityPageKeywords(city.name),
     alternates: { canonical: path },
     openGraph: {
       title,
@@ -71,7 +75,13 @@ const SCHEMA_SERVICES = [
   "Online Marketing",
 ] as const;
 
-function CityJsonLd({ city }: { city: OrangeCountyCity }) {
+function CityJsonLd({
+  city,
+  faqs,
+}: {
+  city: OrangeCountyCity;
+  faqs: readonly CityFaq[];
+}) {
   const pageUrl = `${SITE.url}${cityPath(city.slug)}`;
   const data = {
     "@context": "https://schema.org",
@@ -112,7 +122,7 @@ function CityJsonLd({ city }: { city: OrangeCountyCity }) {
       {
         "@type": "FAQPage",
         "@id": `${pageUrl}#faq`,
-        mainEntity: city.faqs.map((faq) => ({
+        mainEntity: faqs.map((faq) => ({
           "@type": "Question",
           name: faq.question,
           acceptedAnswer: {
@@ -162,10 +172,11 @@ export default async function CityLandingPage({ params }: CityPageProps) {
   if (!city) notFound();
 
   const nearby = getNearbyCities(city);
+  const faqs = cityPageFaqs(city.name, city.faqs);
 
   return (
     <>
-      <CityJsonLd city={city} />
+      <CityJsonLd city={city} faqs={faqs} />
 
       <Section className="bg-radial-neon pt-12 sm:pt-16">
         <nav aria-label="Breadcrumb" className="mb-6 text-sm text-muted">
@@ -211,7 +222,8 @@ export default async function CityLandingPage({ params }: CityPageProps) {
         <p className="mt-2.5 max-w-2xl text-sm leading-relaxed text-muted sm:text-base">
           Custom websites, local SEO, Google Maps and Google Business Profile
           work, Google Ads management, and online marketing—written for
-          businesses that serve {city.name}.
+          businesses that serve {city.name}. If you need a website developer in{" "}
+          {city.name}, CA, you work directly with me from design through launch.
         </p>
         <ul className="mt-8 grid gap-5 sm:grid-cols-2">
           {CITY_SERVICE_SECTIONS.map((section) => (
@@ -245,10 +257,12 @@ export default async function CityLandingPage({ params }: CityPageProps) {
         </h2>
         <p className="mt-2.5 max-w-2xl text-sm leading-relaxed text-muted sm:text-base">
           Straight answers for owners who want to show up for website designer,
-          web design, and local SEO searches in {city.name}.
+          web design, and local SEO searches in {city.name}, and what to expect
+          from a {city.name} marketing agency that handles Google Maps, ads, and
+          your website.
         </p>
         <dl className="mt-8 space-y-4">
-          {city.faqs.map((faq) => (
+          {faqs.map((faq) => (
             <div
               key={faq.question}
               className="rounded-2xl border border-border bg-surface p-5 sm:p-6"
