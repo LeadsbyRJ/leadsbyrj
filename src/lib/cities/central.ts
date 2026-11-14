@@ -9,13 +9,13 @@ export const CENTRAL_OC_CITIES: OrangeCountyCity[] = [
     areas: "The Disneyland Resort and convention district, the Platinum Triangle, downtown Anaheim, and Anaheim Hills",
     intro: [
       "Anaheim is not one search market. The resort and convention district is hotels, restaurants, and visitor services. Anaheim Hills is homeowners hiring landscapers, HVAC techs, and medical offices. Downtown Anaheim and the Platinum Triangle add their own mix of offices and new residential. A website designer who writes one “Anaheim” paragraph for all of that is leaving rankings on the table.",
-      "Leads by RJ builds custom websites, local SEO, and Google marketing for Anaheim businesses that need to be found for the right intent: website design in Anaheim, plumber in Anaheim Hills, or a restaurant near the resort. I am based in Newport Beach and I will not treat a Hills contractor like a Harbor Boulevard souvenir shop.",
+      "Leads by RJ builds custom websites, local SEO, and Google marketing for Anaheim businesses that need to be found for the right intent: website design in Anaheim, plumber in Anaheim Hills, or a restaurant near the resort. I am based in Newport Beach, and Hills contractors get a different page than a restaurant on the resort edge.",
     ],
     whyLocal:
       "National brands dominate resort-area Google Ads and Maps. Independent Anaheim businesses win by being specific: neighborhood names, real service photos, and a Google Business Profile that matches the part of the city they actually serve. Local SEO is how an Anaheim Hills electrician avoids competing with every “near Disneyland” listing that has nothing to do with panel upgrades.",
     services: {
       web: "Custom website design for Anaheim splits visitor businesses from residential service companies. Website development includes clear offers, fast mobile pages, and forms or booking paths that match whether you serve tourists, Hills homeowners, or both—on separate pages when the offers differ.",
-      seo: "Local SEO for Anaheim uses distinct copy for the resort district and Anaheim Hills instead of one stuffed keyword block. I target website designer, web design, and trade phrases the way residents and meeting planners actually type them.",
+      seo: "Local SEO for Anaheim uses distinct copy for the resort district and Anaheim Hills. I target website designer, web design, and trade phrases the way residents and meeting planners actually type them.",
       maps:
         "Google Maps marketing and Google Business Profile optimization have to pick the right categories. A contractor serving Anaheim Hills should not look like a tourist attraction. Photos, service area, and posts should match the jobs you want.",
       ads: "Google Ads management in Anaheim needs tight geography and query filters so you are not paying for theme-park research. Campaigns can focus on Anaheim Hills, central Anaheim, or a defined radius—not the entire visitor funnel.",
@@ -26,7 +26,7 @@ export const CENTRAL_OC_CITIES: OrangeCountyCity[] = [
       {
         question: "Do you design websites for Anaheim Hills businesses as well as the resort area?",
         answer:
-          "Yes. Those are different customers. I will not copy one Anaheim page for both. Hills home-service companies and resort-area restaurants get copy, offers, and Google profile categories that match their actual work.",
+          "Yes. Those are different customers. Hills home-service companies and resort-area restaurants get copy, offers, and Google profile categories that match the work they actually do.",
       },
       {
         question: "Can local SEO help if big hotel sites dominate Anaheim search?",
@@ -36,7 +36,7 @@ export const CENTRAL_OC_CITIES: OrangeCountyCity[] = [
       {
         question: "Should my Google Business Profile mention the Platinum Triangle or downtown?",
         answer:
-          "Only if you serve those areas. Google Business Profile optimization should describe real coverage. I will not add districts as decoration.",
+          "If you serve those areas, they belong on the profile and on the page. Google Business Profile optimization describes the parts of Anaheim you actually cover—Hills, downtown, the Platinum Triangle, or the resort edge.",
       },
       {
         question: "How do I get a free ranking audit for Anaheim?",
@@ -53,14 +53,14 @@ export const CENTRAL_OC_CITIES: OrangeCountyCity[] = [
       "Website designer in Fountain Valley, CA for custom websites, local SEO, and Google Ads. Mile Square and Brookhurst-corridor businesses welcome.",
     areas: "Mile Square Regional Park, the Brookhurst and Warner commercial corridors, and the residential grid toward Huntington Beach, Westminster, and Santa Ana",
     intro: [
-      "Fountain Valley sits in the middle of the county, which sounds convenient until every competitor from Huntington Beach and Santa Ana claims it in a footer. Residents still search website designer in Fountain Valley, pediatric dentist Fountain Valley, and HVAC near Mile Square. Those queries belong on a custom website, not on a 34-city list.",
+      "Fountain Valley sits in the middle of the county, which sounds convenient until every competitor from Huntington Beach and Santa Ana claims it in passing. Residents still search website designer in Fountain Valley, pediatric dentist Fountain Valley, and HVAC near Mile Square. Those queries belong on a custom website built for this city.",
       "Leads by RJ builds website design, local SEO, and Google Business Profile systems for Fountain Valley medical offices, retailers along Brookhurst, and home-service companies that already work the residential grid. I am based in Newport Beach and I write Fountain Valley as its own city.",
     ],
     whyLocal:
       "Central Orange County is dense. A website developer who understands Fountain Valley will talk about Mile Square, the medical corridor, and the fact that many customers also search Huntington Beach and Westminster. Local SEO and Maps marketing then draw a clean service area so Google is not guessing whether you are a coastal shop or a Santa Ana office.",
     services: {
       web: "Custom website design for Fountain Valley practices and trades: service pages, insurance or service-area notes when relevant, and forms that work on mobile. Website development stays fast and conversion-focused.",
-      seo: "Local SEO targets Fountain Valley phrases and the neighboring searches you can serve in Huntington Beach, Westminster, and Santa Ana—each on honest pages, not one paragraph of city names.",
+      seo: "Local SEO targets Fountain Valley phrases and the neighboring searches you can serve in Huntington Beach, Westminster, and Santa Ana—each on its own page.",
       maps:
         "Google Maps marketing helps medical, dental, and home-service listings appear around Mile Square and the Brookhurst corridor. Google Business Profile optimization covers categories, photos, and a realistic service area.",
       ads: "Google Ads management can geo-target Fountain Valley without buying the entire coastal strip. Search campaigns stay tied to the offer on your custom website.",
@@ -81,7 +81,7 @@ export const CENTRAL_OC_CITIES: OrangeCountyCity[] = [
       {
         question: "What does Google marketing include for Fountain Valley?",
         answer:
-          "Google Business Profile optimization, Google Maps visibility, local SEO on the website, and optional Google Ads management. No invented reviews or rankings.",
+          "Google Business Profile optimization, Google Maps visibility, local SEO on the website, and optional Google Ads management—tied to a site that can turn the click into a call or form fill.",
       },
       {
         question: "How do I request a ranking audit for Fountain Valley?",
@@ -102,9 +102,9 @@ export const CENTRAL_OC_CITIES: OrangeCountyCity[] = [
       "Leads by RJ builds custom websites, local SEO, and Google marketing for Garden Grove owners who need to be found by neighbors—not lost between Anaheim and Westminster directory listings. I am based in Newport Beach and I write pages that match the corridor and the residential streets you actually serve.",
     ],
     whyLocal:
-      "When a city has strong ethnic business districts, generic English-only templates underperform. A website designer can plan layout, NAP consistency, and Google Business Profile categories that match how customers search, including Maps marketing along Garden Grove Boulevard. Local SEO then stops Anaheim resort sites from absorbing every “near me” query on the north edge of the city.",
+      "When a city has strong ethnic business districts, generic English-only templates underperform. A website designer can plan layout, consistent listings, and Google Business Profile categories that match how customers search, including Maps marketing along Garden Grove Boulevard. Local SEO then keeps Garden Grove businesses visible instead of losing “near me” queries to Anaheim resort listings.",
     services: {
-      web: "Website design and development for Garden Grove includes custom websites for restaurants, clinics, auto shops, and home-service companies. Pages can be structured for clarity first; multilingual needs are handled honestly rather than with unreadable keyword blocks.",
+      web: "Website design and development for Garden Grove includes custom websites for restaurants, clinics, auto shops, and home-service companies. Pages stay clear first; if you serve customers in more than one language, we plan real pages for the people who read them.",
       seo: "Local SEO for Garden Grove targets city-plus-service phrases and boulevard-area searches. I keep Garden Grove copy distinct from Westminster and Santa Ana so Google can tell the cities apart.",
       maps:
         "Google Maps marketing is especially useful on a dense commercial corridor. Google Business Profile optimization covers categories, photos of the actual storefront, hours, and a service area that matches where you work.",
@@ -124,9 +124,9 @@ export const CENTRAL_OC_CITIES: OrangeCountyCity[] = [
           "Yes. Contractors serving Garden Grove, Stanton, and Westminster need city pages and a realistic Maps service area, not a single “we serve all of OC” sentence.",
       },
       {
-        question: "Will you stuff Korean or Vietnamese keywords into the site?",
+        question: "Can the website support more than one language?",
         answer:
-          "No. If you need another language, we plan real content for the people who read it. Keyword stuffing and hidden text are off the table.",
+          "Yes. If your Garden Grove customers search and read in more than one language, we plan real pages for them—clear copy, not a machine dump.",
       },
       {
         question: "How do I get a free ranking audit for Garden Grove?",
@@ -161,7 +161,7 @@ export const CENTRAL_OC_CITIES: OrangeCountyCity[] = [
       {
         question: "How do you keep “Orange” from meaning the whole county in Google?",
         answer:
-          "By using “Orange, CA,” naming Old Towne or east Orange in the copy, and matching that language on your Google Business Profile. I do not title the page as if it were a county-wide hub.",
+          "By using “Orange, CA,” naming Old Towne or east Orange in the copy, and matching that language on your Google Business Profile so Google treats it as the city, not the county.",
       },
       {
         question: "Do you design websites for Old Towne Orange shops?",
@@ -189,10 +189,10 @@ export const CENTRAL_OC_CITIES: OrangeCountyCity[] = [
     areas: "Downtown Santa Ana and the civic center, the Artists Village, Fourth Street (La Cuatro), and the South Coast Metro edge toward Costa Mesa",
     intro: [
       "Santa Ana is the county seat, which means downtown civic traffic, a working Artists Village, and Fourth Street’s long-running commercial corridor all sit in the same city as dense residential neighborhoods. People search website designer in Santa Ana, attorney near the civic center, and plumber in south Santa Ana as separate intents. One county-wide homepage cannot cover them.",
-      "Leads by RJ builds custom websites, local SEO, and Google marketing for Santa Ana businesses that serve residents and local offices—not for invented “we rank #1 downtown” claims. I am based in Newport Beach and I write Santa Ana as a specific city: civic center, Fourth Street, Artists Village, and the neighborhoods that meet Garden Grove, Orange, and Tustin.",
+      "Leads by RJ builds custom websites, local SEO, and Google marketing for Santa Ana businesses that serve residents and local offices. I am based in Newport Beach and I write Santa Ana as a specific city: civic center, Fourth Street, Artists Village, and the neighborhoods that meet Garden Grove, Orange, and Tustin.",
     ],
     whyLocal:
-      "County-seat searches attract law firms, government directories, and national brands. A local website developer helps a Santa Ana contractor or clinic compete on the queries that actually make the phone ring. Google Business Profile optimization, honest service-area settings, and pages that name Fourth Street or the Artists Village only when relevant give Google a map of the real business—not a civic boilerplate paragraph.",
+      "County-seat searches attract law firms, government directories, and national brands. A local website developer helps a Santa Ana contractor or clinic compete on the queries that actually make the phone ring. Google Business Profile optimization, a clear service area, and pages that name Fourth Street or the Artists Village when that is where you work give Google a map of the real business.",
     services: {
       web: "Website design and development for Santa Ana includes custom websites for professional offices near downtown, retailers on Fourth Street, and home-service companies covering the residential grid. Lead forms, click-to-call, and bilingual layouts when the business actually operates that way.",
       seo: "Local SEO for Santa Ana targets city-specific service phrases and keeps downtown professional queries separate from neighborhood home-service queries. Nearby Costa Mesa, Tustin, and Garden Grove pages are used only for real coverage.",
@@ -214,9 +214,9 @@ export const CENTRAL_OC_CITIES: OrangeCountyCity[] = [
           "Yes. Storefronts on Fourth Street benefit from Maps-focused Google marketing, accurate hours, and a website that loads well on phones for people already on the corridor.",
       },
       {
-        question: "Do you invent rankings or reviews for Santa Ana clients?",
+        question: "Do I need a new website, or can you improve the one I have?",
         answer:
-          "No. I do not add ratings, reviews, or performance claims that are not real. Local SEO work is the website, the profile, and the citations.",
+          "Either works. If the current site is slow, hard to update, or weak on mobile, a custom rebuild is usually cleaner. If the bones are solid, we can improve the pages, local SEO, and Google Business Profile around downtown, Fourth Street, and the neighborhoods you serve.",
       },
       {
         question: "How do I get a free ranking audit for Santa Ana?",
@@ -237,10 +237,10 @@ export const CENTRAL_OC_CITIES: OrangeCountyCity[] = [
       "Beach Boulevard brings auto shops, restaurants, and retail. The residential grid is homeowners who hire local trades. Custom website design and local SEO should talk to those customers instead of copying a neighboring city’s paragraph.",
     ],
     whyLocal:
-      "In a small, densely bordered city, Maps proximity is noisy. A website designer who treats Stanton as real will match NAP data, write unique copy, and set Google Business Profile service areas that include Stanton on purpose. That is usually more effective than another blog post about “Orange County marketing.”",
+      "In a small, densely bordered city, Maps proximity is noisy. A website designer who treats Stanton as its own market will match your name and phone, write Stanton-specific copy, and set Google Business Profile service areas that include this city on purpose. That is usually more effective than another blog post about “Orange County marketing.”",
     services: {
       web: "Custom websites for Stanton businesses stay practical: services, photos, a map or city mention, and a form. Website development is mobile-first for Beach Boulevard shoppers and for homeowners in the grid.",
-      seo: "Local SEO for Stanton is a dedicated page and on-page work for city-plus-service phrases. Nearby Garden Grove, Cypress, and Westminster links help visitors without turning the page into a keyword dump.",
+      seo: "Local SEO for Stanton is a dedicated page and on-page work for city-plus-service phrases. Nearby Garden Grove, Cypress, and Westminster links help visitors who also search those cities.",
       maps:
         "Google Business Profile optimization helps compact-city businesses appear on Google Maps for Stanton searches. Categories and photos should match the boulevard shop or the residential work you do.",
       ads: "Google Ads management can draw a tight radius around Stanton so a small budget is not spent on Anaheim tourist queries or distant coastal clicks.",
@@ -282,7 +282,7 @@ export const CENTRAL_OC_CITIES: OrangeCountyCity[] = [
       "Leads by RJ builds custom websites, local SEO, and Google Maps marketing for Tustin businesses that need to be found for website design in Tustin, dentist Old Town Tustin, or services near Tustin Legacy. I am based in Newport Beach and I keep Tustin distinct from Irvine even though the I-5 corridor makes them feel close.",
     ],
     whyLocal:
-      "Irvine’s planned-community sites are aggressive in local search. Tustin owners need pages that say Tustin, show Old Town or Legacy context, and use a Google Business Profile that does not hide inside an Irvine address story. Local SEO plus honest nearby-city links to Irvine, Orange, and Santa Ana is how you cover the corridor without becoming another Irvine clone.",
+      "Irvine’s planned-community sites are aggressive in local search. Tustin owners need pages that say Tustin, show Old Town or Legacy context, and use a Google Business Profile that is clearly Tustin. Local SEO plus nearby-city pages for Irvine, Orange, and Santa Ana is how you cover the corridor.",
     services: {
       web: "Custom website design for Tustin can highlight Old Town character or Legacy-area convenience without mixing the two if your customers do not overlap. Website development includes lead forms, service lists, and fast mobile performance.",
       seo: "Local SEO for Tustin targets city-specific phrases and keeps Irvine as a neighboring page, not a synonym. Copy can mention Old Town, Tustin Ranch, or The District when those are true service areas.",
@@ -299,14 +299,14 @@ export const CENTRAL_OC_CITIES: OrangeCountyCity[] = [
           "When the customers differ, yes. A historic-core shop and a Legacy-area service company should not share a paragraph. I write to the location you actually serve.",
       },
       {
-        question: "Will you list me as an Irvine business to get more traffic?",
+        question: "Should a Tustin business be listed as Irvine?",
         answer:
-          "No. If you are in Tustin, the site and Google profile say Tustin. Irvine can be a nearby city you serve, with its own page if that is real work.",
+          "No. If you are in Tustin, the site and Google profile say Tustin. Irvine can be a nearby city you serve, with its own page when that work is part of your coverage.",
       },
       {
         question: "Can Google Ads target The District shoppers?",
         answer:
-          "Ads can geo-target Tustin and nearby zip codes. I will not promise you can buy a mall’s foot traffic by name, but we can aim campaigns at the city and the queries those shoppers type.",
+          "Ads can geo-target Tustin and nearby zip codes, aimed at the city and the service queries shoppers and residents actually type—not at every Irvine Spectrum search.",
       },
       {
         question: "How do I get a free ranking audit for Tustin?",
@@ -324,13 +324,13 @@ export const CENTRAL_OC_CITIES: OrangeCountyCity[] = [
     areas: "Quiet residential streets with larger lots, bordering Orange, Anaheim Hills, and Yorba Linda, with almost no commercial strip of its own",
     intro: [
       "Villa Park is a mostly residential Orange County city with larger lots and very little storefront commercial space. That does not mean there is no search demand. Homeowners type website designer in Villa Park, landscaper Villa Park, and pool service Villa Park because they want someone who will come to this city—not a contractor who only works apartment corridors in Santa Ana.",
-      "Leads by RJ builds custom websites and local SEO for companies that already serve Villa Park homes. Google Maps marketing lists the city as a real service area. I am based in Newport Beach and I will not invent a Villa Park storefront you do not have.",
+      "Leads by RJ builds custom websites and local SEO for companies that already serve Villa Park homes. Google Maps marketing lists the city as a real service area. I am based in Newport Beach, and most Villa Park work is service-area: you go to the home.",
     ],
     whyLocal:
-      "When a city has almost no retail, Google leans on service-area businesses and nearby Orange and Anaheim listings. A website developer who understands Villa Park will write homeowner-focused pages, keep citations clean, and use Google Business Profile service areas instead of a fake address. That is how landscapers, remodelers, and professional services get found here.",
+      "When a city has almost no retail, Google leans on service-area businesses and nearby Orange and Anaheim listings. A website developer who understands Villa Park will write homeowner-focused pages, keep listings consistent, and use Google Business Profile service areas so landscapers, remodelers, and professional services get found here.",
     services: {
       web: "Custom website design for Villa Park–serving companies emphasizes residential work: galleries, service lists, and quote forms. Website development stays fast and mobile-friendly for homeowners comparing a few local options.",
-      seo: "Local SEO for Villa Park is a dedicated city page plus on-page work for home-service phrases. Nearby Orange, Anaheim, and Yorba Linda pages cover the cluster without stuffing all three into one sentence.",
+      seo: "Local SEO for Villa Park is a dedicated city page plus on-page work for home-service phrases. Nearby Orange, Anaheim, and Yorba Linda each get their own pages so the cluster is covered clearly.",
       maps:
         "Google Maps marketing for a residential city depends on service-area settings and reviews that mention the work, not on a plaza pin you do not have. Google Business Profile optimization stays within Google’s rules.",
       ads: "Google Ads management can include Villa Park in a tight north-central geo target with Orange and Anaheim Hills. That matches how contractors already drive the area.",
@@ -344,9 +344,9 @@ export const CENTRAL_OC_CITIES: OrangeCountyCity[] = [
           "Yes. Most Villa Park work is service-area: you go to the home. The website and Google profile should say that clearly instead of implying a storefront on a street that is residential.",
       },
       {
-        question: "Should I put a Villa Park address on my site if I do not have one?",
+        question: "Do I need a Villa Park office to show up there?",
         answer:
-          "No. I will not invent a street address. We list Villa Park as a city you serve and build a real page for it.",
+          "No. Most Villa Park work is service-area: you go to the home. The website and Google profile list Villa Park as a city you serve, with a page built around the homeowners you already visit.",
       },
       {
         question: "What kinds of Villa Park searches are you targeting?",
@@ -365,16 +365,16 @@ export const CENTRAL_OC_CITIES: OrangeCountyCity[] = [
     slug: "westminster",
     name: "Westminster",
     metaDescription:
-      "Website designer in Westminster, CA for custom websites, local SEO, and Google Maps. Little Saigon and Bolsa Avenue businesses get practical, honest pages.",
+      "Website designer in Westminster, CA for custom websites, local SEO, and Google Maps. Little Saigon and Bolsa Avenue businesses get practical, professional pages.",
     areas: "Little Saigon along Bolsa Avenue, Asian Garden Mall, and residential neighborhoods toward Garden Grove, Huntington Beach, and Fountain Valley",
     intro: [
-      "Westminster is home to Little Saigon and the Bolsa Avenue commercial corridor, including Asian Garden Mall. That is a real business district with restaurants, professional offices, retail, and medical clinics—not a keyword to paste onto an Irvine template. People search website designer in Westminster, dentist near Bolsa, and plumber Westminster CA with local intent.",
-      "Leads by RJ builds custom websites, local SEO, and Google Business Profile work for Westminster businesses that want to be found by neighbors and by customers already on Bolsa. I am based in Newport Beach. I will write unique Westminster copy and I will not hide keyword lists in another language.",
+      "Westminster is home to Little Saigon and the Bolsa Avenue commercial corridor, including Asian Garden Mall. That is a real business district with restaurants, professional offices, retail, and medical clinics. People search website designer in Westminster, dentist near Bolsa, and plumber Westminster CA with local intent.",
+      "Leads by RJ builds custom websites, local SEO, and Google Business Profile work for Westminster businesses that want to be found by neighbors and by customers already on Bolsa. I am based in Newport Beach, and the copy is written for Westminster—not borrowed from Garden Grove or Fountain Valley.",
     ],
     whyLocal:
-      "Corridor search is competitive, and many listings compete on Maps within a few blocks. A website designer who understands Westminster will match NAP data, choose accurate Google Business Profile categories, and write service pages that name Bolsa or Little Saigon only when that is where you operate. Local SEO then keeps you from being absorbed into Garden Grove or Fountain Valley results.",
+      "Corridor search is competitive, and many listings compete on Maps within a few blocks. A website designer who understands Westminster will keep your name and phone consistent, choose accurate Google Business Profile categories, and write service pages around Bolsa or Little Saigon when that is where you operate. Local SEO then keeps you from being absorbed into Garden Grove or Fountain Valley results.",
     services: {
-      web: "Website design and development for Westminster includes custom websites for clinics, restaurants, auto shops, and home-service companies. If you operate in more than one language, we plan real content—not machine-translated keyword stuffing.",
+      web: "Website design and development for Westminster includes custom websites for clinics, restaurants, auto shops, and home-service companies. If you operate in more than one language, we plan real pages for the people who read them.",
       seo: "Local SEO for Westminster targets city-plus-service phrases and Bolsa-area intent. Garden Grove, Huntington Beach, and Fountain Valley remain neighboring pages when you truly work those cities.",
       maps:
         "Google Maps marketing is high-leverage on Bolsa Avenue. Google Business Profile optimization covers photos of the actual storefront, hours, categories, and a service area that matches your coverage.",
@@ -391,7 +391,7 @@ export const CENTRAL_OC_CITIES: OrangeCountyCity[] = [
       {
         question: "Can you add another language to my Westminster website?",
         answer:
-          "We can plan genuine pages in the language your customers use. I will not insert hidden translations or stuffed keyword blocks.",
+          "Yes. We can plan genuine pages in the language your customers use, written for the people who will read them.",
       },
       {
         question: "Will Google Business Profile help a mall-adjacent shop?",

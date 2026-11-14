@@ -15,7 +15,7 @@ export const SOUTH_OC_CITIES: OrangeCountyCity[] = [
       "Planned communities produce a lot of similar-looking contractor websites. Local SEO is how you stand out: a unique Aliso Viejo page, Google Business Profile categories that match the Town Center or the residential streets you serve, and Google Ads that geo-target this city instead of all of south Orange County. I am based in Newport Beach and I write Aliso Viejo as its own market.",
     services: {
       web: "Custom website design for Aliso Viejo offices and trades: clear services, HOA-aware residential proof when relevant, and forms that work on mobile. Website development stays fast and conversion-focused.",
-      seo: "Local SEO targets Aliso Viejo phrases and links nearby Laguna Hills, Laguna Niguel, and Lake Forest pages only when you truly work those cities. No 34-city footer paragraph pretending to be content.",
+      seo: "Local SEO targets Aliso Viejo phrases and links nearby Laguna Hills, Laguna Niguel, and Lake Forest pages when you serve those cities too. Each page stays about its own city.",
       maps:
         "Google Maps marketing helps Town Center offices and residential trades appear for “near me” searches inside Aliso Viejo. Google Business Profile optimization covers categories, photos, and a realistic service area.",
       ads: "Google Ads management can geo-target Aliso Viejo and a tight Saddleback Valley ring. That keeps spend on people who can become customers this week.",
@@ -36,7 +36,7 @@ export const SOUTH_OC_CITIES: OrangeCountyCity[] = [
       {
         question: "Do HOA neighborhoods change how you write the website?",
         answer:
-          "They change the proof you show—residential work, access, and local trust—not the need for keyword stuffing. Copy stays factual about Aliso Viejo.",
+          "They change the proof you show—residential work, access, and local trust. The site still needs to be fast, clear, and built around Aliso Viejo homeowners.",
       },
       {
         question: "How do I get a free ranking audit for Aliso Viejo?",
@@ -50,17 +50,17 @@ export const SOUTH_OC_CITIES: OrangeCountyCity[] = [
     slug: "irvine",
     name: "Irvine",
     metaDescription:
-      "Website designer in Irvine, CA for custom websites, local SEO, and Google Ads. Spectrum, IBC, and village neighborhoods each get honest, specific copy.",
+      "Website designer in Irvine, CA for custom websites, local SEO, and Google Ads. Spectrum, IBC, and village neighborhoods each get specific, professional copy.",
     areas: "Irvine Spectrum, the Irvine Business Complex, University Town Center, and villages such as Woodbridge, Northwood, and Turtle Rock",
     intro: [
       "Irvine is a master-planned city of villages, a large business complex, and retail centers like Irvine Spectrum and University Town Center. Searches fragment the same way: website designer in Irvine, web design near the Spectrum, plumber in Woodbridge, dentist in Northwood. A custom website that says “Irvine / OC / LA” in one breath is not built for those queries.",
-      "Leads by RJ builds website design, local SEO, and Google marketing for Irvine companies that serve a village, the IBC, or a defined set of nearby cities. I am based in Newport Beach. I will name Woodbridge or Turtle Rock only if you work there, and I will not treat Irvine as a synonym for Tustin or Lake Forest.",
+      "Leads by RJ builds website design, local SEO, and Google marketing for Irvine companies that serve a village, the IBC, or a defined set of nearby cities. I am based in Newport Beach. Woodbridge, Turtle Rock, and the other villages appear when they are part of your service area, and Irvine stays distinct from Tustin and Lake Forest.",
     ],
     whyLocal:
-      "Irvine is one of the most competitive local-search markets in Orange County because so many professional firms and national brands sit in the Spectrum and IBC. Local SEO still works when the page is specific: village names that are true, Google Business Profile categories that match the office, and Google Ads that geo-target Irvine instead of the entire county. A website developer who already works coastal Orange County can keep that work factual.",
+      "Irvine is one of the most competitive local-search markets in Orange County because so many professional firms and national brands sit in the Spectrum and IBC. Local SEO still works when the page is specific: the villages you serve, Google Business Profile categories that match the office, and Google Ads that geo-target Irvine instead of the entire county.",
     services: {
       web: "Custom website design for Irvine professional offices, medical groups, and home-service companies that work HOA villages. Website development includes fast mobile pages, clear services, and lead forms—not a corporate template that could live in any U.S. suburb.",
-      seo: "Local SEO for Irvine targets city-plus-service phrases and village-level language only when it is accurate. Nearby Tustin, Costa Mesa, Lake Forest, and Newport Beach pages cover the corridor without stuffing four cities into one heading.",
+      seo: "Local SEO for Irvine targets city-plus-service phrases and the villages you actually serve. Nearby Tustin, Costa Mesa, Lake Forest, and Newport Beach each get their own pages along the corridor.",
       maps:
         "Google Maps marketing in Irvine is competitive. Google Business Profile optimization—categories, photos of the actual office or jobs, and a realistic service area—is how an independent company stays visible next to larger IBC and Spectrum listings.",
       ads: "Google Ads management can geo-target Irvine and filter queries so you are not buying every Spectrum shopping search. Campaigns stay tied to the offer on your custom website.",
@@ -76,7 +76,7 @@ export const SOUTH_OC_CITIES: OrangeCountyCity[] = [
       {
         question: "Should my site list Woodbridge, Northwood, and Turtle Rock?",
         answer:
-          "Only if you serve those villages. Listing every Irvine village as a keyword is stuffing. Naming the ones you drive every week is useful local SEO.",
+          "If you serve those villages, yes—homeowners search that way. We name the communities you actually drive every week, not every village on the map.",
       },
       {
         question: "Can you help HOA-oriented home-service companies in Irvine?",
@@ -102,7 +102,7 @@ export const SOUTH_OC_CITIES: OrangeCountyCity[] = [
       "Leads by RJ builds custom websites, local SEO, and Google Business Profile systems for Laguna Hills practices and home-service companies. I am based in Newport Beach and I write Laguna Hills as itself—next to Aliso Viejo and Laguna Woods, not interchangeable with them.",
     ],
     whyLocal:
-      "When three “Laguna” cities sit in a row, Google needs help telling them apart. Unique copy, accurate NAP, and Google Maps marketing that names Laguna Hills keep you from ranking only in Laguna Niguel. A website designer who understands south Orange County will not paste one Laguna paragraph across all three cities.",
+      "When three “Laguna” cities sit in a row, Google needs help telling them apart. Unique copy, consistent listings, and Google Maps marketing that names Laguna Hills keep you from ranking only in Laguna Niguel. Each Laguna city gets its own page.",
     services: {
       web: "Custom website design for Laguna Hills medical offices, professional services, and trades. Website development includes clear services, mobile forms, and location context around Oakbrook Village or the residential streets you serve.",
       seo: "Local SEO targets Laguna Hills phrases and links Aliso Viejo, Laguna Niguel, and Laguna Woods only as nearby cities. Each page stays unique.",
@@ -121,7 +121,7 @@ export const SOUTH_OC_CITIES: OrangeCountyCity[] = [
       {
         question: "How do you keep Laguna Hills separate from Laguna Niguel in search?",
         answer:
-          "Separate pages, separate headings, and Google Business Profile service areas that list each city only when you work there. I do not publish one “Laguna” page for all three cities.",
+          "Separate pages, separate headings, and Google Business Profile service areas that list each city you serve. Laguna Hills, Laguna Niguel, and Laguna Woods each get their own page.",
       },
       {
         question: "Can you help home-service companies in Laguna Hills?",
@@ -147,7 +147,7 @@ export const SOUTH_OC_CITIES: OrangeCountyCity[] = [
       "Leads by RJ builds website design, local SEO, and Google Maps marketing for Laguna Niguel home-service companies, medical offices, and local retailers. I am based in Newport Beach and I keep Laguna Niguel distinct from Laguna Beach, Laguna Hills, and Dana Point.",
     ],
     whyLocal:
-      "Coastal-adjacent suburbs lose clicks to beach cities unless the website says Laguna Niguel in the heading and the Google Business Profile lists it as a service city. Local SEO here is residential: parks, hillside lots, and family neighborhoods. A website developer who already works south Orange County can write that without stuffing “Laguna” five times in a sentence.",
+      "Coastal-adjacent suburbs lose clicks to beach cities unless the website says Laguna Niguel in the heading and the Google Business Profile lists it as a service city. Local SEO here is residential: parks, hillside lots, and family neighborhoods—not a Laguna Beach tourism page with a different name.",
     services: {
       web: "Custom website design for Laguna Niguel businesses that serve homeowners and local offices. Website development includes galleries, service lists, and quote forms that work on a phone after school pickup on Crown Valley.",
       seo: "Local SEO targets Laguna Niguel phrases and uses Laguna Hills, Aliso Viejo, Dana Point, and Laguna Beach as neighboring pages when coverage is real. Each city keeps unique copy.",
@@ -171,7 +171,7 @@ export const SOUTH_OC_CITIES: OrangeCountyCity[] = [
       {
         question: "Can you also cover Dana Point and Aliso Viejo?",
         answer:
-          "If you truly work those cities, they get their own pages and a realistic service area. The Laguna Niguel page stays about Laguna Niguel.",
+          "Yes. Dana Point and Aliso Viejo get their own pages when you serve them. The Laguna Niguel page stays focused on Crown Valley, Alicia, and the neighborhoods you already drive.",
       },
       {
         question: "How do I get a free ranking audit for Laguna Niguel?",
@@ -189,13 +189,13 @@ export const SOUTH_OC_CITIES: OrangeCountyCity[] = [
     areas: "Laguna Woods Village, the city’s gates and clubhouses, and the immediate edges toward Laguna Hills, Aliso Viejo, and Lake Forest",
     intro: [
       "Laguna Woods is a 55+ community—Laguna Woods Village—incorporated as its own Orange County city. That changes search behavior. Residents and their families look for website designer in Laguna Woods, medical transport, home repair, dental, and landscaping that already understands gated-community access. A generic south-county website that never mentions the village will not get those calls.",
-      "Leads by RJ builds custom websites, local SEO, and Google Business Profile work for businesses that serve Laguna Woods. I am based in Newport Beach. Copy stays respectful and factual: this is a senior community with its own city name, not a punchline and not a keyword to hide on a Laguna Hills page.",
+      "Leads by RJ builds custom websites, local SEO, and Google Business Profile work for businesses that serve Laguna Woods. I am based in Newport Beach. This is a senior community with its own city name, and the pages are written for residents and families—not folded into a Laguna Hills page.",
     ],
     whyLocal:
-      "Google sees Laguna Woods as a distinct city, even though the three Laguna names confuse outsiders. Local SEO that uses the correct city, a Google profile with the right categories, and a website that explains how you serve the village (access, scheduling, the services residents actually hire) is more useful than a county-wide slogan. A website designer who understands Orange County will not treat Laguna Woods as a subsection of Laguna Hills.",
+      "Google sees Laguna Woods as a distinct city, even though the three Laguna names confuse outsiders. Local SEO that uses the correct city, a Google profile with the right categories, and a website that explains how you serve the village—access, scheduling, the services residents actually hire—is more useful than a county-wide slogan.",
     services: {
       web: "Custom website design for companies that serve Laguna Woods: clear services, an obvious phone number, and language that is easy to read. Website development stays mobile-friendly for residents and for adult children researching providers from another city.",
-      seo: "Local SEO targets Laguna Woods phrases and keeps Laguna Hills, Aliso Viejo, and Lake Forest as neighboring pages. I will not hide “Laguna Woods” inside a Laguna Hills paragraph.",
+      seo: "Local SEO targets Laguna Woods phrases and keeps Laguna Hills, Aliso Viejo, and Lake Forest as neighboring pages. Residents searching this city get a page written for Laguna Woods.",
       maps:
         "Google Maps marketing helps providers appear when someone in the village searches from a phone. Google Business Profile optimization covers categories, photos, and a service area that includes Laguna Woods on purpose.",
       ads: "Google Ads management can geo-target Laguna Woods tightly. That is often more efficient than a broad south-county campaign for businesses whose customers live in this community.",
@@ -216,7 +216,7 @@ export const SOUTH_OC_CITIES: OrangeCountyCity[] = [
       {
         question: "What kinds of Laguna Woods businesses do you help?",
         answer:
-          "Home repair and maintenance, medical and dental, mobility and transportation-related services, landscaping, and other providers residents actually search for. I only describe services you really offer.",
+          "Home repair and maintenance, medical and dental, mobility and transportation-related services, landscaping, and other providers residents actually search for.",
       },
       {
         question: "How do I get a ranking audit for Laguna Woods?",
@@ -230,17 +230,17 @@ export const SOUTH_OC_CITIES: OrangeCountyCity[] = [
     slug: "lake-forest",
     name: "Lake Forest",
     metaDescription:
-      "Website designer in Lake Forest, CA for custom websites, local SEO, and Google Ads. Foothill Ranch and Portola Hills businesses get specific, honest copy.",
+      "Website designer in Lake Forest, CA for custom websites, local SEO, and Google Ads. Foothill Ranch and Portola Hills businesses get specific, professional copy.",
     areas: "Lake Forest’s older neighborhoods, Foothill Ranch, Portola Hills, and the business parks along the 241 corridor toward Irvine and Mission Viejo",
     intro: [
       "Lake Forest includes established neighborhoods plus Foothill Ranch and Portola Hills—communities people still search by those names even though they sit inside the city. Website designer in Lake Forest, warehouse office near Foothill Ranch, and plumber in Portola Hills are different intents. A custom website that only says “south OC” misses all three.",
       "Leads by RJ builds website design, local SEO, and Google marketing for Lake Forest companies in the business parks and for trades that serve the hills. I am based in Newport Beach and I keep Lake Forest distinct from Irvine and Mission Viejo even though the freeways stitch them together.",
     ],
     whyLocal:
-      "Foothill Ranch business parks compete with Irvine IBC listings. Portola Hills homeowners compete with Mission Viejo and Rancho Santa Margarita providers. Local SEO that names the correct community, plus a Google Business Profile with a realistic service area, is how a Lake Forest company stays visible. A website developer who works Orange County will not merge those places into one “Saddleback” paragraph.",
+      "Foothill Ranch business parks compete with Irvine IBC listings. Portola Hills homeowners compete with Mission Viejo and Rancho Santa Margarita providers. Local SEO that names the correct community, plus a Google Business Profile with a realistic service area, is how a Lake Forest company stays visible.",
     services: {
-      web: "Custom website design for Lake Forest professional offices, light-industrial and service businesses, and residential trades. Website development includes clear offers, mobile forms, and community names used only when they are true.",
-      seo: "Local SEO targets Lake Forest phrases and can mention Foothill Ranch or Portola Hills in ordinary sentences if you serve them. Nearby Irvine, Mission Viejo, and Laguna Hills pages cover the corridor without keyword dumping.",
+      web: "Custom website design for Lake Forest professional offices, light-industrial and service businesses, and residential trades. Website development includes clear offers, mobile forms, and community names—Foothill Ranch, Portola Hills—when they are part of your market.",
+      seo: "Local SEO targets Lake Forest phrases and can mention Foothill Ranch or Portola Hills in ordinary sentences when you serve them. Nearby Irvine, Mission Viejo, and Laguna Hills pages cover the corridor.",
       maps:
         "Google Maps marketing helps business-park offices and residential crews appear for the right “near me” search. Google Business Profile optimization covers categories, photos, and service area.",
       ads: "Google Ads management can geo-target Lake Forest, Foothill Ranch, and a tight ring toward Irvine and Mission Viejo without buying the entire county.",
@@ -256,12 +256,12 @@ export const SOUTH_OC_CITIES: OrangeCountyCity[] = [
       {
         question: "Can local SEO mention Portola Hills?",
         answer:
-          "Yes, when you actually work Portola Hills. It is a real community inside Lake Forest, and residents search that name. I will not add it as decoration.",
+          "Yes. Portola Hills is a real community inside Lake Forest, and residents search that name. If you already work there, it belongs on the page.",
       },
       {
-        question: "Will you list me as Irvine to rank higher?",
+        question: "Should a Lake Forest business be listed as Irvine?",
         answer:
-          "No. If you are in Lake Forest, the site says Lake Forest. Irvine can be a nearby city you serve, with its own page if that work is real.",
+          "No. If you are in Lake Forest, the site says Lake Forest. Irvine can be a nearby city you serve, with its own page when that work is part of your coverage.",
       },
       {
         question: "How do I get a free ranking audit for Lake Forest?",
@@ -278,14 +278,14 @@ export const SOUTH_OC_CITIES: OrangeCountyCity[] = [
       "Website designer in Mission Viejo, CA for custom websites, local SEO, and Google Maps. Lake Mission Viejo and Shops at Mission Viejo businesses welcome.",
     areas: "Lake Mission Viejo, The Shops at Mission Viejo, Kaleidoscope, and the master-planned residential neighborhoods across the Saddleback Valley",
     intro: [
-      "Mission Viejo is a large master-planned south Orange County city organized around Lake Mission Viejo and retail at The Shops at Mission Viejo and Kaleidoscope. Families search website designer in Mission Viejo, pediatric dentist Mission Viejo, and landscaper near the lake. Those queries should land on a custom website, not on an Irvine Spectrum page that stuffed this city in a footer.",
+      "Mission Viejo is a large master-planned south Orange County city organized around Lake Mission Viejo and retail at The Shops at Mission Viejo and Kaleidoscope. Families search website designer in Mission Viejo, pediatric dentist Mission Viejo, and landscaper near the lake. Those queries should land on a custom website built for this city, not an Irvine page that happens to mention it.",
       "Leads by RJ builds website design, local SEO, and Google marketing for Mission Viejo medical offices, retailers, and home-service companies. I am based in Newport Beach and I treat Mission Viejo as its own market next to Lake Forest, Laguna Hills, and Rancho Santa Margarita.",
     ],
     whyLocal:
-      "Planned-community search is crowded with medical groups and national retailers. Independent Mission Viejo businesses still rank when the page is specific, the Google Business Profile is complete, and Google Ads geo-target this city instead of “all of south county.” A website designer who knows Orange County can write lake, shops, and neighborhood context without inventing results.",
+      "Planned-community search is crowded with medical groups and national retailers. Independent Mission Viejo businesses still rank when the page is specific, the Google Business Profile is complete, and Google Ads geo-target this city instead of “all of south county.” Lake, shops, and neighborhood context belong on the page because that is how families here search.",
     services: {
-      web: "Custom website design for Mission Viejo practices and trades: service pages, family-oriented proof when it is real, and forms that work on mobile. Website development stays conversion-focused.",
-      seo: "Local SEO targets Mission Viejo phrases and uses Lake Forest, Laguna Hills, and Rancho Santa Margarita as neighboring pages. Lake Mission Viejo and The Shops appear only when they help a real customer understand where you work.",
+      web: "Custom website design for Mission Viejo practices and trades: service pages, family-oriented proof of the work you do, and forms that work on mobile. Website development stays conversion-focused.",
+      seo: "Local SEO targets Mission Viejo phrases and uses Lake Forest, Laguna Hills, and Rancho Santa Margarita as neighboring pages. Lake Mission Viejo and The Shops help customers understand where you work when those places are part of your market.",
       maps:
         "Google Maps marketing helps offices and home-service companies appear for “near me” searches across the planned neighborhoods. Google Business Profile optimization covers categories, photos, and service area.",
       ads: "Google Ads management can geo-target Mission Viejo tightly. That is usually a better fit than a campaign that also buys Irvine Spectrum shopping queries.",
@@ -304,9 +304,9 @@ export const SOUTH_OC_CITIES: OrangeCountyCity[] = [
           "Yes. Residential work around the lake and the planned neighborhoods is a strong fit for a city page, service pages, and Google Maps marketing.",
       },
       {
-        question: "Should The Shops at Mission Viejo be in my keywords?",
+        question: "Can you work with me remotely in Mission Viejo?",
         answer:
-          "Only if your customers come from that center. Naming a mall you do not serve is stuffing. Naming the city you do serve is local SEO.",
+          "Yes. I am based in Newport Beach and work with owners across Orange County by phone, email, and video. Call (949) 264-2559 or email rj@leadsbyrj.com to start.",
       },
       {
         question: "How do I get a free ranking audit for Mission Viejo?",
@@ -324,10 +324,10 @@ export const SOUTH_OC_CITIES: OrangeCountyCity[] = [
     areas: "Rancho Santa Margarita Town Center, the planned residential villages, and the canyon-adjacent edges toward Trabuco Canyon and Mission Viejo",
     intro: [
       "Rancho Santa Margarita is a planned Saddleback Valley city with a Town Center and residential villages that sit closer to the canyons than to the coast. People search website designer in Rancho Santa Margarita, dentist at Town Center, and landscaper near Trabuco Canyon because they want a provider who already drives this side of the county. A custom website that only lists Mission Viejo will not catch those queries.",
-      "Leads by RJ builds website design, local SEO, and Google marketing for Rancho Santa Margarita offices and home-service companies. I am based in Newport Beach. Canyon-adjacent is a real geographic fact; it is not an excuse to stuff every south-county city into one paragraph.",
+      "Leads by RJ builds website design, local SEO, and Google marketing for Rancho Santa Margarita offices and home-service companies. I am based in Newport Beach. Canyon-adjacent is part of how this city actually sits on the map, and the pages are written for Town Center and the villages you serve.",
     ],
     whyLocal:
-      "RSM is far enough from Irvine and Newport Beach that many agencies never write a real page for it. That is an opening. Unique copy, a complete Google Business Profile, and Google Ads that geo-target Rancho Santa Margarita help Town Center businesses and residential trades show up before Mission Viejo competitors take the search. A website developer who works Orange County can keep the Trabuco Canyon edge honest—nearby, not inside the city limits unless it is.",
+      "RSM is far enough from Irvine and Newport Beach that many agencies never write a real page for it. That is an opening. Unique copy, a complete Google Business Profile, and Google Ads that geo-target Rancho Santa Margarita help Town Center businesses and residential trades show up before Mission Viejo competitors take the search.",
     services: {
       web: "Custom website design for Rancho Santa Margarita Town Center offices and for trades that serve the planned villages. Website development includes mobile-first pages, clear services, and quote forms.",
       seo: "Local SEO targets Rancho Santa Margarita phrases. Nearby Mission Viejo, Lake Forest, and San Juan Capistrano pages cover real driving range without turning the heading into a city list.",
@@ -346,12 +346,12 @@ export const SOUTH_OC_CITIES: OrangeCountyCity[] = [
       {
         question: "Can you mention Trabuco Canyon on the page?",
         answer:
-          "If you actually serve that nearby area, we can say so in ordinary language. Trabuco Canyon is not the same as Rancho Santa Margarita, and I will not blur the boundary to chase keywords.",
+          "Yes, if you serve that nearby area. Trabuco Canyon is next door, not the same city, and the page can say that clearly for customers who search both names.",
       },
       {
         question: "Is Rancho Santa Margarita too far from Newport Beach for you to help?",
         answer:
-          "No. I work throughout Orange County. The website and Google profile are built around RSM, not around the studio’s coastal address.",
+          "No. I work throughout Orange County. The website and Google profile are built around Rancho Santa Margarita. Call (949) 264-2559 or email rj@leadsbyrj.com.",
       },
       {
         question: "How do I get a free ranking audit for Rancho Santa Margarita?",

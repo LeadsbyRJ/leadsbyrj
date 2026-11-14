@@ -9,13 +9,13 @@ export const NORTH_OC_CITIES: OrangeCountyCity[] = [
     areas: "Downtown Brea along Birch Street, the Brea Mall corridor, and the residential neighborhoods climbing toward Carbon Canyon",
     intro: [
       "Brea sits at the north end of Orange County, where a walkable downtown on Birch Street meets a busy retail corridor around Brea Mall. If you run a shop, clinic, or home-service company here, people search in a very local way: website design in Brea, dentist near Birch Street, HVAC in north Orange County. Leads by RJ is a Newport Beach–based website designer and local marketing practice that builds custom websites and Google visibility for those businesses.",
-      "North Orange County searches are competitive because Brea, Fullerton, and La Habra sit so close together. A generic “Orange County” homepage does not tell Google—or a neighbor on Birch Street—that you actually work here. City-specific website development, local SEO, and Google Business Profile work make that connection explicit.",
+      "North Orange County searches are competitive because Brea, Fullerton, and La Habra sit so close together. A generic “Orange County” homepage does not tell a neighbor on Birch Street that you actually work here. City-specific website development, local SEO, and Google Business Profile work make that connection explicit.",
     ],
     whyLocal:
       "Brea customers compare nearby options in Fullerton and Yorba Linda before they call. A website designer who understands north Orange County can put your name, service, and Brea service area on the same page, then back it up with Maps categories, photos, and reviews that match how people here actually search. I am based in Newport Beach and work with owners across Orange County, including Brea’s downtown retailers, medical and dental offices, and the contractors who serve homes toward Carbon Canyon.",
     services: {
       web: "Custom website design for Brea businesses that need more than a template: fast pages, clear services, and forms that turn Birch Street and mall-corridor traffic into calls. I build mobile-first sites for clinics, boutiques, restaurants, and home-service companies that want website development they can maintain as the downtown calendar changes.",
-      seo: "Local SEO for Brea means ranking for the phrases people type with the city attached—web design, dentist, plumber, salon—without stuffing the same sentence on every page. I work on title tags, service copy, and internal links that reflect downtown Brea, the mall area, and nearby Fullerton and La Habra searches.",
+      seo: "Local SEO for Brea means ranking for the phrases people type with the city attached—web design, dentist, plumber, salon. I work on title tags, service copy, and internal links that reflect downtown Brea, the mall area, and nearby Fullerton and La Habra searches.",
       maps:
         "Google Maps marketing and Google Business Profile optimization help Brea shops show up when someone is already in town. Categories, hours, photos of the Birch Street storefront or job sites, and a complete profile matter more here than a vague county-wide listing.",
       ads: "Google Ads management is useful in Brea when organic rankings will take time—especially for competitive home services and medical searches. Campaigns can target Brea and a tight ring of north Orange County cities so you are not paying for clicks from the other side of the county.",
@@ -31,7 +31,7 @@ export const NORTH_OC_CITIES: OrangeCountyCity[] = [
       {
         question: "Can a Newport Beach website designer help a Brea company with local SEO?",
         answer:
-          "Location of the marketing studio matters less than whether the pages, citations, and Google profile actually talk about Brea. I am based in Newport Beach and build city-specific pages and Maps listings for Brea so Google sees a clear service area, not a generic Orange County placeholder.",
+          "Yes. I am based in Newport Beach and work with owners throughout Orange County. Your pages, listings, and Google profile are built around Brea so people searching in north Orange County can find you.",
       },
       {
         question: "What kinds of Brea businesses do you work with?",
@@ -60,9 +60,9 @@ export const NORTH_OC_CITIES: OrangeCountyCity[] = [
       "Entertainment-corridor searches are noisy. National brands and chains bid on the same Google Ads and crowd the map. A local website designer can separate “things to do in Buena Park” from “hire a contractor in Buena Park,” then give your Google Business Profile the categories, photos, and service area that match the second query. I work from Newport Beach with Orange County service businesses and treat Buena Park as its own city, not a suburb of Anaheim.",
     services: {
       web: "Website design and development for Buena Park companies that need a custom website with clear offers, Spanish-and-English-friendly layouts when needed, and lead forms that work on a phone in the Beach Boulevard parking lot. I avoid template sites that look like every other contractor in north Orange County.",
-      seo: "Local SEO here has to distinguish tourist queries from service queries. I write and structure pages so “website designer in Buena Park” and “AC repair Buena Park” can rank without hiding behind Knott’s-related keywords you do not need.",
+      seo: "Local SEO here has to distinguish tourist queries from service queries. I write and structure pages so “website designer in Buena Park” and “AC repair Buena Park” rank as service searches, separate from Knott’s visitor queries.",
       maps:
-        "Google Business Profile optimization and Google Maps marketing help independent shops compete with bigger entertainment listings. Accurate NAP, categories, and photos of real Buena Park jobs or the storefront matter more than a county-wide description.",
+        "Google Business Profile optimization and Google Maps marketing help independent shops compete with bigger entertainment listings. Accurate name, phone, categories, and photos of real Buena Park jobs or the storefront matter more than a county-wide description.",
       ads: "Google Ads management for Buena Park can geo-target the city and nearby Cypress, Fullerton, and Anaheim neighborhoods. That keeps budget on people who can actually become customers instead of visitors searching for theme-park hours.",
       marketing:
         "Online marketing for Buena Park is the combination of a conversion-focused website, local SEO, Maps, and ads. I keep the message practical: get found by residents and neighboring cities, then make it easy to call.",
@@ -98,14 +98,14 @@ export const NORTH_OC_CITIES: OrangeCountyCity[] = [
       "Website designer in Cypress, CA for custom websites, local SEO, and Google Business Profile help. Reach homeowners and small businesses in northwest Orange County.",
     areas: "Residential neighborhoods around Cypress Civic Center, Lincoln Avenue, and the streets that border Los Alamitos and La Palma",
     intro: [
-      "Cypress is a residential northwest Orange County city that often gets folded into “Long Beach / Cerritos / OC” in a website footer and then ignored. Homeowners still search “website designer in Cypress,” “roofer Cypress CA,” and “Google marketing near me.” If your site never names Cypress, those searches go to neighbors who did the local SEO work.",
+      "Cypress is a residential northwest Orange County city that often gets folded into “Long Beach / Cerritos / OC” and then ignored. Homeowners still search “website designer in Cypress,” “roofer Cypress CA,” and “Google marketing near me.” If your site never names Cypress, those searches go to neighbors who did the local SEO work.",
       "Leads by RJ provides website design, custom website development, and local SEO for Cypress businesses that serve a tight geography: independent shops, medical and dental offices, and tradespeople who already drive Lincoln and Valley View. Google Maps marketing then matches the city people type into search.",
     ],
     whyLocal:
       "Cypress is small enough that a handful of well-optimized competitors can own the map pack. You do not need a national agency for that. You need a website developer who will write Cypress-specific service pages, keep your Google Business Profile consistent with Los Alamitos and La Palma listings, and not pretend you are a Los Angeles company. I am based in Newport Beach and work with Orange County owners who want that kind of focused local SEO.",
     services: {
       web: "Custom website design for Cypress companies that need a clean, fast site with service pages, a real contact path, and none of the stock “serving the greater LA area” language that dilutes local relevance. Website development here is about clarity for homeowners, not a 40-page brochure.",
-      seo: "Local SEO for Cypress focuses on city-plus-service phrases and the nearby searches you actually get from La Palma, Los Alamitos, and Buena Park. I keep copy factual and tied to neighborhoods rather than stuffing every north Orange County city into one paragraph.",
+      seo: "Local SEO for Cypress focuses on city-plus-service phrases and the nearby searches you actually get from La Palma, Los Alamitos, and Buena Park. Pages stay tied to the neighborhoods you serve so Cypress remains easy to find next to those larger neighbors.",
       maps:
         "Google Business Profile optimization helps Cypress businesses show up on Google Maps when a neighbor searches from home. Categories, service area, and photos of local jobs beat a profile that only lists “Orange County.”",
       ads: "Google Ads management can cover Cypress with a tight radius so small businesses are not bidding against Los Angeles campaigns. Search and Local Services Ads stay useful when the website and tracking are set up to capture those leads.",
@@ -144,7 +144,7 @@ export const NORTH_OC_CITIES: OrangeCountyCity[] = [
     areas: "Downtown Fullerton, the College Park / CSUF area, and the residential neighborhoods stretching north and west toward Brea and Buena Park",
     intro: [
       "Fullerton has two search personalities. Downtown Fullerton is restaurants, bars, and professional offices around a historic core. North and west Fullerton are neighborhoods and campuses—Cal State Fullerton and Fullerton College—where students, families, and long-time homeowners search for services. A website designer who copies one “OC city” template will miss both.",
-      "Leads by RJ builds custom websites, local SEO, and Google marketing for Fullerton businesses that need to be found for phrases like website design in Fullerton, chiropractor near downtown, or plumber in north Fullerton. I am based in Newport Beach and treat Fullerton as its own market, not a line in a 34-city footer.",
+      "Leads by RJ builds custom websites, local SEO, and Google marketing for Fullerton businesses that need to be found for phrases like website design in Fullerton, chiropractor near downtown, or plumber in north Fullerton. I am based in Newport Beach and treat Fullerton as its own market.",
     ],
     whyLocal:
       "College-town downtowns attract template agencies and out-of-area vendors. Fullerton owners do better with a website developer who understands that a Harbor Boulevard shop and a downtown restaurant do not share the same Google Maps behavior. Local SEO, Google Business Profile optimization, and carefully targeted Google Ads can pull the right people without chasing every search in Anaheim and Brea at once.",
@@ -189,13 +189,13 @@ export const NORTH_OC_CITIES: OrangeCountyCity[] = [
     areas: "Whittier Boulevard, the historic downtown core, and residential streets that meet Fullerton, Brea, and the Los Angeles County line",
     intro: [
       "La Habra sits on Orange County’s northern edge, so many websites bury it under “LA and OC.” That is a mistake. Residents search for a website designer in La Habra, a mechanic on Whittier Boulevard, or a landscaper who will actually drive to their street. Leads by RJ builds custom websites and local SEO that name La Habra on purpose.",
-      "The city mixes a traditional downtown, a commercial stretch along Whittier Boulevard, and neighborhoods that shop both in Brea and across the county line. Website development and Google Business Profile work have to reflect that border-city reality without pretending you are a Los Angeles agency.",
+      "The city mixes a traditional downtown, a commercial stretch along Whittier Boulevard, and neighborhoods that shop both in Brea and across the county line. Website development and Google Business Profile work have to reflect that border-city reality.",
     ],
     whyLocal:
-      "Border cities lose rankings when NAP data says one county and the website says another. A local website designer can keep your name, address, phone, and La Habra service area consistent, then write pages that match how north Orange County homeowners search. I work from Newport Beach with service businesses that need that kind of practical Google marketing—not a statewide campaign.",
+      "Border cities lose rankings when the website says one county and the listings say another. A local website designer keeps your name, phone, and La Habra service area consistent, then writes pages that match how north Orange County homeowners search. I work from Newport Beach with service businesses that need that kind of practical Google marketing—not a statewide campaign.",
     services: {
       web: "Custom website design for La Habra owners who need Spanish-friendly layouts in some cases, clear service lists, and click-to-call. Website development stays focused on leads from Whittier Boulevard and nearby neighborhoods, not a bloated corporate site.",
-      seo: "Local SEO for La Habra targets city-specific phrases and nearby Fullerton and Brea searches you can actually serve. I avoid stuffing Los Angeles County city names unless you truly work those areas and we build real pages for them.",
+      seo: "Local SEO for La Habra targets city-specific phrases and nearby Fullerton and Brea searches you can actually serve. If you also work across the county line, those cities get their own pages instead of a long list on the La Habra page.",
       maps:
         "Google Maps marketing and Google Business Profile optimization keep your pin and categories aligned with La Habra, so you show up for “near me” searches along Whittier Boulevard and in the residential grid.",
       ads: "Google Ads management can fence campaigns around La Habra and a short list of neighboring cities. That is usually more efficient than a broad “Southern California” campaign for a small business.",
@@ -206,12 +206,12 @@ export const NORTH_OC_CITIES: OrangeCountyCity[] = [
       {
         question: "Can you design a website if my La Habra business also gets customers from LA County?",
         answer:
-          "Yes. The La Habra page stays about La Habra. If you genuinely serve cities across the line, we can plan additional location pages instead of hiding those names in one footer list.",
+          "Yes. The La Habra page stays about La Habra. If you also serve cities across the line, we can plan additional location pages for those areas.",
       },
       {
         question: "Do you offer Google Business Profile optimization in La Habra?",
         answer:
-          "Yes. Profile categories, photos, services, and NAP consistency are a core part of Google Maps marketing for La Habra storefronts and service-area businesses.",
+          "Yes. Profile categories, photos, services, and consistent name and phone details are a core part of Google Maps marketing for La Habra storefronts and service-area businesses.",
       },
       {
         question: "What should a small business website include for La Habra?",
@@ -240,7 +240,7 @@ export const NORTH_OC_CITIES: OrangeCountyCity[] = [
       "In a small city, three optimized competitors can own local search. You do not need a huge content mill. You need a website developer who will write accurate La Palma copy, keep your Google Business Profile from being lumped into Cerritos, and target ads tightly. I am based in Newport Beach and do that work for Orange County owners who want local leads, not statewide branding.",
     services: {
       web: "Custom websites for La Palma companies stay lean: services, service area, proof, and a form. Website design and development here should load fast on phones and make it obvious you work this neighborhood, not “all of Southern California.”",
-      seo: "Local SEO for La Palma is city-plus-service pages and clean internal links to Cypress, Los Alamitos, and Buena Park when those cities are truly in range. I do not hide La Palma inside a 40-city keyword list.",
+      seo: "Local SEO for La Palma is city-plus-service pages and clean internal links to Cypress, Los Alamitos, and Buena Park when those cities are in your service area. Google can tell this small city apart from its larger neighbors.",
       maps:
         "Google Business Profile optimization helps a small-city business appear on Google Maps for La Palma searches. Categories, photos, and a realistic service area matter more than extra locations you do not have.",
       ads: "Google Ads management can run a tight radius around La Palma so a small budget is not spent on Long Beach or Anaheim clicks. Search campaigns stay tied to the custom website’s offer.",
@@ -254,9 +254,9 @@ export const NORTH_OC_CITIES: OrangeCountyCity[] = [
           "Yes. Fewer businesses compete, but the ones that optimized their website and Google Business Profile tend to take the map pack. City-specific pages help you join that group.",
       },
       {
-        question: "Can you tell Google I serve La Palma if my office is in another OC city?",
+        question: "Can I show up in La Palma if my office is in another Orange County city?",
         answer:
-          "You can show that you serve La Palma with a real service-area page, consistent NAP, and a Google Business Profile that lists the city. I will not invent a La Palma street address you do not have.",
+          "Yes. A dedicated La Palma page, consistent name and phone details, and a Google Business Profile that lists the city are enough. You do not need a La Palma storefront if you already serve homes and businesses here.",
       },
       {
         question: "What types of La Palma businesses do you help?",
@@ -284,7 +284,7 @@ export const NORTH_OC_CITIES: OrangeCountyCity[] = [
     whyLocal:
       "Small downtowns get overshadowed on Google by Seal Beach, Cypress, and Long Beach listings. A website designer who understands that pattern will write Los Alamitos-specific pages, keep citations consistent, and not merge you into a Long Beach campaign. I work from Newport Beach with Orange County service businesses and treat Los Alamitos as its own city on the map.",
     services: {
-      web: "Website design for Los Alamitos businesses is custom, mobile-first, and honest about the service area. Website development includes lead forms, clear services, and downtown or neighborhood context instead of stock skyline photos from another city.",
+      web: "Website design for Los Alamitos businesses is custom, mobile-first, and clear about the service area. Website development includes lead forms, clear services, and downtown or neighborhood context instead of stock skyline photos from another city.",
       seo: "Local SEO work targets Los Alamitos phrases and the Seal Beach / Cypress searches you already drive. I keep the copy tied to this city so Google has a reason to rank the page here.",
       maps:
         "Google Maps marketing depends on a complete Google Business Profile with the right categories and photos. For a small city, an accurate profile can move you into the local pack faster than more blog posts.",
@@ -327,10 +327,10 @@ export const NORTH_OC_CITIES: OrangeCountyCity[] = [
       "Leads by RJ builds website design, local SEO, and Google Business Profile systems for Placentia shops, clinics, and home-service companies. I am based in Newport Beach and work across Orange County, including the residential streets that sit between Fullerton and Yorba Linda.",
     ],
     whyLocal:
-      "Placentia searches often get captured by Anaheim and Fullerton competitors with stronger websites. Local SEO is how you take those queries back: a city page, on-page service copy, and a Google profile that lists Placentia as a real service area. A website developer who lives in Orange County can keep that work factual—downtown, packing house, neighborhoods—without inventing a brand story.",
+      "Placentia searches often get captured by Anaheim and Fullerton competitors with stronger websites. Local SEO is how you take those queries back: a city page, on-page service copy, and a Google profile that lists Placentia as a real service area. A website developer who lives in Orange County can write to downtown, the packing-house district, and the neighborhoods you already serve.",
     services: {
       web: "Custom website design for Placentia businesses that need a professional site with services, photos from the actual city, and forms that work on mobile. Website development stays conversion-focused for contractors, restaurants, and professional offices.",
-      seo: "Local SEO for Placentia targets city-specific phrases and nearby Fullerton, Anaheim, and Yorba Linda searches you already serve. Pages stay unique rather than swapping one city name in a cloned paragraph.",
+      seo: "Local SEO for Placentia targets city-specific phrases and nearby Fullerton, Anaheim, and Yorba Linda searches you already serve. Each city gets its own page.",
       maps:
         "Google Maps marketing and Google Business Profile optimization help downtown and service-area businesses appear when someone in Placentia searches from their phone. Categories and photos should match the packing-house district or the neighborhoods you actually work.",
       ads: "Google Ads management can focus on Placentia plus a tight north-county ring. That is usually a better fit than a county-wide campaign for a small local company.",
@@ -341,7 +341,7 @@ export const NORTH_OC_CITIES: OrangeCountyCity[] = [
       {
         question: "Can a website designer in Newport Beach work with a Placentia business?",
         answer:
-          "Yes. I am based in Newport Beach and work throughout Orange County. The website and Google profile are built around Placentia, not around my studio address.",
+          "Yes. I am based in Newport Beach and work throughout Orange County. The website and Google profile are built around Placentia, so people searching this city find you.",
       },
       {
         question: "Do you help historic downtown businesses or only home-service companies?",
@@ -351,7 +351,7 @@ export const NORTH_OC_CITIES: OrangeCountyCity[] = [
       {
         question: "What does local SEO include for Placentia?",
         answer:
-          "On-page work for Placentia phrases, a dedicated city page, citation consistency, and Google Business Profile optimization. Content stays factual about the downtown and residential areas you serve.",
+          "On-page work for Placentia phrases, a dedicated city page, consistent listings, and Google Business Profile optimization—written around downtown and the residential areas you serve.",
       },
       {
         question: "How do I start with a ranking audit in Placentia?",
@@ -372,10 +372,10 @@ export const NORTH_OC_CITIES: OrangeCountyCity[] = [
       "Leads by RJ provides website design, website development, and local SEO for Yorba Linda businesses that already serve these neighborhoods. Google Maps marketing then shows you on the map when a parent in a cul-de-sac searches from their phone. I am based in Newport Beach and work with Orange County service companies that want local leads, not vanity traffic.",
     ],
     whyLocal:
-      "Yorba Linda customers often compare you with Brea, Placentia, and Anaheim Hills providers. Local SEO and a city-specific website give Google a reason to pick you for Yorba Linda searches. Google Business Profile photos of hillside or park-adjacent jobs, honest service-area settings, and pages that mention the library area or eastern neighborhoods (only if you work them) read as local because they are local.",
+      "Yorba Linda customers often compare you with Brea, Placentia, and Anaheim Hills providers. Local SEO and a city-specific website give Google a reason to pick you for Yorba Linda searches. Google Business Profile photos of hillside or park-adjacent jobs, a clear service area, and pages that mention the library area or eastern neighborhoods you serve read as local because they are local.",
     services: {
       web: "Custom website design for Yorba Linda companies that sell to homeowners: galleries, service breakdowns, and quote forms. Website development is mobile-first so a parent can contact you between school and practice.",
-      seo: "Local SEO targets “in Yorba Linda” phrases for website design, home services, and professional practices. Copy stays tied to real areas of the city instead of a dumped list of every north-county ZIP code.",
+      seo: "Local SEO targets “in Yorba Linda” phrases for website design, home services, and professional practices. Copy stays tied to the parts of the city you serve—the library area, the park, the hillside and equestrian streets.",
       maps:
         "Google Business Profile optimization and Google Maps marketing help you appear for Yorba Linda “near me” searches. Categories, hours, and photos should match the kind of residential work you actually do here.",
       ads: "Google Ads management can geo-target Yorba Linda and adjacent Placentia, Brea, and Anaheim Hills areas. That keeps spend on higher-intent local searches.",
@@ -391,7 +391,7 @@ export const NORTH_OC_CITIES: OrangeCountyCity[] = [
       {
         question: "Should my Google Business Profile list Yorba Linda if I am based in another city?",
         answer:
-          "If you truly serve Yorba Linda, it belongs in your service area and on a dedicated website page. I will not add a street address you do not have.",
+          "If you serve Yorba Linda, it belongs in your service area and on a dedicated website page. You do not need an office here for homeowners to find you.",
       },
       {
         question: "Can Google Ads help professional offices in Yorba Linda?",
