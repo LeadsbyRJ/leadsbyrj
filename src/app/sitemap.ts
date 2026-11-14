@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/constants";
 import { getAllPosts } from "@/lib/blog";
+import { cityPath, getAllCities } from "@/lib/cities";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
@@ -30,5 +31,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticEntries, ...postEntries];
+  const cityEntries = getAllCities().map((city) => ({
+    url: `${SITE.url}${cityPath(city.slug)}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  return [...staticEntries, ...postEntries, ...cityEntries];
 }

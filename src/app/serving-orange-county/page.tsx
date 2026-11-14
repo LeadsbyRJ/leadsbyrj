@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { SITE, SERVICES } from "@/lib/constants";
 import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
+import { cityPath, getAllCities } from "@/lib/cities";
 
 const PAGE_PATH = "/serving-orange-county";
 const META_TITLE =
@@ -9,42 +11,7 @@ const META_TITLE =
 const META_DESCRIPTION =
   "Orange County-based digital marketing for local businesses. Custom coded websites, SEO, Google Ads, and Google Business Profile management across all 34 cities in Orange County, CA.";
 
-const ORANGE_COUNTY_CITIES = [
-  "Aliso Viejo",
-  "Anaheim",
-  "Brea",
-  "Buena Park",
-  "Costa Mesa",
-  "Cypress",
-  "Dana Point",
-  "Fountain Valley",
-  "Fullerton",
-  "Garden Grove",
-  "Huntington Beach",
-  "Irvine",
-  "La Habra",
-  "La Palma",
-  "Laguna Beach",
-  "Laguna Hills",
-  "Laguna Niguel",
-  "Laguna Woods",
-  "Lake Forest",
-  "Los Alamitos",
-  "Mission Viejo",
-  "Newport Beach",
-  "Orange",
-  "Placentia",
-  "Rancho Santa Margarita",
-  "San Clemente",
-  "San Juan Capistrano",
-  "Santa Ana",
-  "Seal Beach",
-  "Stanton",
-  "Tustin",
-  "Villa Park",
-  "Westminster",
-  "Yorba Linda",
-] as const;
+const ORANGE_COUNTY_CITIES = getAllCities();
 
 const LOCAL_SERVICES = SERVICES.filter((service) =>
   ["web", "seo", "ads", "gbp"].includes(service.id)
@@ -97,7 +64,7 @@ function ServingAreaJsonLd() {
       },
       ...ORANGE_COUNTY_CITIES.map((city) => ({
         "@type": "City",
-        name: city,
+        name: city.name,
         containedInPlace: {
           "@type": "AdministrativeArea",
           name: "Orange County, California",
@@ -144,11 +111,13 @@ export default function ServingOrangeCountyPage() {
         </p>
         <ul className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
           {ORANGE_COUNTY_CITIES.map((city) => (
-            <li
-              key={city}
-              className="rounded-xl border border-border bg-surface px-3 py-2.5 text-sm text-foreground"
-            >
-              {city}
+            <li key={city.slug}>
+              <Link
+                href={cityPath(city.slug)}
+                className="block rounded-xl border border-border bg-surface px-3 py-2.5 text-sm text-foreground transition-colors hover:border-accent/40 hover:text-accent"
+              >
+                {city.name}
+              </Link>
             </li>
           ))}
         </ul>
