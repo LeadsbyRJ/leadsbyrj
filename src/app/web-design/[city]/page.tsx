@@ -223,7 +223,7 @@ export default async function CityLandingPage({ params }: CityPageProps) {
           Custom websites, local SEO, Google Maps and Google Business Profile
           work, Google Ads management, and online marketing—written for
           businesses that serve {city.name}. If you need a website developer in{" "}
-          {city.name}, CA, the site is built around those local searches.
+          {city.name}, CA, you work directly with me from design through launch.
         </p>
         <ul className="mt-8 grid gap-5 sm:grid-cols-2">
           {CITY_SERVICE_SECTIONS.map((section) => (
@@ -257,9 +257,9 @@ export default async function CityLandingPage({ params }: CityPageProps) {
         </h2>
         <p className="mt-2.5 max-w-2xl text-sm leading-relaxed text-muted sm:text-base">
           Straight answers for owners who want to show up for website designer,
-          web design, and local SEO searches in {city.name}. They also cover how
-          a {city.name} marketing agency approaches Google Maps, ads, and the
-          website those campaigns send people to.
+          web design, and local SEO searches in {city.name}, and what to expect
+          from a {city.name} marketing agency that handles Google Maps, ads, and
+          your website.
         </p>
         <dl className="mt-8 space-y-4">
           {faqs.map((faq) => (
