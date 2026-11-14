@@ -7,6 +7,8 @@ import type { OrangeCountyCity } from "./types";
 export {
   CITY_PAGE_PREFIX,
   CITY_SERVICE_SECTIONS,
+  cityPageFaqs,
+  cityPageKeywords,
   cityPageTitle,
   cityPath,
 } from "./types";
